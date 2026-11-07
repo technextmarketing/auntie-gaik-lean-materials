@@ -22,10 +22,10 @@
   const slugOf = i => i === 0 ? 'welcome' : i === TABS.length - 1 ? 'visit' : CH[i - 1].id;
 
   /* ================================================================ faces (page contents) */
-  const dishBtn = d => `<li class="dh"><button type="button" class="dh__b" data-dish="${d.id}" aria-label="${esc(d.name)}: open the dish">
+  const dishBtn = d => `<li class="dh"><div class="dh__b">
       <span class="dh__n">${esc(d.name)}${d.pick ? ` <span class="dh__star" title="Written about by the MICHELIN Guide inspectors">${SPARK}</span>` : ''}</span>
       <span class="dh__l">${esc(d.local || '')}${d.zh ? ` <span class="zh">${d.zh}</span>` : ''}</span>
-      <span class="dh__d">${esc(d.desc)}</span></button></li>`;
+      <span class="dh__d">${esc(d.desc)}</span></div></li>`;
 
   function photoFig(d, cls) {
     const p = d.photo;
@@ -415,8 +415,6 @@
   /* ---- clicks inside pages */
   view.addEventListener('click', e => {
     if (down && down.moved) return;
-    const d = e.target.closest('[data-dish]');
-    if (d) { e.preventDefault(); if (window.AGMenu) window.AGMenu.openDish(d.dataset.dish, null); return; }
     const t = e.target.closest('[data-tab]');
     if (t) { goPos(posOfTab(+t.dataset.tab)); return; }
   });
@@ -434,14 +432,13 @@
 
   addEventListener('keydown', e => {
     if (view.hidden || e.defaultPrevented || e.metaKey || e.ctrlKey || e.altKey) return;
-    if (document.getElementById('sheet') && !document.getElementById('sheet').hidden) return;
     if (/^(input|textarea|select)$/i.test(e.target.tagName)) return;
     const k = e.key;
     if (k === 'ArrowRight' || k === 'PageDown') { e.preventDefault(); next(); }
     else if (k === 'ArrowLeft' || k === 'PageUp') { e.preventDefault(); prev(); }
     else if (k === 'Home') { e.preventDefault(); goPos(0); }
     else if (k === 'End') { e.preventDefault(); goPos(B.max); }
-    else if (/^[1-6]$/.test(k) && !(e.target.closest && e.target.closest('.modes'))) { e.preventDefault(); goPos(posOfTab(+k)); }
+    else if (/^[1-6]$/.test(k)) { e.preventDefault(); goPos(posOfTab(+k)); }
     else if (k === 'f' || k === 'F') { if (fsOk) bFs.click(); }
     else if (k === 's' || k === 'S') { bSnd.click(); }
   });

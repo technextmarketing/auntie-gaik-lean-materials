@@ -1,0 +1,63 @@
+/* Auntie Gaik Lean's menu: shared base (reset, buttons, top bar). Tokens from ../assets/css/brand.css only. */
+*, *::before, *::after { box-sizing: border-box; }
+html, body { margin: 0; }
+:root { --barH: 72px; --dockH: 0px; --gut: clamp(16px, 4vw, 64px); --ease: cubic-bezier(.2, .7, .2, 1); }
+body { background: var(--night); color: var(--porcelain); font-family: var(--f-sans); -webkit-font-smoothing: antialiased;
+  padding-top: var(--barH); padding-bottom: var(--dockH); overflow-x: hidden; }
+img { display: block; max-width: 100%; }
+button { font: inherit; color: inherit; background: none; border: 0; padding: 0; margin: 0; cursor: pointer; }
+a { color: inherit; }
+ul, ol { list-style: none; margin: 0; padding: 0; }
+p, h1, h2, h3 { margin: 0; }
+kbd { font: 500 11px/1 var(--f-sans); border: 1px solid var(--line-dark); border-radius: 2px; padding: 3px 6px; color: var(--gold-hi); }
+.sr-only { position: absolute !important; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0; }
+.skip { position: fixed; left: 12px; top: -80px; z-index: 300; background: var(--gold); color: var(--ink); padding: 12px 18px; font: 500 13px var(--f-sans); text-decoration: none; }
+.skip:focus { top: 12px; }
+:focus-visible { outline: 2px solid var(--gold-hi); outline-offset: 3px; }
+main:focus { outline: none; }
+.noscript { display: none; }
+.zh { font-family: var(--f-zh); font-weight: 600; letter-spacing: .08em; font-style: normal; }
+
+/* buttons (same family as the website) */
+.btn { display: inline-flex; align-items: center; justify-content: center; gap: 10px; min-height: 48px; padding: 0 24px; font: 500 12px/1 var(--f-sans);
+  letter-spacing: .22em; text-transform: uppercase; text-decoration: none; border: 1px solid transparent; border-radius: 2px; white-space: nowrap; cursor: pointer;
+  transition: background-color .3s, color .3s, border-color .3s, transform .2s var(--ease); }
+.btn:active { transform: translateY(1px); }
+.btn svg { width: 18px; height: 18px; fill: none; stroke: currentColor; stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round; }
+.btn-gold { background: var(--gold); color: var(--ink); } .btn-gold:hover { background: var(--gold-hi); }
+.btn-line { border-color: rgba(245, 247, 251, .5); color: var(--porcelain); } .btn-line:hover { background: var(--porcelain); color: var(--night); border-color: var(--porcelain); }
+.btn-cobalt { background: var(--cobalt); color: var(--porcelain); } .btn-cobalt:hover { background: var(--indigo); }
+.btn-ghost { border-color: var(--cobalt); color: var(--cobalt); } .btn-ghost:hover { background: var(--cobalt); color: var(--porcelain); }
+.btn[aria-disabled="true"] { opacity: .45; pointer-events: none; }
+.ib { display: inline-flex; align-items: center; justify-content: center; gap: 8px; height: 42px; min-width: 42px; padding: 0 10px; border-radius: 2px;
+  color: var(--porcelain); text-decoration: none; transition: background-color .25s, color .25s; }
+.ib:hover { background: rgba(201, 161, 74, .16); color: var(--gold-hi); }
+.ib svg { width: 20px; height: 20px; fill: none; stroke: currentColor; stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round; flex: none; }
+.ib__t { font: 500 11px/1 var(--f-sans); letter-spacing: .2em; text-transform: uppercase; display: none; }
+
+.bar { position: fixed; inset: 0 0 auto; z-index: 60; height: var(--barH); background: var(--night); border-bottom: 1px solid var(--line-dark); }
+.bar__in { height: 100%; display: flex; align-items: center; gap: clamp(14px, 1.8vw, 28px); padding: 0 var(--gut); }
+.bar__logo { flex: none; display: block; }
+.bar__logo img { width: 148px; height: auto; }
+.bar__back { display: flex; gap: 18px; flex: none; }
+.bar__back a { font: 500 11.5px/1 var(--f-sans); letter-spacing: .2em; text-transform: uppercase; color: var(--mist); text-decoration: none; padding: 8px 0;
+  border-bottom: 1px solid transparent; transition: color .25s, border-color .25s; }
+.bar__back a:hover { color: var(--porcelain); border-color: var(--gold); }
+.bar__tools { display: flex; align-items: center; gap: 4px; flex: none; margin-left: auto; }
+.bar__book { min-height: 42px; padding: 0 20px; margin-left: 8px; }
+@media (min-width: 1600px) { .ib__t { display: inline; } }
+@media (max-width: 699px) {
+  :root { --barH: 88px; --gut: 16px; }
+  .bar__in { flex-wrap: wrap; align-content: flex-start; row-gap: 0; column-gap: 4px; }
+  .bar__logo { height: 56px; display: flex; align-items: center; }
+  .bar__logo img { width: 112px; }
+  .bar__back { order: 3; width: 100%; height: 31px; align-items: center; border-top: 1px solid rgba(201, 161, 74, .2); gap: 20px; }
+  .bar__back a { font-size: 10.5px; padding: 6px 0; }
+  .bar__back a:first-child::before { content: "\2190\00a0"; }
+  .bar__tools { height: 56px; gap: 0; }
+  .ib { min-width: 40px; padding: 0 8px; }
+  .bar__book { min-height: 38px; padding: 0 13px; font-size: 10.5px; letter-spacing: .16em; margin-left: 4px; }
+}
+/* phones and narrow tablets: the list view has its own sticky dock, so the bar keeps only the PDF */
+@media (max-width: 900px) { .bar__tools .bar__book, .bar__tools #barWa { display: none; } }
+.noscript-b { padding: 24px var(--gut); color: var(--mist); }
