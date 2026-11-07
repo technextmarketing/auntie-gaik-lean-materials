@@ -75,3 +75,44 @@ a{color:inherit}
 .cap .alt{font-size:10px;letter-spacing:.14em;color:var(--ink-2);text-transform:uppercase}
 .lb-dl2{flex:none;background:transparent;color:var(--porcelain);border:1px solid var(--line-dark);text-decoration:none;font-size:12px;padding:13px 18px;border-radius:2px}.lb-dl2:hover{background:var(--porcelain);color:var(--night)}.lb-acts{display:flex;gap:10px;flex:none}.lb-acts[hidden],.lb-dl2[hidden]{display:none}
 @media (max-width:420px){.lb-acts{flex-direction:column}.lb-dl2{text-align:center}}
+
+/* v3: categorised sections */
+.chips{position:sticky;top:0;z-index:5;background:rgba(10,16,42,.94);backdrop-filter:blur(6px);padding-top:12px;padding-bottom:12px;border-bottom:1px solid var(--line-dark)}
+.lib{max-width:1560px;margin:0 auto;padding:0 clamp(16px,4vw,48px) 90px}
+.sec{padding:clamp(48px,6vw,84px) 0 8px;border-bottom:1px solid var(--line-dark);scroll-margin-top:80px}
+.sec[hidden]{display:none}
+.sec-h{display:grid;grid-template-columns:auto 1fr;gap:clamp(18px,3vw,40px);align-items:start;margin-bottom:clamp(24px,3vw,40px)}
+.sec-no{font-family:var(--f-display);font-style:italic;font-size:clamp(56px,7vw,104px);line-height:.8;color:var(--gold);opacity:.55;min-width:1.4em}
+.sec-h .eyebrow{margin:0 0 10px}
+.sec-h h2{margin:0;font-size:clamp(32px,4.4vw,60px);font-weight:500;line-height:1.02}
+.sec-d{margin:12px 0 0;max-width:60ch;color:var(--mist);font-size:clamp(15px,1.3vw,17px)}
+.grp{margin:0 0 clamp(30px,3.4vw,48px)}
+.grp-h{margin:0 0 14px;font-size:11px;color:var(--gold-hi);display:flex;gap:10px;align-items:center}
+.grp-h span{color:var(--sky)}
+.grp-h::after{content:"";flex:1;height:1px;background:var(--line-dark)}
+.row{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:16px;align-items:flex-start}
+.row .card{width:auto;margin:0;flex:none}
+.row .thumb{height:var(--h);width:auto}
+.row .thumb img{width:auto;height:100%;max-width:none}
+.row .card .cap{max-width:calc(var(--h) * 1.2);min-width:140px}
+.set .set-h{margin:2px 4px 10px;display:flex;flex-direction:column;gap:3px;color:var(--ink)}
+.set .set-h .lbl{font-size:10px;color:var(--cobalt)}
+.set .set-h .n{font-family:var(--f-display);font-size:17px;line-height:1.15}
+.pair{display:flex;gap:10px;align-items:flex-end;padding-bottom:10px}
+.pair .open{width:auto!important}
+.pair .alt{display:block;margin-top:6px;font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-2)}
+@media (max-width:760px){
+  .row{gap:10px}.row .thumb{height:var(--hm)}.row .card .cap{max-width:calc(var(--hm) * 1.3);min-width:110px}
+  .sec-h{grid-template-columns:1fr}.sec-no{display:none}
+  .pair .thumb{height:calc(var(--hm) * .9)}
+}
+
+/* thumbnails sized from their own ratio, never wider than the screen */
+.row .thumb{height:auto;width:min(calc(var(--h) * var(--ar)), calc(100vw - 2 * clamp(16px,4vw,48px) - 16px))}
+.row .thumb img{width:100%;height:100%;object-fit:cover}
+.row .card{max-width:100%}
+@media (max-width:760px){.row .thumb{width:min(calc(var(--hm) * var(--ar)), calc(100vw - 48px))}.pair .thumb{width:calc(var(--hm) * .9 * var(--ar))}}
+/* card hugs its thumbnail; caption wraps to the image width */
+.row .card{display:grid;grid-template-columns:min-content}
+.row .card .cap,.row .card .cap{min-width:0;max-width:none}
+.row .card.set{grid-template-columns:auto}
