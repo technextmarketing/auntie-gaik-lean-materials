@@ -311,6 +311,7 @@
     vt = p * ((rv.duration || 5.04) - 0.05);
     if (!seeking) seek();
   }
+  if (rv) {
   rv.addEventListener('seeked', function () { seeking = false; if (Math.abs(rv.currentTime - vt) > 0.03) seek(); });
   rv.addEventListener('loadedmetadata', function () { if (roomScrub) seek(); });
   if ('IntersectionObserver' in W && !SHOT && !STATIC) {
@@ -321,6 +322,7 @@
       if (roomScrub) return;
       if (es[0].isIntersecting && !REDUCE) playV(rv); else rv.pause();
     }, { threshold: 0.1 }).observe(rv);
+  }
   }
 
   /* ---------------- plate rail (drag + wheel + keys, inertia, snap) ---------------- */
@@ -847,8 +849,8 @@
 
       /* the room: scroll-scrubbed film inside a 16:10 window (no extra crop) */
       var lines = qa('.rm-lines li');
-      roomScrub = desk;
-      if (desk) {
+      roomScrub = desk && !!rv;
+      if (!rv) { /* room section removed */ } else if (desk) {
         rv.loop = false;
         var mtl = G.timeline({ scrollTrigger: { trigger: '.rm-pin', start: 'top top', end: '+=200%', pin: true, scrub: true,
           onUpdate: function (s) { scrubTo(s.progress); } } });
