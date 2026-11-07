@@ -13,7 +13,7 @@
   html { scroll-behavior: smooth; }
   body { background: var(--porcelain); color: var(--ink); font-family: var(--f-sans); -webkit-font-smoothing: antialiased; }
   a { color: inherit; }
-  img, video { display: block; max-width: 100%; }
+  img, video { display: block; max-width: 100%; height: auto; }
   .wrap { width: min(1200px, calc(100% - 32px)); margin-inline: auto; }
 
   /* top bar */
@@ -34,7 +34,7 @@
   .hero h1 { font-size: clamp(44px, 6.4vw, 92px); margin: 18px 0 20px; padding-bottom: .08em; }
   .hero h1 i { color: var(--gold-hi); }
   .hero p { font-size: clamp(17px, 1.6vw, 20px); line-height: 1.55; color: var(--mist); max-width: 34em; }
-  .hero .logo { width: min(420px, 100%); justify-self: end; opacity: .96; }
+  .hero .logo { width: min(420px, 100%); height: auto; justify-self: end; opacity: .96; }
   .count { display: flex; flex-wrap: wrap; gap: 10px 28px; margin-top: 30px; font-size: 13px; color: var(--sky); }
   .count b { color: var(--porcelain); font-family: var(--f-display); font-weight: 500; font-size: 28px; letter-spacing: 0; margin-right: 8px; vertical-align: -3px; }
   @media (max-width: 860px) { .hero .wrap { grid-template-columns: 1fr; } .hero .logo { justify-self: start; width: min(320px, 80%); order: -1; } }
