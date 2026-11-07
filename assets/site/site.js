@@ -145,7 +145,7 @@
     return { el: t, a: d.getElementById(ids[0]), b: d.getElementById(ids[ids.length - 1]),
       nav: q('.nav a[href="#' + ids[0] + '"]'), top: 0, bot: 1, p: -1 };
   });
-  var navExtra = qa('.nav a').filter(function (a) { return !tiers.some(function (t) { return t.nav === a; }); }).map(function (a) {
+  var navExtra = qa('.nav a[href^="#"]').filter(function (a) { return !tiers.some(function (t) { return t.nav === a; }); }).map(function (a) {
     var el = d.getElementById(a.getAttribute('href').slice(1));
     return { a: a, el: el, top: 0, bot: 1 };
   });
@@ -540,65 +540,6 @@
     else if (!menu.hidden) { setMenu(false); mBtn.focus(); }
   });
 
-  /* ---------------- the menu: Auntie's tingkat (lift a tier to open it) ---------------- */
-  var tkg = q('#tkg'), tkTiers = qa('.tier', tkg), tkBtns = qa('.tier-btn', tkg), tkLid = q('.tkg-lid', tkg);
-  var mnPhs = qa('.mn-ph'), mnCaps = qa('.mn-cap'), tkOpen = -1, tkHover = 0;
-  function liftPx() { var ti = q('.tier-in', tkTiers[0]); return ti ? ti.offsetHeight - 4 : 130; }
-  function setTier(i, focus) {
-    var L = liftPx();
-    tkOpen = i;
-    tkg.setAttribute('data-open', i);
-    tkLid.style.transform = i < 0 ? '' : 'translate3d(0,' + (-L) + 'px,0)';
-    tkTiers.forEach(function (t, k) {
-      t.style.transform = i >= 0 && k < i ? 'translate3d(0,' + (-L) + 'px,0)' : '';
-      t.classList.toggle('on', k === i);
-      tkBtns[k].setAttribute('aria-expanded', k === i ? 'true' : 'false');
-    });
-    if (i >= 0) {
-      mnPhs.forEach(function (p, k) { p.classList.toggle('on', k === i); });
-      mnCaps.forEach(function (p, k) { p.classList.toggle('on', k === i); });
-    }
-    if (focus) tkBtns[i].focus();
-  }
-  tkBtns.forEach(function (b, i) {
-    b.addEventListener('click', function () { setTier(i); });
-    b.addEventListener('keydown', function (e) {
-      if (e.key === 'ArrowDown' || e.key === 'ArrowRight') { e.preventDefault(); setTier(Math.min(tkBtns.length - 1, i + 1), true); }
-      else if (e.key === 'ArrowUp' || e.key === 'ArrowLeft') { e.preventDefault(); setTier(Math.max(0, i - 1), true); }
-    });
-    if (FINE) {
-      b.addEventListener('pointerenter', function (e) {
-        if (e.pointerType !== 'mouse') return;
-        clearTimeout(tkHover);
-        tkHover = setTimeout(function () { if (tkOpen !== i) setTier(i); }, 90);
-      });
-      b.addEventListener('pointerleave', function () { clearTimeout(tkHover); });
-    }
-  });
-  W.addEventListener('resize', function () { if (tkOpen >= 0) setTier(tkOpen); });
-  if (MOTION) setTier(-1); else setTier(0);
-
-  /* ---------------- 360 tour: click-to-load facade (0 KB until used; new tab on phones) ---------------- */
-  (function () {
-    var a = q('#tourPlay'), win = q('#tourWin');
-    if (!a || !win) return;
-    function load(e) {
-      if (e && (e.metaKey || e.ctrlKey || e.shiftKey || e.button > 0)) return;
-      if (W.matchMedia && W.matchMedia('(max-width:600px)').matches) return; /* phones: native new-tab link */
-      if (e) e.preventDefault();
-      var f = document.createElement('iframe');
-      f.src = a.href;
-      f.title = '360° virtual tour of Auntie Gaik Lean’s dining room';
-      f.setAttribute('allow', 'fullscreen; xr-spatial-tracking; gyroscope; accelerometer');
-      f.setAttribute('allowfullscreen', '');
-      f.setAttribute('loading', 'lazy');
-      win.appendChild(f);
-      q('#tour').classList.add('live');
-      f.focus();
-    }
-    a.addEventListener('click', load);
-  })();
-
   /* ---------------- copy address ---------------- */
   var copyBtn = q('#copyBtn');
   copyBtn.addEventListener('click', function () {
@@ -726,11 +667,12 @@
     var cr = q('.cur-r'), cdot = q('.cur-d'), cw = q('.cur-word');
     var dX = G.quickTo(cdot, 'x', { duration: 0.08, ease: 'power3' }), dY = G.quickTo(cdot, 'y', { duration: 0.08, ease: 'power3' });
     var rX = G.quickTo(cr, 'x', { duration: 0.5, ease: 'power3' }), rY = G.quickTo(cr, 'y', { duration: 0.5, ease: 'power3' });
-    var lastT = null;
+    var lastT = null, curIdle = 0;
     W.addEventListener('pointermove', function (e) {
       if (e.pointerType && e.pointerType !== 'mouse') return;
       dX(e.clientX); dY(e.clientY); rX(e.clientX); rY(e.clientY);
       root.classList.remove('cur-off');
+      clearTimeout(curIdle); curIdle = setTimeout(function () { root.classList.add('cur-off'); }, 2200);
       var t = e.target.closest ? e.target.closest('[data-cursor], a, button, summary') : null;
       if (t === lastT && !(t && t.hasAttribute('data-cursor'))) return;
       lastT = t;
@@ -872,12 +814,7 @@
       /* signature: extreme close-up that pulls back to the whole bowl */
       G.fromTo('.sig-px img', { scale: 1.42 }, { scale: 1, ease: 'none', scrollTrigger: { trigger: '.sig-ph', start: 'top 95%', end: 'center 45%', scrub: 0.7 } });
       G.fromTo('.sig-frame', { x: -26, y: -26 }, { x: 0, y: 0, ease: 'none', scrollTrigger: { trigger: '.sig-ph', start: 'top bottom', end: 'bottom 40%', scrub: 0.7 } });
-      G.from('.pk', { opacity: 0, y: 34, duration: 1, ease: 'power3.out', stagger: 0.08, scrollTrigger: { trigger: '.picks-list', start: 'top 85%', once: true } });
-
-      /* the menu: the lid lifts when the tingkat comes into view */
-      ST.create({ trigger: '#tkg', start: 'top 72%', once: true, onEnter: function () { if (tkOpen < 0) setTier(0); } });
-      G.from('.tier, .tkg-lid', { y: 40, opacity: 0, duration: 0.9, ease: 'power3.out', stagger: { each: 0.06, from: 'end' },
-        scrollTrigger: { trigger: '#tkg', start: 'top 88%', once: true }, clearProps: 'opacity' });
+      if (desk) G.from('.pk', { opacity: 0, y: 34, duration: 1, ease: 'power3.out', stagger: 0.08, scrollTrigger: { trigger: '.picks-list', start: 'top 85%', once: true } });
 
       /* the rempah: scattered bowls assemble into a tile grid */
       var bowls = qa('.bowl'), seed = 11;
