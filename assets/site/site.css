@@ -82,7 +82,7 @@ h2.disp{font-size:clamp(38px,4.4vw,78px);line-height:1.04;text-wrap:balance}
 /* mobile menu */
 .menu{position:fixed;inset:0;z-index:55;display:flex;flex-direction:column;justify-content:space-between;gap:28px;padding:calc(var(--hdr) + 3vh) var(--pad) 28px;background:var(--cobalt);color:var(--porcelain);overflow-y:auto}
 .menu[hidden]{display:none}
-.menu-tiles{position:absolute;inset:0;width:100%;height:100%;opacity:.2;pointer-events:none}
+.menu::before{content:"";position:absolute;inset:0;background:url(../texture/blue-filigree-v-1280.webp) 50% 0/cover;opacity:.35;pointer-events:none}
 .menu-nav{position:relative;display:flex;flex-direction:column}
 .menu-nav a{display:flex;align-items:baseline;gap:18px;padding:10px 0 12px;font:500 clamp(36px,9vw,60px)/1.08 var(--f-display);font-variation-settings:"opsz" 28;text-decoration:none;border-bottom:1px solid rgba(159,182,227,.28)}
 .menu-nav .lbl{font-family:var(--f-sans);font-size:11px;color:var(--gold-hi)}
@@ -115,7 +115,8 @@ h2.disp{font-size:clamp(38px,4.4vw,78px);line-height:1.04;text-wrap:balance}
 .leaf-in{position:absolute;top:0;bottom:0;left:0;width:100vw;display:grid;place-items:center}
 .leaf-r .leaf-in{left:-50vw}
 .tiles{fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
-.leaf .tiles{position:absolute;inset:0;width:100%;height:100%;opacity:.6;-webkit-mask-image:radial-gradient(ellipse 30% 22% at 50% 50%,transparent 45%,#000 100%);mask-image:radial-gradient(ellipse 30% 22% at 50% 50%,transparent 45%,#000 100%)}
+.leaf-in::before{content:"";position:absolute;inset:0;background:url(../texture/blue-filigree-v-1280.webp) 50% 50%/cover;opacity:.9;-webkit-mask-image:radial-gradient(ellipse 30% 24% at 50% 50%,transparent 40%,#000 100%);mask-image:radial-gradient(ellipse 30% 24% at 50% 50%,transparent 40%,#000 100%)}
+.leaf .tiles{display:none;position:absolute;inset:0;width:100%;height:100%;opacity:.6;-webkit-mask-image:radial-gradient(ellipse 30% 22% at 50% 50%,transparent 45%,#000 100%);mask-image:radial-gradient(ellipse 30% 22% at 50% 50%,transparent 45%,#000 100%)}
 .intro-logo{position:relative;width:min(460px,70vw);height:auto}
 .panel{position:absolute;border:1px solid var(--gold);outline:1px solid rgba(201,161,74,.35);outline-offset:-9px}
 .leaf-l .panel{left:14%;right:9%}.leaf-r .panel{left:9%;right:14%}

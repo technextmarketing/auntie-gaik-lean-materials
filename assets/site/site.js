@@ -634,9 +634,7 @@
     maskAt(0);
     var m = { v: 0 };
     var tl = G.timeline({ onComplete: finish });
-    G.set(uses, { strokeDasharray: 1, strokeDashoffset: 1 });
-    tl.to(uses, { strokeDashoffset: 0, duration: 0.8, ease: 'power2.out', stagger: function (i) { return dist[i] * 0.55; } }, 0)
-      .from(qa('.panel, .stile', intro), { scaleY: 0, duration: 0.9, ease: 'expo.out', stagger: 0.04 }, 0.12)
+    tl.from(qa('.panel, .stile', intro), { scaleY: 0, duration: 0.9, ease: 'expo.out', stagger: 0.04 }, 0.12)
       .fromTo(logos, { y: 26 }, { y: 0, duration: 1, ease: 'power3.out' }, 0.32)
       .to(m, { v: 100, duration: 0.95, ease: 'power2.out', onUpdate: function () { maskAt(m.v); } }, 0.32)
       .addLabel('open', 1.45)
@@ -769,7 +767,6 @@
           .to(hw, { x: function () { return geo.dx; }, y: function () { return geo.dy; }, scale: function () { return geo.s; }, duration: 1, ease: 'power2.inOut' }, 0)
           .fromTo(['.plaque', '.hw-bar'], { opacity: 1, y: 0 }, { opacity: 0, y: 24, duration: 0.24, immediateRender: false }, 0)
           .to('.hero-foot', { opacity: 0, duration: 0.15 }, 0)
-          .to('.hw-tiles', { opacity: 0, scale: 0.92, duration: 0.4 }, 0)
           .fromTo(aCap, { opacity: 0, y: 14 }, { opacity: 1, y: 0, duration: 0.18, immediateRender: false }, 0.82)
           .to({}, { duration: 0.16 });
       } else {
