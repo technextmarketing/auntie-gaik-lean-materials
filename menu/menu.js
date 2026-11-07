@@ -167,7 +167,7 @@
   }
 
   /* ---------------------------------------------------------------- state */
-  const state = { mode: 'tingkat', open: -1, busy: false, sheet: null };
+  const state = { mode: 'book', open: -1, busy: false, sheet: null };
   const T = { guests: 4, ids: [], rot: 0 };
   try {
     const sv = JSON.parse(localStorage.getItem('ag-menu-table') || 'null');
@@ -869,9 +869,11 @@
   });
 
   /* ================================================================ MODES */
-  const views = { tingkat: $('#view-tingkat'), table: $('#view-table'), list: $('#view-list') };
+  const views = { book: $('#view-book'), tingkat: $('#view-tingkat'), table: $('#view-table'), list: $('#view-list') };
+  let entered = false;
   function onShow(m) {
-    if (m === 'tingkat') fit(0);
+    if (m === 'book' && window.AGBook) window.AGBook.show();
+    if (m === 'tingkat') { fit(0); if (!entered) { entered = true; entrance(); } }
     if (m === 'table') { if (!tableBuilt) buildTable(); else { layoutSeats(false); layoutPlates(false); } }
     if (m === 'list' && !listBuilt) buildList();
   }
@@ -934,7 +936,9 @@
   const fontsReady = (document.fonts && document.fonts.ready) ? document.fonts.ready : Promise.resolve();
   function route(first) {
     const h = decodeURIComponent(location.hash.slice(1));
-    if (h === 'table' || h === 'list') { setMode(h, { instant: true, keepHash: true }); return; }
+    if (h === 'table' || h === 'list' || h === 'tingkat') { setMode(h, { instant: true, keepHash: true }); return; }
+    if (h === 'book' || h.startsWith('book-')) { if (window.AGBook && h.length > 5) window.AGBook.goto(h.slice(5), true); return; }
+    if (h.startsWith('tier-') || h.startsWith('dish-')) setMode('tingkat', { instant: true, keepHash: true });
     if (h.startsWith('tier-')) { const k = CH.findIndex(c => c.id === h.slice(5) || String(c.n) === h.slice(5)); if (k >= 0) { openTier(k, { noFocus: first }); return; } }
     if (h.startsWith('dish-') && DISH[h.slice(5)]) {
       const id = h.slice(5), k = DISH[id].ci;
@@ -945,8 +949,7 @@
   }
   fontsReady.then(() => {
     fit(0);
-    const deep = /^#(tier-|dish-|table|list)/.test(location.hash);
-    if (!deep) entrance();
+    fit(0);
     steamLoop();
     route(true);
     window.MENU_READY = true;

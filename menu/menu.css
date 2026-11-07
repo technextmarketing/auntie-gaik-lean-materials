@@ -62,7 +62,7 @@ main:focus { outline: none; }
 @media (max-width: 1179px) {
   :root { --modesH: calc(62px + env(safe-area-inset-bottom)); }
   .modes { position: fixed; left: 0; right: 0; bottom: 0; height: var(--modesH); margin: 0; padding: 0 0 env(safe-area-inset-bottom); border: 0;
-    border-top: 1px solid var(--line-dark); background: var(--night); z-index: 60; display: grid; grid-template-columns: repeat(3, 1fr); gap: 0; }
+    border-top: 1px solid var(--line-dark); background: var(--night); z-index: 60; display: grid; grid-template-columns: repeat(4, 1fr); gap: 0; }
   .modes__b { flex-direction: column; justify-content: center; gap: 6px; height: 62px; font-size: 10px; letter-spacing: .16em; padding: 0 4px; }
   .modes__b[aria-pressed="true"] { background: transparent; color: var(--gold-hi); box-shadow: inset 0 2px 0 var(--gold); }
 }
