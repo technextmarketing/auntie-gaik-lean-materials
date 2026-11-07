@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="robots" content="noindex,nofollow">
+<meta name="export" content="posts/07-auntiegaik-post-four-years-running.png"><meta name="size" content="1080x1440">
+<title>Post 07 - Four years running</title>
+<link rel="stylesheet" href="../../assets/css/brand.css">
+<link rel="stylesheet" href="art.css">
+<style>
+.p7{background:var(--night)}
+.p7 .glowbg{position:absolute;inset:0;background:radial-gradient(48% 30% at 74% 46%,rgba(201,161,74,.22),transparent 70%),radial-gradient(80% 60% at 30% 90%,rgba(29,63,143,.5),transparent 70%)}
+.p7 .tiles{position:absolute;inset:0;background:url("../../assets/pattern/tile-gold.svg") 0 0/120px 120px;opacity:.05}
+.p7 .logo{position:absolute;left:64px;top:64px;width:300px}
+.p7 .handle{position:absolute;right:64px;top:92px;text-align:right}
+.p7 h1{position:absolute;left:64px;top:206px;font-size:128px;color:var(--porcelain)}
+.p7 h1 i{color:var(--gold-hi)}
+/* arch window: chef-0140 (lg 1800x1200) - Auntie with the plaques */
+.p7 .arch{left:64px;top:536px;width:380px;height:470px;border-radius:190px 190px 0 0}
+.p7 .arch img{position:absolute;width:1300px;height:867px;max-width:none;left:-460px;top:-350px}
+.p7 .archline{position:absolute;left:52px;top:524px;width:404px;height:494px;border:1px solid var(--gold);border-bottom:0;border-radius:202px 202px 0 0;opacity:.8}
+.p7 .sub{position:absolute;left:64px;top:1046px;width:440px;font-size:28px;text-wrap:pretty;color:var(--mist)}
+.p7 .lbl.foot{position:absolute;left:64px;top:1290px;line-height:1.5;font-size:22px;color:var(--gold-hi)}
+/* the tingkat */
+.p7 .tk{position:absolute;left:560px;top:470px;width:456px;height:906px}
+.p7 .rod{position:absolute;top:118px;width:12px;height:770px;border-radius:6px;background:linear-gradient(90deg,var(--gold-lo),var(--gold-hi) 45%,var(--gold) 70%,var(--gold-lo))}
+.p7 .rod.l{left:0}.p7 .rod.r{right:0}
+.p7 .handlebar{position:absolute;left:0;top:30px;width:456px;height:200px;border:12px solid var(--gold);border-bottom:0;border-radius:228px 228px 0 0;opacity:.9}
+.p7 .tier{position:absolute;left:30px;width:396px;height:150px;border-radius:14px 14px 22px 22px;
+  background:url("../../assets/pattern/tile-gold.svg") 0 0/60px 60px,linear-gradient(90deg,var(--night) 0%,var(--cobalt) 20%,var(--cobalt-hi) 46%,var(--cobalt) 76%,var(--night) 100%);
+  box-shadow:inset 0 -10px 18px rgba(4,8,24,.45)}
+.p7 .tier::before{content:"";position:absolute;left:-10px;right:-10px;top:-8px;height:16px;border-radius:8px;background:linear-gradient(90deg,var(--gold-lo),var(--gold-hi) 45%,var(--gold) 70%,var(--gold-lo))}
+.p7 .tier::after{content:"";position:absolute;left:-14px;top:50px;width:424px;height:22px;
+  background:linear-gradient(90deg,var(--gold) 0 12px,transparent 12px calc(100% - 12px),var(--gold) calc(100% - 12px))}
+.p7 .cart{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:250px;height:104px;border-radius:52px;background:var(--porcelain);border:2px solid var(--gold);
+  display:flex;flex-direction:column;align-items:center;justify-content:center}
+.p7 .cart b{font-family:var(--f-display);font-weight:600;font-size:56px;line-height:1;color:var(--cobalt);font-variation-settings:"opsz" 28;letter-spacing:.01em}
+.p7 .cart span{font-family:var(--f-sans);font-weight:500;font-size:20px;letter-spacing:.2em;text-transform:uppercase;color:var(--ink-2);margin-top:4px}
+.p7 .t4{top:262px}.p7 .t3{top:428px}.p7 .t2{top:594px}.p7 .t1{top:760px}
+.p7 .t4 .cart{background:var(--gold-hi);border-color:var(--porcelain)}
+.p7 .t4 .cart b{color:var(--night)}.p7 .t4 .cart span{color:var(--night)}
+.p7 .lift{position:absolute;left:30px;top:90px;width:396px;height:120px;transform:rotate(-9deg);transform-origin:20% 100%}
+.p7 .lid{position:absolute;left:0;bottom:0;width:396px;height:96px;border-radius:198px 198px 18px 18px/96px 96px 18px 18px;
+  background:url("../../assets/pattern/tile-gold.svg") 0 0/60px 60px,linear-gradient(90deg,var(--night) 0%,var(--cobalt) 20%,var(--cobalt-hi) 46%,var(--cobalt) 76%,var(--night) 100%);box-shadow:0 18px 30px rgba(2,6,20,.55)}
+.p7 .lid::after{content:"";position:absolute;left:-10px;right:-10px;bottom:-6px;height:14px;border-radius:7px;background:linear-gradient(90deg,var(--gold-lo),var(--gold-hi) 45%,var(--gold) 70%,var(--gold-lo))}
+.p7 .knob{position:absolute;left:174px;top:-4px;width:48px;height:30px;border-radius:24px 24px 6px 6px;background:linear-gradient(90deg,var(--gold-lo),var(--gold-hi) 50%,var(--gold-lo))}
+.p7 .shine{position:absolute;left:30px;top:150px;width:396px;height:140px;background:radial-gradient(50% 60% at 50% 100%,rgba(228,197,126,.55),transparent 70%)}
+</style></head><body>
+<div class="ab post p7">
+  <div class="glowbg"></div><div class="tiles"></div>
+  <img class="logo" src="../../assets/logo/logo-white.png" alt="Auntie Gaik Lean's Old School Eatery">
+  <div class="handle">MICHELIN Guide<br>Malaysia</div>
+  <h1 class="disp">Four years<br><i>running</i>.</h1>
+  <div class="archline"></div>
+  <div class="ph arch"><img src="../../assets/img/chef-0140-lg.webp" alt=""></div>
+  <p class="sub body">One MICHELIN Star in every MICHELIN Guide Malaysia, 2023 to 2026. The first Nyonya restaurant in Malaysia to earn one.</p>
+  <div class="lbl foot">1 Bishop Street<br>George Town</div>
+  <div class="tk">
+    <div class="handlebar"></div>
+    <div class="rod l"></div><div class="rod r"></div>
+    <div class="shine"></div>
+    <div class="tier t1"><div class="cart"><b>2023</b><span>One Star</span></div></div>
+    <div class="tier t2"><div class="cart"><b>2024</b><span>One Star</span></div></div>
+    <div class="tier t3"><div class="cart"><b>2025</b><span>One Star</span></div></div>
+    <div class="tier t4"><div class="cart"><b>2026</b><span>One Star</span></div></div>
+    <div class="lift"><div class="lid"><div class="knob"></div></div></div>
+  </div>
+  <div class="grain"></div>
+</div>
+</body></html>

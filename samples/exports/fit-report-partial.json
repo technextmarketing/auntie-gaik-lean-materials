@@ -1,7 +1,7 @@
 [
  {
-  "stem": "ad1-feed",
-  "file": "ads/ad1-auntiegaik-meta-michelin-nyonya-4x5.png",
+  "stem": "post-06",
+  "file": "posts/06-auntiegaik-post-pie-tee.png",
   "issues": [],
   "fonts": [
    true,
@@ -11,8 +11,8 @@
   "broken": []
  },
  {
-  "stem": "ad1-story",
-  "file": "ads/ad1-auntiegaik-meta-michelin-nyonya-9x16.png",
+  "stem": "xhs-01",
+  "file": "xhs/01-auntiegaik-xhs-michelin-nyonya.png",
   "issues": [],
   "fonts": [
    true,

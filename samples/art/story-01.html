@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="robots" content="noindex">
+<meta name="export" content="stories/story-01-auntiegaik-poll.png"><meta name="size" content="1080x1920">
+<title>Story 01 - Poll</title>
+<link rel="stylesheet" href="../../assets/css/brand.css"><link rel="stylesheet" href="art.css">
+<style>
+.s1{background:var(--night)}
+.s1 .tiles{position:absolute;inset:0;background:url("../../assets/pattern/tile-gold.svg") 0 0/120px 120px;opacity:.08}
+.s1 .glow1{position:absolute;inset:0;background:radial-gradient(90% 40% at 50% 62%,rgba(47,92,184,.5),transparent 70%)}
+.s1 .lbl{position:absolute;left:80px;top:270px;font-size:34px;color:var(--gold-hi);letter-spacing:.2em}
+.s1 h1{position:absolute;left:80px;top:330px;width:920px;font-size:100px;color:var(--porcelain)}
+.s1 h1 i{color:var(--gold-hi)}
+.s1 .split{position:absolute;left:0;top:640px;width:1080px;height:690px;overflow:hidden}
+.s1 .half{position:absolute;inset:0;overflow:hidden}
+.s1 .half img{position:absolute;max-width:none}
+.s1 .a{clip-path:polygon(0 0,700px 0,470px 690px,0 690px)}
+.s1 .b{clip-path:polygon(732px 0,1080px 0,1080px 690px,502px 690px)}
+.s1 .a img{left:-235px;top:-10px;width:1030px;height:auto;transform-origin:30% 50%}
+.s1 .b img{left:600px;top:-250px;width:620px;height:auto;transform-origin:50% 50%}
+.s1 .seam{position:absolute;left:0;top:0}
+.s1 .poll{position:absolute;left:100px;top:1370px;width:880px;background:var(--porcelain);color:var(--ink);padding:26px 34px 34px;box-shadow:0 0 0 2px var(--gold)}
+.s1 .poll .q{font-family:var(--f-sans);font-weight:500;font-size:34px;letter-spacing:.14em;text-transform:uppercase;color:var(--cobalt);text-align:center;margin-bottom:20px}
+.s1 .poll .opts{display:flex;gap:20px}
+.s1 .poll .o{flex:1;text-align:center;font-family:var(--f-display);font-weight:500;font-variation-settings:"opsz" 28;font-optical-sizing:none;font-size:38px;line-height:1.1;padding:22px 8px;border:2px solid var(--cobalt);color:var(--cobalt)}
+.s1 .poll .o.on{background:var(--cobalt);color:var(--porcelain)}
+</style></head><body>
+<div class="ab story s1">
+ <div class="tiles"></div><div class="glow1"></div>
+ <div class="lbl lbl" data-in="0.2" data-y="30">Your pick for supper</div>
+ <h1 class="disp" data-in="0.5" data-y="50">Curry Kapitan <i>or</i> Assam Prawns?</h1>
+ <div class="split">
+  <div class="half a"><img data-zoom="1,1.10,7" src="../../assets/img/dish-curry-kapitan-lg.webp" alt=""></div>
+  <div class="half b"><img data-zoom="1,1.10,7" src="../../assets/img/food-1624-lg.webp" alt=""></div>
+  <svg class="seam" width="1080" height="690"><line x1="716" y1="-2" x2="486" y2="692" stroke="#c9a14a" stroke-width="3"/></svg>
+ </div>
+ <div class="poll" data-in="1.3" data-y="60"><div class="q">Tap to vote</div><div class="opts"><div class="o">Curry<br>Kapitan</div><div class="o">Assam<br>Prawns</div></div></div>
+ <div class="grain"></div>
+</div>
+<script>
+const q=new URLSearchParams(location.search);
+window.setT=function(t){document.querySelectorAll("[data-in]").forEach(e=>{const s=+e.dataset.in,d=+(e.dataset.d||.8),p=Math.min(1,Math.max(0,(t-s)/d)),k=1-Math.pow(1-p,3);e.style.opacity=k;e.style.transform="translateY("+((1-k)*(+(e.dataset.y||40)))+"px)"});
+document.querySelectorAll("[data-zoom]").forEach(e=>{const [a,b,dur]=e.dataset.zoom.split(",").map(Number);e.style.transform="scale("+(a+(b-a)*Math.min(1,t/dur))+")"})};
+if(q.has("t"))setT(+q.get("t"));
+</script>
+</body></html>

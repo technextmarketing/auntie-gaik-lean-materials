@@ -1,11 +1,11 @@
 <!doctype html>
-<html lang="en">
+<html lang="en-GB">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex,nofollow">
-<title>Sample pack · Auntie Gaik Lean's Old School Eatery</title>
-<meta name="description" content="Sample website, social posts, Meta ads and a reel for Auntie Gaik Lean's Old School Eatery, George Town, Penang.">
+<title>Campaign · Auntie Gaik Lean's Old School Eatery</title>
+<meta name="description" content="A month of marketing for Auntie Gaik Lean's: posts, Xiaohongshu covers, stories, reels, Meta ads, emails, in-store and Google posts, all made from the restaurant's own shoot.">
 <link rel="icon" href="../assets/logo/logo-ink.png">
 <link rel="stylesheet" href="../assets/css/brand.css">
 <style>
@@ -14,266 +14,351 @@
   body { background: var(--porcelain); color: var(--ink); font-family: var(--f-sans); -webkit-font-smoothing: antialiased; }
   a { color: inherit; }
   img, video { display: block; max-width: 100%; height: auto; }
-  .wrap { width: min(1200px, calc(100% - 32px)); margin-inline: auto; }
-
-  /* top bar */
-  .bar { position: sticky; top: 0; z-index: 20; background: rgba(245,247,251,.92); backdrop-filter: blur(8px); border-bottom: 1px solid var(--line-light); }
-  .bar .wrap { display: flex; align-items: center; justify-content: space-between; gap: 16px; height: 64px; }
+  .wrap { width: min(1320px, calc(100% - clamp(32px, 8vw, 160px))); margin-inline: auto; }
+  button { font: inherit; }
+  .bar { position: sticky; top: 0; z-index: 30; background: rgba(245,247,251,.93); backdrop-filter: blur(10px); border-bottom: 1px solid var(--line-light); }
+  .bar .wrap { display: flex; align-items: center; justify-content: space-between; gap: 18px; height: 66px; }
   .bar img { height: 34px; width: auto; }
-  .bar nav { display: flex; gap: clamp(12px, 2.4vw, 28px); font-size: 13px; letter-spacing: .2em; text-transform: uppercase; font-weight: 500; }
-  .bar nav a { text-decoration: none; color: var(--ink-2); }
-  .bar nav a:hover, .bar nav a:focus-visible { color: var(--cobalt); }
-  @media (max-width: 720px) { .bar nav { display: none; } }
-
-  /* hero */
+  .bar nav { display: flex; gap: clamp(10px, 1.6vw, 24px); font-size: 12px; letter-spacing: .2em; text-transform: uppercase; font-weight: 500; }
+  .bar nav a { text-decoration: none; color: var(--ink-2); white-space: nowrap; padding: 6px 0; border-bottom: 1px solid transparent; }
+  .bar nav a:hover { color: var(--cobalt); border-color: var(--gold); }
+  @media (max-width: 1100px) { .bar nav a:not(.keep) { display: none; } }
   .hero { position: relative; background: var(--night); color: var(--porcelain); overflow: hidden; }
-  .hero::before { content: ""; position: absolute; inset: 0; background: url("../assets/pattern/tile-gold.svg") 0 0 / 96px 96px; opacity: .22;
-    -webkit-mask-image: linear-gradient(90deg, transparent 0%, #000 55%); mask-image: linear-gradient(90deg, transparent 0%, #000 55%); }
-  .hero .wrap { position: relative; display: grid; grid-template-columns: 1.1fr .9fr; gap: 48px; align-items: center; padding: clamp(56px, 9vw, 120px) 0; }
+  .hero::before { content: ""; position: absolute; inset: 0; background: url("../assets/pattern/tile-gold.svg") 0 0 / 96px; opacity: .2;
+    -webkit-mask-image: linear-gradient(100deg, transparent 30%, #000 85%); mask-image: linear-gradient(100deg, transparent 30%, #000 85%); }
+  .hero .wrap { position: relative; display: grid; grid-template-columns: 1.05fr .95fr; gap: clamp(32px, 5vw, 72px); align-items: center; padding: clamp(64px, 9vw, 128px) 0; }
   .hero .kick { color: var(--gold-hi); font-size: 13px; }
-  .hero h1 { font-size: clamp(44px, 6.4vw, 92px); margin: 18px 0 20px; padding-bottom: .08em; }
+  .hero h1 { font-size: clamp(46px, 6.4vw, 96px); margin: 18px 0 22px; padding-bottom: .1em; text-wrap: balance; }
   .hero h1 i { color: var(--gold-hi); }
-  .hero p { font-size: clamp(17px, 1.6vw, 20px); line-height: 1.55; color: var(--mist); max-width: 34em; }
-  .hero .logo { width: min(420px, 100%); height: auto; justify-self: end; opacity: .96; }
-  .count { display: flex; flex-wrap: wrap; gap: 10px 28px; margin-top: 30px; font-size: 13px; color: var(--sky); }
-  .count b { color: var(--porcelain); font-family: var(--f-display); font-weight: 500; font-size: 28px; letter-spacing: 0; margin-right: 8px; vertical-align: -3px; }
-  @media (max-width: 860px) { .hero .wrap { grid-template-columns: 1fr; } .hero .logo { justify-self: start; width: min(320px, 80%); order: -1; } }
-
-  /* sections */
+  .hero p { font-size: clamp(16px, 1.5vw, 19px); line-height: 1.6; color: var(--mist); max-width: 34em; }
+  .counts { display: flex; flex-wrap: wrap; gap: 12px 28px; margin-top: 32px; font-size: 12px; color: var(--sky); letter-spacing: .2em; text-transform: uppercase; font-weight: 500; }
+  .counts b { color: var(--porcelain); font-family: var(--f-display); font-weight: 500; font-size: 30px; letter-spacing: 0; margin-right: 8px; vertical-align: -4px; }
+  .fan { position: relative; height: clamp(360px, 40vw, 560px); }
+  .fan img { position: absolute; width: 46%; box-shadow: 0 30px 60px rgba(0,0,0,.45); border: 6px solid #fff; transition: transform .8s cubic-bezier(.2,.7,.2,1); }
+  .fan img:nth-child(1) { left: 2%; top: 12%; transform: rotate(-9deg); }
+  .fan img:nth-child(2) { left: 27%; top: 0; transform: rotate(2deg); z-index: 2; }
+  .fan img:nth-child(3) { left: 52%; top: 14%; transform: rotate(10deg); }
+  .fan:hover img:nth-child(1) { transform: rotate(-14deg) translateX(-14px); } .fan:hover img:nth-child(3) { transform: rotate(15deg) translateX(14px); }
+  @media (max-width: 900px) { .hero .wrap { grid-template-columns: 1fr; } .fan { height: 78vw; } }
   section.blk { padding: clamp(64px, 8vw, 112px) 0; }
-  section.blk + section.blk { border-top: 1px solid var(--line-light); }
-  .head { display: flex; align-items: end; justify-content: space-between; gap: 24px; margin-bottom: 36px; flex-wrap: wrap; }
+  section.blk.dark { background: var(--night); color: var(--porcelain); }
+  section.blk.cobalt { background: var(--cobalt); color: var(--porcelain); }
+  .head { display: flex; align-items: end; justify-content: space-between; gap: 24px; margin-bottom: 40px; flex-wrap: wrap; }
   .head .n { font-family: var(--f-display); font-style: italic; color: var(--gold-lo); font-size: 22px; display: block; margin-bottom: 6px; }
-  .head h2 { font-size: clamp(34px, 4.4vw, 58px); color: var(--indigo); padding-bottom: .06em; }
-  .head p { max-width: 30em; color: var(--ink-2); line-height: 1.55; font-size: 16px; }
-
-  /* website block */
-  .browser { background: #fff; border: 1px solid var(--line-light); box-shadow: 0 30px 60px -30px rgba(12,20,51,.35); }
-  .browser .chrome { display: flex; align-items: center; gap: 8px; height: 40px; padding: 0 14px; background: var(--porcelain-2); border-bottom: 1px solid var(--line-light); }
-  .browser .chrome span { width: 10px; height: 10px; border-radius: 50%; background: #c5cde0; }
-  .browser .chrome em { margin-left: 12px; font-style: normal; font-size: 13px; color: var(--ink-2); background: #fff; padding: 4px 12px; flex: 1; max-width: 520px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
-  .browser .shot { max-height: 640px; overflow: hidden; position: relative; }
-  .browser .shot img { width: 100%; }
-  .site-grid { display: grid; grid-template-columns: 1fr 260px; gap: 28px; align-items: start; }
-  .phone { border: 10px solid var(--night); border-radius: 30px; overflow: hidden; background: var(--night); box-shadow: 0 30px 60px -30px rgba(12,20,51,.45); max-height: 540px; }
-  @media (max-width: 860px) { .site-grid { grid-template-columns: 1fr; } .phone { max-width: 260px; } }
-  .btn { display: inline-flex; align-items: center; gap: 10px; margin-top: 24px; padding: 14px 22px; background: var(--cobalt); color: #fff; text-decoration: none; font-size: 13px; letter-spacing: .2em; text-transform: uppercase; font-weight: 500; }
-  .btn:hover, .btn:focus-visible { background: var(--indigo); }
-  .btn.ghost { background: transparent; color: var(--cobalt); border: 1px solid var(--cobalt); margin-left: 10px; }
-
-  /* posts */
-  .posts { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
-  .card { background: #fff; border: 1px solid var(--line-light); }
-  .card button.zoom { all: unset; cursor: zoom-in; display: block; }
-  .card button.zoom:focus-visible { outline: 2px solid var(--cobalt); outline-offset: 2px; }
-  .card .meta { padding: 18px 18px 20px; }
-  .card .meta .lbl { font-size: 11px; color: var(--gold-lo); }
-  .card .meta h3 { font-family: var(--f-display); font-weight: 500; font-size: 22px; margin: 6px 0 10px; color: var(--indigo); }
-  .cap { font-size: 14px; line-height: 1.55; color: var(--ink-2); white-space: pre-line; }
-  .copy { all: unset; cursor: pointer; margin-top: 12px; font-size: 11px; letter-spacing: .2em; text-transform: uppercase; color: var(--cobalt); font-weight: 500; }
+  .dark .head .n, .cobalt .head .n { color: var(--gold-hi); }
+  .head h2 { font-size: clamp(34px, 4.4vw, 60px); color: var(--indigo); padding-bottom: .08em; text-wrap: balance; }
+  .dark .head h2, .cobalt .head h2 { color: var(--porcelain); }
+  .head p { max-width: 32em; color: var(--ink-2); line-height: 1.6; font-size: 16px; }
+  .dark .head p, .cobalt .head p { color: var(--mist); }
+  .cal { display: grid; grid-template-columns: 120px repeat(3, 1fr); gap: 1px; background: var(--line-light); border: 1px solid var(--line-light); }
+  .cal > div { background: #fff; padding: 14px; min-height: 118px; }
+  .cal .wk { background: var(--porcelain-2); font-family: var(--f-display); font-size: 22px; color: var(--indigo); display: flex; flex-direction: column; justify-content: center; }
+  .cal .wk small { font-family: var(--f-sans); font-size: 11px; letter-spacing: .2em; text-transform: uppercase; color: var(--ink-2); margin-top: 4px; }
+  .cal .hd { min-height: 0; background: var(--indigo); color: var(--porcelain); font-size: 12px; letter-spacing: .2em; text-transform: uppercase; font-weight: 500; }
+  .slot { display: grid; grid-template-columns: 64px 1fr; gap: 12px; align-items: center; text-decoration: none; }
+  .slot img { width: 64px; height: 86px; object-fit: cover; background: var(--porcelain-2); }
+  .slot b { display: block; font-family: var(--f-display); font-weight: 500; font-size: 17px; color: var(--indigo); line-height: 1.2; }
+  .slot span { font-size: 11px; letter-spacing: .18em; text-transform: uppercase; color: var(--gold-lo); }
+  @media (max-width: 860px) { .cal { grid-template-columns: 1fr; } .cal .hd { display: none; } }
+  .grid { display: grid; gap: 24px; }
+  .g4 { grid-template-columns: repeat(4, 1fr); } .g3 { grid-template-columns: repeat(3, 1fr); } .g5 { grid-template-columns: repeat(5, 1fr); }
+  @media (max-width: 1100px) { .g4, .g5 { grid-template-columns: repeat(3, 1fr); } }
+  @media (max-width: 760px) { .g4, .g3, .g5 { grid-template-columns: 1fr 1fr; } }
+  @media (max-width: 460px) { .g4, .g3, .g5 { grid-template-columns: 1fr; } }
+  .card { background: #fff; border: 1px solid var(--line-light); display: flex; flex-direction: column; }
+  .dark .card, .cobalt .card { background: rgba(255,255,255,.05); border-color: var(--line-dark); }
+  .zoom { all: unset; cursor: zoom-in; display: block; overflow: hidden; }
+  .zoom img { transition: transform .9s cubic-bezier(.2,.7,.2,1); width: 100%; }
+  .zoom:hover img { transform: scale(1.035); }
+  .zoom:focus-visible { outline: 2px solid var(--gold); outline-offset: 2px; }
+  .meta { padding: 16px 16px 18px; display: flex; flex-direction: column; gap: 6px; flex: 1; }
+  .meta .lbl { font-size: 11px; color: var(--gold-lo); }
+  .dark .meta .lbl, .cobalt .meta .lbl { color: var(--gold-hi); }
+  .meta h3 { font-family: var(--f-display); font-weight: 500; font-size: 20px; color: var(--indigo); line-height: 1.2; }
+  .dark .meta h3, .cobalt .meta h3 { color: var(--porcelain); }
+  details.cap summary { cursor: pointer; font-size: 11px; letter-spacing: .2em; text-transform: uppercase; color: var(--cobalt); font-weight: 500; list-style: none; margin-top: auto; padding-top: 8px; }
+  .dark details.cap summary, .cobalt details.cap summary { color: var(--sky); }
+  details.cap summary::-webkit-details-marker { display: none; }
+  details.cap p { white-space: pre-line; font-size: 14px; line-height: 1.55; color: var(--ink-2); margin-top: 8px; }
+  .dark details.cap p, .cobalt details.cap p { color: var(--mist); }
+  .copy { all: unset; cursor: pointer; margin-top: 10px; font-size: 11px; letter-spacing: .2em; text-transform: uppercase; color: var(--cobalt); font-weight: 600; }
+  .dark .copy, .cobalt .copy { color: var(--gold-hi); }
   .copy:focus-visible { outline: 2px solid var(--cobalt); outline-offset: 3px; }
-  @media (max-width: 900px) { .posts { grid-template-columns: 1fr; max-width: 520px; } }
-
-  /* ads */
-  .ad { display: grid; grid-template-columns: 1.15fr .62fr 1fr; gap: 24px; align-items: start; margin-bottom: 48px; }
-  .ad .copybox { background: var(--night); color: var(--porcelain); padding: 26px; }
-  .ad .copybox h3 { font-family: var(--f-display); font-weight: 500; font-size: 26px; margin-bottom: 18px; padding-bottom: .05em; }
-  .ad dl { display: grid; gap: 14px; }
+  .phones { display: grid; grid-template-columns: repeat(auto-fill, minmax(210px, 1fr)); gap: 28px; }
+  .phone { background: var(--night); border: 9px solid #05081a; border-radius: 30px; overflow: hidden; aspect-ratio: 9 / 16; position: relative; box-shadow: 0 30px 60px -25px rgba(0,0,0,.6); cursor: pointer; }
+  .phone video, .phone img { width: 100%; height: 100%; object-fit: cover; }
+  .phone-meta { margin-top: 14px; }
+  .phone-meta b { font-family: var(--f-display); font-weight: 500; font-size: 19px; display: block; }
+  .phone-meta span { font-size: 11px; letter-spacing: .2em; text-transform: uppercase; color: var(--gold-hi); }
+  .ad { display: grid; grid-template-columns: 1.15fr .62fr 1fr; gap: 24px; align-items: start; padding: 32px 0; border-top: 1px solid var(--line-dark); }
+  .ad:first-child { border-top: 0; padding-top: 0; }
+  .ad figcaption { font-size: 11px; letter-spacing: .2em; text-transform: uppercase; color: var(--sky); margin-top: 10px; }
+  .ad .copybox h3 { font-family: var(--f-display); font-weight: 500; font-size: 26px; margin-bottom: 16px; }
+  .ad dl { display: grid; gap: 12px; }
   .ad dt { font-size: 11px; letter-spacing: .22em; text-transform: uppercase; color: var(--gold-hi); }
-  .ad dd { font-size: 15px; line-height: 1.55; color: var(--porcelain-2); }
-  .ad figcaption { font-size: 12px; letter-spacing: .18em; text-transform: uppercase; color: var(--ink-2); margin-top: 10px; }
+  .ad dd { font-size: 15px; line-height: 1.55; color: var(--porcelain-2); white-space: pre-line; }
   @media (max-width: 900px) { .ad { grid-template-columns: 1fr 1fr; } .ad .copybox { grid-column: 1 / -1; } }
-
-  /* reel */
-  .reel { display: grid; grid-template-columns: 360px 1fr; gap: 48px; align-items: center; }
-  .reel video { width: 100%; aspect-ratio: 9 / 16; object-fit: cover; background: var(--night); border: 10px solid var(--night); border-radius: 28px; }
-  .cuts { list-style: none; display: grid; gap: 0; border-top: 1px solid var(--line-light); }
-  .cuts li { display: grid; grid-template-columns: 90px 1fr; gap: 16px; padding: 14px 0; border-bottom: 1px solid var(--line-light); font-size: 15px; color: var(--ink-2); }
-  .cuts li b { font-family: var(--f-display); font-weight: 500; color: var(--cobalt); font-size: 18px; }
-  @media (max-width: 860px) { .reel { grid-template-columns: 1fr; } .reel video { max-width: 320px; } }
-
-  footer { background: var(--night); color: var(--mist); padding: 40px 0; font-size: 13px; letter-spacing: .06em; }
+  .mail { display: grid; grid-template-columns: 270px 1fr; border: 1px solid var(--line-light); background: #fff; min-height: 640px; }
+  .mail ul { list-style: none; border-right: 1px solid var(--line-light); }
+  .mail li button { all: unset; display: block; width: 100%; box-sizing: border-box; padding: 18px 20px; border-bottom: 1px solid var(--line-light); cursor: pointer; }
+  .mail li button b { display: block; font-size: 14px; color: var(--indigo); } .mail li button span { font-size: 13px; color: var(--ink-2); }
+  .mail li button[aria-selected="true"] { background: var(--porcelain-2); box-shadow: inset 3px 0 0 var(--gold); }
+  .mail li button:focus-visible { outline: 2px solid var(--cobalt); outline-offset: -2px; }
+  .mail .view { overflow: auto; max-height: 860px; background: #e9edf5; display: flex; justify-content: center; align-items: flex-start; padding: 28px; }
+  .mail .view img { width: 600px; max-width: 100%; box-shadow: 0 20px 40px -20px rgba(12,20,51,.35); }
+  @media (max-width: 760px) { .mail { grid-template-columns: 1fr; } .mail ul { display: flex; overflow-x: auto; border-right: 0; } .mail li { flex: 0 0 auto; } }
+  .facts { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: rgba(255,255,255,.18); border: 1px solid rgba(255,255,255,.18); }
+  .facts div { background: var(--cobalt); padding: 22px; }
+  .facts b { display: block; font-size: 11px; letter-spacing: .22em; text-transform: uppercase; color: var(--gold-hi); margin-bottom: 8px; }
+  .facts p { font-size: 15px; line-height: 1.55; }
+  @media (max-width: 860px) { .facts { grid-template-columns: 1fr; } }
+  .weeks { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
+  .weeks div { border-top: 2px solid var(--gold); padding-top: 16px; }
+  .weeks h3 { font-family: var(--f-display); font-weight: 500; font-size: 24px; color: var(--indigo); margin-bottom: 8px; }
+  .weeks p { font-size: 15px; line-height: 1.55; color: var(--ink-2); }
+  @media (max-width: 860px) { .weeks { grid-template-columns: 1fr 1fr; } }
+  .kpis { list-style: none; display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+  .kpis li { background: #fff; border: 1px solid var(--line-light); padding: 22px; }
+  .kpis b { font-family: var(--f-display); font-weight: 500; font-size: 22px; color: var(--indigo); display: block; margin-bottom: 6px; }
+  .kpis span { font-size: 14px; color: var(--ink-2); line-height: 1.5; }
+  @media (max-width: 860px) { .kpis { grid-template-columns: 1fr; } }
+  .dl { columns: 3 260px; column-gap: 32px; list-style: none; }
+  .dl li { break-inside: avoid; padding: 9px 0; border-bottom: 1px solid var(--line-dark); font-size: 14px; display: flex; justify-content: space-between; gap: 12px; }
+  .dl a { color: var(--sky); text-decoration: none; word-break: break-all; } .dl a:hover { text-decoration: underline; color: var(--porcelain); }
+  .dl em { font-style: normal; font-size: 11px; letter-spacing: .16em; text-transform: uppercase; color: var(--gold-hi); white-space: nowrap; }
+  footer { background: var(--night); color: var(--mist); padding: 40px 0; font-size: 13px; border-top: 1px solid var(--line-dark); }
   footer .wrap { display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; align-items: center; }
   footer img { height: 36px; width: auto; }
-
-  /* lightbox */
-  .lb { position: fixed; inset: 0; z-index: 50; background: rgba(8,12,30,.92); display: none; place-items: center; padding: 24px; cursor: zoom-out; }
+  .lb { position: fixed; inset: 0; z-index: 60; background: rgba(8,12,30,.94); display: none; place-items: center; padding: 24px; cursor: zoom-out; }
   .lb.on { display: grid; }
-  .lb img { max-height: calc(100vh - 48px); width: auto; box-shadow: 0 40px 80px rgba(0,0,0,.5); }
+  .lb img { max-height: calc(100vh - 48px); width: auto; max-width: 100%; box-shadow: 0 40px 80px rgba(0,0,0,.5); }
   .reveal { opacity: 0; transform: translateY(18px); transition: opacity .7s ease, transform .7s cubic-bezier(.2,.7,.2,1); }
   .reveal.in { opacity: 1; transform: none; }
-  @media (prefers-reduced-motion: reduce) { .reveal { opacity: 1; transform: none; transition: none; } html { scroll-behavior: auto; } }
+  .empty { font-size: 14px; font-style: italic; opacity: .8; }
+  @media (prefers-reduced-motion: reduce) { .reveal { opacity: 1; transform: none; transition: none; } html { scroll-behavior: auto; } .fan img { transition: none; } }
 </style>
 </head>
 <body>
-<header class="bar">
-  <div class="wrap">
-    <a href="#top" aria-label="Back to top"><img src="../assets/logo/logo-ink.png" alt="Auntie Gaik Lean's Old School Eatery" width="1144" height="372"></a>
-    <nav aria-label="Sections"><a href="../materials.html">All materials</a><a href="#website">Website</a><a href="#posts">Posts</a><a href="#ads">Ads</a><a href="#reel">Reel</a></nav>
-  </div>
-</header>
+<header class="bar"><div class="wrap">
+  <a href="../materials.html" aria-label="All materials"><img src="../assets/logo/logo-ink.png" alt="Auntie Gaik Lean's Old School Eatery" width="1144" height="372"></a>
+  <nav aria-label="Sections">
+    <a class="keep" href="../materials.html">All materials</a><a href="#calendar">Calendar</a><a href="#posts">Posts</a><a href="#xhs">Xiaohongshu</a><a href="#video">Stories &amp; reels</a><a href="#ads">Ads</a><a href="#email">Email</a><a href="#instore">In-store</a><a href="#press">Press</a><a href="#downloads">Downloads</a>
+  </nav>
+</div></header>
 
-<main id="top">
+<main>
   <section class="hero">
     <div class="wrap">
       <div>
-        <span class="lbl kick">Sample pack · November 2026</span>
-        <h1 class="disp">Auntie's story, told <i>online</i>.</h1>
-        <p>A website, social posts, Meta ads and a reel, all made from the restaurant's own photo shoot.</p>
-        <div class="count lbl"><span><b>1</b>Website</span><span><b>3</b>Posts</span><span><b>2</b>Ads · 4 sizes</span><span><b>1</b>Reel</span></div>
+        <span class="lbl kick">Campaign · Auntie's Table · November 2026</span>
+        <h1 class="disp">A month at <i>Auntie's</i> table.</h1>
+        <p>Every piece is made from the restaurant's own shoot and films: their editorial look, plus what the feed is missing today, a reason to book, Chinese lines and a steady rhythm.</p>
+        <div class="counts" id="counts"></div>
       </div>
-      <img class="logo" src="../assets/logo/logo-white.png" alt="" width="1144" height="371">
+      <div class="fan" id="fan" aria-hidden="true"></div>
     </div>
   </section>
 
-  <section class="blk" id="website">
+  <section class="blk" id="calendar">
     <div class="wrap">
-      <div class="head reveal">
-        <div><span class="n">01</span><h2 class="disp">Website</h2></div>
-        <p>Replaces the "Launching Soon" page. Story, dishes, the room, hours, and booking through their online booking page, call or WhatsApp.</p>
-      </div>
-      <div class="site-grid reveal">
-        <div>
-          <div class="browser">
-            <div class="chrome"><span></span><span></span><span></span><em>auntiegaiklean.com (proposed)</em></div>
-            <div class="shot"><img src="exports/web/site-1440.png" alt="Homepage sample at desktop width" loading="lazy"></div>
-          </div>
-          <a class="btn" href="../">Open the live sample</a>
-        </div>
-        <div class="phone"><img src="exports/web/site-390.png" alt="Homepage sample on a phone" loading="lazy"></div>
-      </div>
+      <div class="head reveal"><div><span class="n">01</span><h2 class="disp">Four weeks, three posts a week.</h2></div>
+        <p>A reel or story, a carousel and a single post each week, on the pillars that already work: dishes, people, the room, Penang and moments.</p></div>
+      <div class="cal reveal" id="cal"></div>
     </div>
   </section>
 
-  <section class="blk" id="posts">
+  <section class="blk" id="posts" style="padding-top:0">
     <div class="wrap">
-      <div class="head reveal">
-        <div><span class="n">02</span><h2 class="disp">Social posts</h2></div>
-        <p>3:4 feed posts for Instagram and Facebook (and Xiaohongshu, if started). Captions are ready to paste.</p>
-      </div>
-      <div class="posts">
-        <article class="card reveal">
-          <button class="zoom" data-full="exports/posts/01-auntiegaik-post-meet-auntie.png" aria-label="Enlarge post 1"><img src="exports/web/01-auntiegaik-post-meet-auntie.webp" alt="Post: Meet Auntie Gaik Lean" width="720" height="960" loading="lazy"></button>
-          <div class="meta"><span class="lbl">Post 01 · People</span><h3>Meet Auntie</h3>
-            <p class="cap">Auntie Gaik Lean started cooking for her family at twelve. She sold homemade kuih by the roadside, cooked in factory canteens and trained chefs in Kuala Lumpur. In 2013 her son Adrian opened this eatery in her name and asked her to come home to run it.
-Her recipes are still made by hand, from scratch, in our kitchen.
-Book a table: link in bio, or call/WhatsApp +60 17-434 4398 · Wed–Sun
-#GaikLeanMoment #AuntieGaikLean #NyonyaCuisine #PeranakanHeritage #GeorgeTown</p>
-            <button class="copy" type="button">Copy caption</button></div>
-        </article>
-        <article class="card reveal">
-          <button class="zoom" data-full="exports/posts/02-auntiegaik-post-curry-kapitan.png" aria-label="Enlarge post 2"><img src="exports/web/02-auntiegaik-post-curry-kapitan.webp" alt="Post: Curry Kapitan" width="720" height="960" loading="lazy"></button>
-          <div class="meta"><span class="lbl">Post 02 · Dish story</span><h3>Curry Kapitan</h3>
-            <p class="cap">Curry Kapitan. A Penang Nyonya classic, made by hand from scratch in Auntie's kitchen, like everything on the menu. Best shared round a big table.
-甲必丹咖哩 · 槟城娘惹菜
-Lunch and dinner, Wednesday to Sunday · 1 Bishop Street, George Town
-Book a table: link in bio
-#GaikLeanMoment #AuntieGaikLean #CurryKapitan #NyonyaCuisine</p>
-            <button class="copy" type="button">Copy caption</button></div>
-        </article>
-        <article class="card reveal">
-          <button class="zoom" data-full="exports/posts/03-auntiegaik-post-find-the-blue-doors.png" aria-label="Enlarge post 3"><img src="exports/web/03-auntiegaik-post-find-the-blue-doors.webp" alt="Post: Look for the blue doors" width="720" height="960" loading="lazy"></button>
-          <div class="meta"><span class="lbl">Post 03 · Visit</span><h3>Find the blue doors</h3>
-            <p class="cap">Look for the blue doors at 1 Bishop Street, George Town.
-Lunch 12–2.30pm and dinner 6–9.30pm, Wednesday to Sunday. Closed Monday and Tuesday.
-Booking ahead is advised: link in bio, or +60 17-434 4398 (call or WhatsApp).
-#GaikLeanMoment #AuntieGaikLean #GeorgeTown #PeranakanHeritage</p>
-            <button class="copy" type="button">Copy caption</button></div>
-        </article>
-      </div>
+      <div class="head reveal"><div><span class="n">02</span><h2 class="disp">Fourteen posts, fourteen ideas.</h2></div>
+        <p>3:4 for Instagram and Facebook. Open a caption to copy it; every one ends with how to book.</p></div>
+      <div class="grid g4" id="postGrid"></div>
     </div>
   </section>
 
-  <section class="blk" id="ads">
+  <section class="blk cobalt" id="xhs">
     <div class="wrap">
-      <div class="head reveal">
-        <div><span class="n">03</span><h2 class="disp">Meta ads</h2></div>
-        <p>Aimed at Singapore and Kuala Lumpur travellers planning a Penang trip. Each ad comes in feed 4:5 and story 9:16.</p>
-      </div>
+      <div class="head reveal"><div><span class="n">03</span><h2 class="disp">For Xiaohongshu.</h2></div>
+        <p>Bilingual covers for Chinese-speaking travellers planning Penang, a channel the restaurant does not use yet.</p></div>
+      <div class="grid g3" id="xhsGrid"></div>
+    </div>
+  </section>
 
-      <div class="ad reveal">
-        <figure><button class="zoom" data-full="exports/ads/ad1-auntiegaik-meta-michelin-nyonya-4x5.png" aria-label="Enlarge ad 1 feed"><img src="exports/web/ad1-auntiegaik-meta-michelin-nyonya-4x5.webp" alt="Ad 1, feed 4:5" width="720" height="900" loading="lazy"></button><figcaption>Feed 4:5</figcaption></figure>
-        <figure><button class="zoom" data-full="exports/ads/ad1-auntiegaik-meta-michelin-nyonya-9x16.png" aria-label="Enlarge ad 1 story"><img src="exports/web/ad1-auntiegaik-meta-michelin-nyonya-9x16.webp" alt="Ad 1, story 9:16" width="720" height="1280" loading="lazy"></button><figcaption>Story 9:16</figcaption></figure>
-        <div class="copybox">
-          <h3>Ad 1 · The MICHELIN Nyonya kitchen</h3>
-          <dl>
-            <div><dt>Primary text</dt><dd class="cap">Going to Penang? Auntie Gaik Lean's was the first Nyonya restaurant in Malaysia to earn a MICHELIN Star, and it has kept it every year since. Heirloom recipes, made by hand on Bishop Street, George Town.</dd></div>
-            <div><dt>Headline</dt><dd>Book Auntie's table in Penang</dd></div>
-            <div><dt>Description</dt><dd>Open Wed–Sun · Lunch &amp; dinner</dd></div>
-            <div><dt>Button</dt><dd>Book now, to <a href="https://inline.app/booking/-OnKy8jPaRn_LUmJ5tDV:inline-live-4/-OnKy8r2gI9_CX8R2D7X" target="_blank" rel="noopener">their online booking page</a></dd></div>
-            <div><dt>Suggested audience</dt><dd>Singapore + Kuala Lumpur, 25–55, interested in travel to Penang and dining out</dd></div>
-          </dl>
-        </div>
-      </div>
+  <section class="blk dark" id="video">
+    <div class="wrap">
+      <div class="head reveal"><div><span class="n">04</span><h2 class="disp">Stories and reels, on their own footage.</h2></div>
+        <p>9:16 masters without sound; music is added in the app. Hover or tap a phone to play.</p></div>
+      <div class="phones" id="phones"></div>
+    </div>
+  </section>
 
-      <div class="ad reveal">
-        <figure><button class="zoom" data-full="exports/ads/ad2-auntiegaik-meta-penang-weekend-4x5.png" aria-label="Enlarge ad 2 feed"><img src="exports/web/ad2-auntiegaik-meta-penang-weekend-4x5.webp" alt="Ad 2, feed 4:5" width="720" height="900" loading="lazy"></button><figcaption>Feed 4:5</figcaption></figure>
-        <figure><button class="zoom" data-full="exports/ads/ad2-auntiegaik-meta-penang-weekend-9x16.png" aria-label="Enlarge ad 2 story"><img src="exports/web/ad2-auntiegaik-meta-penang-weekend-9x16.webp" alt="Ad 2, story 9:16" width="720" height="1280" loading="lazy"></button><figcaption>Story 9:16</figcaption></figure>
-        <div class="copybox">
-          <h3>Ad 2 · Penang this weekend</h3>
-          <dl>
-            <div><dt>Primary text</dt><dd class="cap">Penang this weekend? Bring the whole family to Auntie's table. Big tables for ten or more, 60s music and Nyonya cooking made from scratch. Lunch and dinner, Wednesday to Sunday.</dd></div>
-            <div><dt>Headline</dt><dd>Big Nyonya tables in George Town</dd></div>
-            <div><dt>Description</dt><dd>1 Bishop Street · Booking advised</dd></div>
-            <div><dt>Button</dt><dd>Send <a href="https://wa.me/60174344398" target="_blank" rel="noopener">WhatsApp message</a>, or Book now</dd></div>
-            <div><dt>Suggested audience</dt><dd>Singapore + Kuala Lumpur families and groups, travel and family-dining interests</dd></div>
-          </dl>
-        </div>
+  <section class="blk dark" id="ads" style="padding-top:0">
+    <div class="wrap">
+      <div class="head reveal"><div><span class="n">05</span><h2 class="disp">Paid, but never pushy.</h2></div>
+        <p>Meta ads for Singapore and Kuala Lumpur travellers and for celebrations, each in feed 4:5 and story 9:16, with copy to paste.</p></div>
+      <div id="adList"></div>
+    </div>
+  </section>
+
+  <section class="blk" id="email">
+    <div class="wrap">
+      <div class="head reveal"><div><span class="n">06</span><h2 class="disp">Letters from Bishop Street.</h2></div>
+        <p>Welcome, booking confirmed, a birthday invitation and a thank-you that asks for a review.</p></div>
+      <div class="mail reveal"><ul role="tablist" id="mailList" aria-label="Emails"></ul><div class="view" id="mailView" role="tabpanel"></div></div>
+    </div>
+  </section>
+
+  <section class="blk" id="instore" style="padding-top:0">
+    <div class="wrap">
+      <div class="head reveal"><div><span class="n">07</span><h2 class="disp">From the table to the phone.</h2></div>
+        <p>QR cards on the table and the counter, and Google Business posts that keep the profile alive.</p></div>
+      <div class="grid g5" id="instoreGrid"></div>
+    </div>
+  </section>
+
+  <section class="blk cobalt" id="press">
+    <div class="wrap">
+      <div class="head reveal"><div><span class="n">08</span><h2 class="disp">For the people who write about food.</h2></div>
+        <p>A short fact sheet a journalist or hotel concierge can use as it is. Photos are in the library.</p></div>
+      <div class="facts reveal">
+        <div><b>Who</b><p>Auntie Gaik Lean (Beh Gaik Lean), a fourth-generation, self-taught Nyonya cook, and her eldest son Adrian Tan.</p></div>
+        <div><b>Since</b><p>2013, at 1 Lebuh Bishop (Bishop Street), George Town, Penang.</p></div>
+        <div><b>Recognition</b><p>One MICHELIN Star in the first MICHELIN Guide for Malaysia, kept every year since: four years running.</p></div>
+        <div><b>The cooking</b><p>Heirloom family recipes, made by hand and from scratch on site. Pork-free kitchen.</p></div>
+        <div><b>Try</b><p>Curry Kapitan, Nasi Ulam, Otak-Otak, Gulai Tumis, Assam Prawns, Kuih Pie Tee, Bee Koh Moy.</p></div>
+        <div><b>Visit</b><p>Wed–Sun, lunch 12pm–2.30pm, dinner 6pm–9.30pm. Closed Monday and Tuesday. Booking ahead is advised.</p></div>
+      </div>
+      <p style="margin-top:22px;font-size:14px;color:var(--porcelain-2)">Photos: <a href="../library/index.html" style="color:var(--gold-hi)">Photo &amp; film library</a> · Brand: <a href="../brand/index.html" style="color:var(--gold-hi)">Brand guidelines</a> · Menu: <a href="../menu/index.html" style="color:var(--gold-hi)">Auntie's Tingkat</a></p>
+    </div>
+  </section>
+
+  <section class="blk" id="plan">
+    <div class="wrap">
+      <div class="head reveal"><div><span class="n">09</span><h2 class="disp">The first month.</h2></div>
+        <p>What each week is for, so every post has a job.</p></div>
+      <div class="weeks reveal">
+        <div><h3>Week 1 · Auntie</h3><p>Meet Auntie, the MICHELIN story and the first reel. Fix the bio: booking link first, then hours and address.</p></div>
+        <div><h3>Week 2 · The table</h3><p>Dish stories (Curry Kapitan, Assam Prawns, Pie Tee), the first Xiaohongshu covers and the Singapore ad.</p></div>
+        <div><h3>Week 3 · The room</h3><p>Round tables, celebrations and private events; the events ad; table QR cards go out.</p></div>
+        <div><h3>Week 4 · Come back</h3><p>Desserts and drinks, the thank-you email asking for reviews, and a look at what worked.</p></div>
       </div>
     </div>
   </section>
 
-  <section class="blk" id="reel">
+  <section class="blk" id="measure" style="padding-top:0">
     <div class="wrap">
-      <div class="head reveal">
-        <div><span class="n">04</span><h2 class="disp">Reel</h2></div>
-        <p>A 9:16 reel for Instagram and Facebook, cut from the shoot's photos and animated clips. Music is added in the app.</p>
-      </div>
-      <div class="reel reveal">
-        <video src="exports/reel/01-auntiegaik-reel-auntie-s-table-web.mp4" poster="exports/reel/01-auntiegaik-reel-auntie-s-table-poster.jpg" muted loop playsinline controls preload="metadata"></video>
-        <ol class="cuts" id="cuts">
-          <li><b>Open</b>The blue shopfront on Bishop Street</li>
-          <li><b>Auntie</b>Under her own glowing sign</li>
-          <li><b>Kitchen</b>Made by hand, made from scratch</li>
-          <li><b>Table</b>Quick cuts of the dishes</li>
-          <li><b>Room</b>Big tables, 60s music</li>
-          <li><b>End</b>Logo, MICHELIN Star, hours and number</li>
-        </ol>
-      </div>
+      <div class="head reveal"><div><span class="n">10</span><h2 class="disp">What we will measure.</h2></div>
+        <p>Reported monthly, in plain English.</p></div>
+      <ul class="kpis reveal">
+        <li><b>Bookings from social</b><span>Clicks on the online booking link and WhatsApp chats started from posts, stories and ads.</span></li>
+        <li><b>Saves and shares</b><span>The sign a post was useful, not just liked.</span></li>
+        <li><b>Reach beyond followers</b><span>Reel and Xiaohongshu views from people who do not follow the account yet.</span></li>
+        <li><b>Ad return</b><span>Cost per booking-link click and per WhatsApp chat for the Singapore, Kuala Lumpur and events ads.</span></li>
+        <li><b>Reviews</b><span>New Google reviews after the thank-you email and the table cards; the rating trend over the month.</span></li>
+        <li><b>Search</b><span>Google Business Profile views and direction requests, before and after.</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="blk dark" id="downloads">
+    <div class="wrap">
+      <div class="head reveal"><div><span class="n">11</span><h2 class="disp">Every file, ready to post.</h2></div>
+        <p>Full-size files. Captions and ad copy are above.</p></div>
+      <ul class="dl" id="dl"></ul>
     </div>
   </section>
 </main>
 
-<footer>
-  <div class="wrap">
-    <img src="../assets/logo/logo-white.png" alt="Auntie Gaik Lean's Old School Eatery" width="1144" height="371">
-    <span>Sample pack prepared by TechNext · November 2026 · For review only</span>
-  </div>
-</footer>
-
+<footer><div class="wrap"><img src="../assets/logo/logo-white.png" alt="Auntie Gaik Lean's Old School Eatery" width="1144" height="371"><span>Campaign samples · November 2026 · For review only</span></div></footer>
 <div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="Enlarged image"><img alt=""></div>
 
 <script>
-  // lightbox
+(async () => {
+  const STATIC = new URLSearchParams(location.search).has('static');
+  const norm = f => (f || '').replace(/^\.?\/?(samples\/)?(exports\/)?/, '');
+  const full = f => 'exports/' + norm(f);
+  const web = f => 'exports/web/' + norm(f).split('/').pop().replace(/\.(png|jpe?g)$/i, '') + '.webp';
+  const get = async u => { try { const r = await fetch(u, { cache: 'no-store' }); return r.ok ? r.json() : null; } catch (e) { return null; } };
+  const [posts, video, other, base] = await Promise.all(['manifest/posts.json', 'manifest/video.json', 'manifest/other.json', 'manifest/base.json'].map(get));
+  const arr = (x, ...keys) => Array.isArray(x) ? x : (x && keys.map(k => x[k]).find(Array.isArray)) || [];
+  const P = arr(posts, 'posts', 'items'), V = arr(video, 'items', 'videos'), O = arr(other, 'items'), B = base || { ads: [], reels: [] };
+  const esc = s => String(s == null ? '' : s).replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
+  const key = o => ((o.stem || '') + ' ' + (o.file || '') + ' ' + (o.kind || '') + ' ' + (o.id || '')).toLowerCase();
+  const isX = p => /xhs|xiaohongshu/.test(key(p) + (p.platform || '').toLowerCase());
+  const feed = P.filter(p => !isX(p)), xhs = P.filter(isX);
+  const img = (f, alt, w, h) => `<img src="${web(f)}" alt="${esc(alt)}" loading="lazy" width="${w || 720}" height="${h || 960}" onerror="this.onerror=null;this.src='${full(f)}'">`;
+  const capBlock = c => c ? `<details class="cap"><summary>Caption</summary><p class="txt">${esc(c)}</p><button class="copy" type="button">Copy caption</button></details>` : '';
+  const card = (p, kind) => `<article class="card reveal"><button class="zoom" data-full="${full(p.file)}" aria-label="Enlarge ${esc(p.title)}">${img(p.file, p.title)}</button>
+    <div class="meta"><span class="lbl">${esc(kind)}</span><h3>${esc(p.title)}</h3>${capBlock(p.caption || (typeof p.copy === 'string' ? p.copy : ''))}</div></article>`;
+
+  const isReel = v => /reel/.test(key(v)), isAdV = v => /ad-video|meta-6s/.test(key(v));
+  const reels = B.reels.concat(V.filter(v => isReel(v) && !isAdV(v))), stories = V.filter(v => !isReel(v) && !isAdV(v)), adVideos = V.filter(isAdV);
+  const adSets = {};
+  B.ads.forEach(a => adSets[a.id] = Object.assign({}, a));
+  O.filter(o => /(^| )ad\d|kind: ?ad|\bad\b/.test(key(o)) || /^ad\d/.test(o.stem || '')).forEach(o => {
+    const id = ((o.stem || o.file || '').match(/ad\d+/) || [o.stem])[0]; const s = adSets[id] = adSets[id] || { id, title: o.title };
+    if (/9x16|story/.test(key(o))) s.story = o.file; else s.feed = o.file;
+    const c = o.copy; if (c && typeof c === 'object') { s.primary = s.primary || c.primary || c.primaryText; s.headline = s.headline || c.headline; s.description = s.description || c.description; s.button = s.button || c.button || c.cta; s.audience = s.audience || c.audience; }
+    else if (typeof c === 'string' && !s.primary) s.primary = c; s.title = (o.title || '').replace(/\s*\((feed|story)[^)]*\)\s*$/i, '');
+  });
+  const AD_COPY = {
+    ad3: { primary: "Planning a celebration in Penang? Weddings, private events, corporate events and year-end dinners round our big tables for ten or more. Heirloom Nyonya cooking, made by hand on Bishop Street, George Town.", headline: "Celebrate at Auntie's round table", description: "Tables for ten or more · Booking advised", button: "Send WhatsApp message", audience: "Singapore + Kuala Lumpur, 28–60, groups, family and event-planning interests" },
+    ad4: { primary: "Dessert first. Pengat: Pisang Raja bananas, sweet potato and yam in coconut milk, a Nyonya dessert made by hand from scratch. Open Wednesday to Sunday on Bishop Street, George Town.", headline: "Dessert first at Auntie's", description: "Open Wed–Sun · Lunch & dinner", button: "Book now", audience: "Penang and Kuala Lumpur, 22–50, dessert and Malaysian food interests" } };
+  Object.keys(AD_COPY).forEach(k => { if (adSets[k]) { const c = AD_COPY[k], s = adSets[k]; ['primary', 'headline', 'description', 'button', 'audience'].forEach(f => s[f] = c[f]); } });
+  const adList = Object.values(adSets);
+  const emails = O.filter(o => /email/.test(key(o))), instore = O.filter(o => /instore|gbp|google/.test(key(o)));
+
+  document.getElementById('counts').innerHTML = [[feed.length, 'Posts'], [xhs.length, 'Xiaohongshu'], [stories.length, 'Stories'], [reels.length, 'Reels'], [adList.length + adVideos.length, 'Ads'], [emails.length, 'Emails'], [instore.length, 'In-store & Google']]
+    .filter(c => c[0]).map(c => `<span><b>${c[0]}</b>${c[1]}</span>`).join('');
+  document.getElementById('fan').innerHTML = feed.slice(0, 3).map(p => `<img src="${web(p.file)}" alt="" width="720" height="960">`).join('');
+
+  const pool = [], fq = feed.slice(), vq = reels.concat(stories), xq = xhs.slice();
+  for (let w = 0; w < 4; w++) pool.push(fq.shift(), vq.shift() || fq.shift(), fq.shift() || xq.shift());
+  document.getElementById('cal').innerHTML = '<div class="hd">Week</div><div class="hd">Tuesday</div><div class="hd">Thursday</div><div class="hd">Saturday</div>' +
+    [0, 1, 2, 3].map(w => `<div class="wk">Week ${w + 1}<small>${['Auntie', 'The table', 'The room', 'Come back'][w]}</small></div>` +
+      [0, 1, 2].map(d => { const it = pool[w * 3 + d]; if (!it) return '<div></div>';
+        const vid = !!it.poster || /\.mp4$/i.test(it.file || ''); const th = it.poster ? full(it.poster) : web(it.file);
+        const kind = vid ? (isReel(it) ? 'Reel' : 'Story') : (isX(it) ? 'Xiaohongshu' : 'Post');
+        return `<div><a class="slot" href="#${vid ? 'video' : (isX(it) ? 'xhs' : 'posts')}"><img src="${th}" alt="" loading="lazy" width="64" height="86"><div><span>${kind}</span><b>${esc(it.title)}</b></div></a></div>`; }).join('')).join('');
+
+  document.getElementById('postGrid').innerHTML = feed.length ? feed.map(p => card(p, 'Feed post · 3:4')).join('') : '<p class="empty">Posts are being finalised.</p>';
+  document.getElementById('xhsGrid').innerHTML = xhs.length ? xhs.map(p => card(p, 'Xiaohongshu · 3:4')).join('') : '<p class="empty">Covers are being finalised.</p>';
+
+  const vids = reels.concat(stories, adVideos);
+  document.getElementById('phones').innerHTML = vids.map(v => { const src = v.web || v.file; const isVid = /\.mp4$/i.test(src || '');
+    const label = isAdV(v) ? 'Video ad' : isReel(v) ? 'Reel' : 'Story';
+    return `<figure class="reveal"><div class="phone">${isVid ? `<video src="${full(src)}" ${v.poster ? `poster="${full(v.poster)}"` : ''} muted loop playsinline preload="none" aria-label="${esc(v.title)}"></video>` : `<img src="${full(v.file)}" alt="${esc(v.title)}" loading="lazy">`}</div>
+      <figcaption class="phone-meta"><span>${label}${v.duration ? ' · ' + Math.round(v.duration) + ' s' : ''}</span><b>${esc(v.title)}</b>${capBlock(v.caption)}</figcaption></figure>`; }).join('') || '<p class="empty">Stories and reels are being finalised.</p>';
+  document.querySelectorAll('.phone video').forEach(v => { const f = v.closest('figure'); f.addEventListener('mouseenter', () => v.play().catch(() => {})); f.addEventListener('mouseleave', () => v.pause()); v.parentElement.addEventListener('click', () => v.paused ? v.play().catch(() => {}) : v.pause()); });
+
+  document.getElementById('adList').innerHTML = adList.map(a => { const row = (k, v) => v ? `<div><dt>${k}</dt><dd>${esc(v)}</dd></div>` : '';
+    return `<div class="ad reveal">
+      ${a.feed ? `<figure><button class="zoom" data-full="${full(a.feed)}" aria-label="Enlarge ${esc(a.title)} feed">${img(a.feed, a.title + ' feed', 720, 900)}</button><figcaption>Feed 4:5</figcaption></figure>` : '<div></div>'}
+      ${a.story ? `<figure><button class="zoom" data-full="${full(a.story)}" aria-label="Enlarge ${esc(a.title)} story">${img(a.story, a.title + ' story', 720, 1280)}</button><figcaption>Story 9:16</figcaption></figure>` : '<div></div>'}
+      <div class="copybox"><h3>${esc(a.title)}</h3><dl>${row('Primary text', a.primary)}${row('Headline', a.headline)}${row('Description', a.description)}${row('Button', a.button)}${row('Suggested audience', a.audience)}</dl></div></div>`; }).join('');
+
+  const list = document.getElementById('mailList'), view = document.getElementById('mailView');
+  list.innerHTML = emails.map((e, i) => `<li><button role="tab" aria-selected="${i === 0}" data-i="${i}"><b>${esc(e.title)}</b><span>${esc((e.copy && e.copy.subject) || e.subject || '')}</span></button></li>`).join('');
+  const show = i => { view.innerHTML = emails[i] ? `<img src="${full(emails[i].file)}" alt="${esc(emails[i].title)}">` : '<p class="empty">Emails are being finalised.</p>'; list.querySelectorAll('button').forEach(b => b.setAttribute('aria-selected', b.dataset.i == i)); };
+  list.addEventListener('click', e => { const b = e.target.closest('button'); if (b) show(+b.dataset.i); }); show(0);
+
+  document.getElementById('instoreGrid').innerHTML = instore.map(o => card(o, /gbp|google/.test(key(o)) ? 'Google post' : 'In-store')).join('') || '<p class="empty">In-store pieces are being finalised.</p>';
+
+  const files = [];
+  feed.forEach(p => files.push([p.file, 'Post'])); xhs.forEach(p => files.push([p.file, 'Xiaohongshu']));
+  vids.forEach(v => files.push([v.file, isAdV(v) ? 'Video ad' : isReel(v) ? 'Reel' : 'Story']));
+  adList.forEach(a => { a.feed && files.push([a.feed, 'Ad 4:5']); a.story && files.push([a.story, 'Ad 9:16']); });
+  emails.forEach(e => files.push([e.file, 'Email'])); instore.forEach(o => files.push([o.file, /gbp|google/.test(key(o)) ? 'Google' : 'In-store']));
+  document.getElementById('dl').innerHTML = files.filter(f => f[0]).map(([f, k]) => `<li><a href="${full(f)}" download>${esc(norm(f).split('/').pop())}</a><em>${k}</em></li>`).join('');
+
   const lb = document.getElementById('lb'), lbImg = lb.querySelector('img');
-  document.querySelectorAll('button.zoom').forEach(b => b.addEventListener('click', () => {
-    lbImg.src = b.dataset.full; lbImg.alt = b.querySelector('img').alt; lb.classList.add('on');
-  }));
-  lb.addEventListener('click', () => lb.classList.remove('on'));
-  addEventListener('keydown', e => { if (e.key === 'Escape') lb.classList.remove('on'); });
-  // copy caption / primary text
-  document.querySelectorAll('.copy').forEach(b => b.addEventListener('click', async () => {
-    const t = b.parentElement.querySelector('.cap').innerText.trim();
-    try { await navigator.clipboard.writeText(t); b.textContent = 'Copied'; } catch (e) { b.textContent = 'Select and copy'; }
-    setTimeout(() => b.textContent = 'Copy caption', 1800);
-  }));
-  // reveals
-  const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } }), { rootMargin: '0px 0px -8% 0px' });
-  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
-  if (new URLSearchParams(location.search).has('static')) document.querySelectorAll('.reveal').forEach(el => el.classList.add('in'));
-  // play reel when in view
-  const v = document.querySelector('#reel video');
-  new IntersectionObserver(es => es.forEach(e => e.isIntersecting ? v.play().catch(() => {}) : v.pause()), { threshold: .4 }).observe(v);
+  document.addEventListener('click', e => { const z = e.target.closest('button.zoom'); if (z) { lbImg.src = z.dataset.full; lbImg.alt = z.querySelector('img').alt; lb.classList.add('on'); }
+    const c = e.target.closest('.copy'); if (c) { const t = c.parentElement.querySelector('.txt').innerText.trim(); navigator.clipboard.writeText(t).then(() => { c.textContent = 'Copied'; setTimeout(() => c.textContent = 'Copy caption', 1600); }, () => { c.textContent = 'Select and copy'; }); } });
+  lb.addEventListener('click', () => lb.classList.remove('on')); addEventListener('keydown', e => { if (e.key === 'Escape') lb.classList.remove('on'); });
+  const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } }), { rootMargin: '0px 0px -6% 0px' });
+  document.querySelectorAll('.reveal').forEach(el => STATIC ? el.classList.add('in') : io.observe(el));
+  if (STATIC) document.querySelectorAll('img[loading=lazy]').forEach(i => i.loading = 'eager');
+  window.ARTBOARD_READY = true; window.CAMPAIGN_READY = true;
+})();
 </script>
 </body>
 </html>

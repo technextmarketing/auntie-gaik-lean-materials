@@ -161,7 +161,23 @@ def shoot(cdp, base, url, w, h, dsf=DSF, still=False, transparent=False):
     return Image.open(io.BytesIO(base64.b64decode(shot["data"]))), fit
 
 
+def discover():
+    """JOBS plus every artboard that declares its own export:
+    <meta name="export" content="posts/04-auntiegaik-post-x.png"> and <meta name="size" content="1080x1440">."""
+    import glob, re
+    jobs = dict(JOBS)
+    for f in sorted(glob.glob(os.path.join(ART, "*.html"))):
+        head = open(f, encoding="utf-8").read(6000)
+        m = re.search(r'<meta name="export" content="([^"]+)"', head)
+        z = re.search(r'<meta name="size" content="(\d+)x(\d+)"', head)
+        if m and z:
+            jobs[os.path.basename(f)[:-5]] = (m.group(1), int(z.group(1)), int(z.group(2)))
+    return jobs
+
+
 def main():
+    global JOBS
+    JOBS = discover()
     only = [a for a in sys.argv[1:] if not a.startswith("-")]
     stems = [s for s in JOBS if (not only or s in only) and os.path.exists(os.path.join(ART, s + ".html"))]
     httpd, proc, prof, cdp = launch()

@@ -15,9 +15,9 @@ try{if(!s&&!r&&!sessionStorage.getItem('ag-intro')&&!location.hash)c+=' intro-on
 d.className=c;setTimeout(function(){if(!window.AG_READY)d.className=d.className.replace(/ ?(motion|intro-on)/g,'')},4500)})();</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="preload" as="image" href="assets/video/clips/menu-4.webp">
+<link rel="preload" as="image" href="assets/site/hero-menu-4.webp" imagesrcset="assets/video/clips/menu-4.webp 1280w, assets/site/hero-menu-4.webp 1600w" imagesizes="(min-width:1100px) 52vw, 100vw">
 <link rel="stylesheet" href="assets/css/brand.css">
-<link rel="stylesheet" href="assets/site/site.css?v=8">
+<link rel="stylesheet" href="assets/site/site.css?v=10">
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
@@ -37,14 +37,12 @@ d.className=c;setTimeout(function(){if(!window.AG_READY)d.className=d.className.
 <button class="intro-skip" id="introSkip" type="button" hidden>Skip intro</button>
 
 <header class="hdr" id="hdr">
-  <div class="hdr-in">
+  <div class="wrap hdr-in">
     <a class="brand" href="#top" aria-label="Auntie Gaik Lean's Old School Eatery, back to top">
       <img class="logo-w" src="assets/site/logo-white-760.webp" width="760" height="244" alt="">
       <img class="logo-i" src="assets/site/logo-ink-760.webp" width="760" height="247" alt="">
     </a>
-    <nav class="nav" aria-label="Main">
-      <a href="#story">Story</a><a href="#table">Table</a><a href="#rempah">Rempah</a><a href="#room">Room</a><a href="#visit">Visit</a>
-    </nav>
+    <nav class="nav" aria-label="Main"><a href="#story">Story</a><a href="#table">Table</a><a href="#menu">Menu</a><a href="#room">Room</a><a href="#tour">360° tour</a><a href="#events">Events</a><a href="#visit">Visit</a></nav>
     <a class="btn btn-gold hdr-cta magnet" href="https://inline.app/booking/-OnKy8jPaRn_LUmJ5tDV:inline-live-4/-OnKy8r2gI9_CX8R2D7X" target="_blank" rel="noopener">Reserve</a>
     <button class="menu-btn" id="menuBtn" type="button" aria-expanded="false" aria-controls="menu"><span class="sr">Menu</span><i></i><i></i></button>
   </div>
@@ -52,16 +50,10 @@ d.className=c;setTimeout(function(){if(!window.AG_READY)d.className=d.className.
 
 <div class="menu" id="menu" hidden>
   <svg class="tiles menu-tiles" data-tile="96" data-stroke="#9fb6e3" aria-hidden="true"></svg>
-  <nav class="menu-nav" aria-label="Sections">
-    <a href="#story"><span class="lbl">01</span>Story</a>
-    <a href="#table"><span class="lbl">02</span>Table</a>
-    <a href="#rempah"><span class="lbl">03</span>Rempah</a>
-    <a href="#room"><span class="lbl">04</span>Room</a>
-    <a href="#visit"><span class="lbl">05</span>Visit</a>
-  </nav>
+  <nav class="menu-nav" aria-label="Sections"><a href="#story"><span class="lbl">01</span>Story</a><a href="#table"><span class="lbl">02</span>Table</a><a href="#menu"><span class="lbl">03</span>Menu</a><a href="#room"><span class="lbl">04</span>Room</a><a href="#tour"><span class="lbl">05</span>360° tour</a><a href="#events"><span class="lbl">06</span>Events</a><a href="#visit"><span class="lbl">07</span>Visit</a></nav>
   <div class="menu-foot">
     <p class="pill" data-status><span class="pill-dot" aria-hidden="true"></span><span class="pill-txt">Wed–Sun · 12pm–2.30pm · 6pm–9.30pm</span></p>
-    <div class="cta"><a class="btn btn-gold" href="https://inline.app/booking/-OnKy8jPaRn_LUmJ5tDV:inline-live-4/-OnKy8r2gI9_CX8R2D7X" target="_blank" rel="noopener">Book a table</a><a class="btn btn-line" href="https://wa.me/60174344398" target="_blank" rel="noopener">WhatsApp us</a></div>
+    <div class="cta"><a class="btn btn-gold" href="https://inline.app/booking/-OnKy8jPaRn_LUmJ5tDV:inline-live-4/-OnKy8r2gI9_CX8R2D7X" target="_blank" rel="noopener">Book a table</a><a class="btn btn-line" href="menu/index.html">Full menu</a></div>
   </div>
 </div>
 
@@ -69,42 +61,54 @@ d.className=c;setTimeout(function(){if(!window.AG_READY)d.className=d.className.
   <span class="tk-handle" aria-hidden="true"></span>
   <a class="tk-t" href="#top" data-for="top star" style="--c:var(--cobalt)"><span class="tk-body"><span class="tk-fill"></span><span class="tk-band"></span></span><span class="tk-tip">Welcome</span></a>
   <a class="tk-t" href="#story" data-for="story" style="--c:var(--rose)"><span class="tk-body"><span class="tk-fill"></span><span class="tk-band"></span></span><span class="tk-tip">Auntie's story</span></a>
-  <a class="tk-t" href="#table" data-for="table" style="--c:var(--jade)"><span class="tk-body"><span class="tk-fill"></span><span class="tk-band"></span></span><span class="tk-tip">On the table</span></a>
-  <a class="tk-t" href="#rempah" data-for="rempah" style="--c:var(--gold)"><span class="tk-body"><span class="tk-fill"></span><span class="tk-band"></span></span><span class="tk-tip">The rempah</span></a>
-  <a class="tk-t" href="#room" data-for="room people" style="--c:var(--cobalt-hi)"><span class="tk-body"><span class="tk-fill"></span><span class="tk-band"></span></span><span class="tk-tip">The room</span></a>
-  <a class="tk-t" href="#visit" data-for="visit" style="--c:var(--rose)"><span class="tk-body"><span class="tk-fill"></span><span class="tk-band"></span></span><span class="tk-tip">Visit</span></a>
+  <a class="tk-t" href="#table" data-for="table signature" style="--c:var(--jade)"><span class="tk-body"><span class="tk-fill"></span><span class="tk-band"></span></span><span class="tk-tip">On the table</span></a>
+  <a class="tk-t" href="#menu" data-for="menu values" style="--c:var(--gold)"><span class="tk-body"><span class="tk-fill"></span><span class="tk-band"></span></span><span class="tk-tip">The menu</span></a>
+  <a class="tk-t" href="#room" data-for="room tour people" style="--c:var(--cobalt-hi)"><span class="tk-body"><span class="tk-fill"></span><span class="tk-band"></span></span><span class="tk-tip">The room</span></a>
+  <a class="tk-t" href="#kitchen" data-for="kitchen social" style="--c:var(--sky)"><span class="tk-body"><span class="tk-fill"></span><span class="tk-band"></span></span><span class="tk-tip">From the kitchen</span></a>
+  <a class="tk-t" href="#reserve" data-for="reserve visit" style="--c:var(--rose)"><span class="tk-body"><span class="tk-fill"></span><span class="tk-band"></span></span><span class="tk-tip">Book and visit</span></a>
 </nav>
 
 <main id="main">
 <!-- 1 HERO -->
 <section class="hero" id="top" aria-labelledby="hero-h">
-  <div class="hero-film" data-cursor="Pause">
-    <div class="film-clip">
-      <div class="film-zoom">
-        <video class="hv is-on" muted playsinline preload="none" poster="assets/video/clips/menu-4.webp" aria-hidden="true" tabindex="-1"></video>
-        <video class="hv" muted playsinline preload="none" aria-hidden="true" tabindex="-1"></video>
+  <div class="wrap hero-grid">
+    <div class="hero-txt">
+      <p class="lbl eyebrow h-rv">George Town, Penang · Since 2013</p>
+      <h1 class="disp hero-h" id="hero-h"><span class="hl"><span class="hl-i">Nyonya cooking,</span></span> <span class="hl"><span class="hl-i">the <i>old school</i> way.</span></span></h1>
+      <p class="lead h-rv">One MICHELIN Star. Heirloom family recipes, made by hand from scratch in a shophouse on Bishop Street.</p>
+      <div class="cta h-rv">
+        <a class="btn btn-gold magnet" href="https://inline.app/booking/-OnKy8jPaRn_LUmJ5tDV:inline-live-4/-OnKy8r2gI9_CX8R2D7X" target="_blank" rel="noopener">Book a table</a>
+        <a class="btn btn-line" href="https://wa.me/60174344398" target="_blank" rel="noopener">WhatsApp us</a>
       </div>
-      <span class="film-shade" aria-hidden="true"></span>
+      <p class="hero-tel h-rv">or call <a href="tel:+60174344398">+60 17-434 4398</a></p>
+      <p class="pill h-rv" data-status><span class="pill-dot" aria-hidden="true"></span><span class="pill-txt">Wed–Sun · 12pm–2.30pm · 6pm–9.30pm</span></p>
+    </div>
+    <div class="hero-stage">
+      <svg class="tiles hw-tiles" data-tile="84" data-stroke="#2f5cb8" aria-hidden="true"></svg>
+      <div class="hw" data-cursor="Pause">
+        <span class="hw-line" aria-hidden="true"></span>
+        <div class="hw-film">
+          <img class="hw-poster" src="assets/site/hero-menu-4.webp" srcset="assets/video/clips/menu-4.webp 1280w, assets/site/hero-menu-4.webp 1600w" sizes="(min-width:1100px) 52vw, 100vw" width="1600" height="900" alt="" decoding="async" fetchpriority="high">
+          <video class="hv is-on" muted playsinline preload="none" aria-hidden="true" tabindex="-1" width="1920" height="1080"></video>
+          <video class="hv" muted playsinline preload="none" aria-hidden="true" tabindex="-1" width="1920" height="1080"></video>
+        </div>
+      </div>
+      <div class="plaque h-rv">
+        <svg class="plq-s" viewBox="0 0 100 100" aria-hidden="true"><path d="M50 0C53 31 69 47 100 50C69 53 53 69 50 100C47 69 31 53 0 50C31 47 47 31 50 0Z"/></svg>
+        <p><span class="disp plq-t">One MICHELIN Star</span><span class="lbl plq-y">2023 · 2024 · 2025 · 2026</span></p>
+      </div>
+      <div class="hw-bar h-rv">
+        <span class="lbl hw-count" aria-hidden="true"><b>01</b> / 04</span>
+        <span class="hw-prog" aria-hidden="true"><i></i></span>
+        <button class="film-btn" id="filmBtn" type="button" aria-pressed="false"><span class="fb-i" aria-hidden="true"></span><span class="fb-t">Pause film</span></button>
+      </div>
     </div>
   </div>
-  <span class="arch-line" aria-hidden="true"></span>
   <p class="lbl arch-cap" aria-hidden="true">1 Lebuh Bishop · George Town</p>
-  <div class="hero-in">
-    <p class="lbl eyebrow h-rv">George Town, Penang · Since 2013</p>
-    <h1 class="disp" id="hero-h" data-split="chars">Nyonya cooking, the <i>old school</i> way.</h1>
-    <p class="lead h-rv">One MICHELIN Star. Heirloom family recipes, made by hand from scratch in a shophouse on Bishop Street.</p>
-    <div class="cta h-rv">
-      <a class="btn btn-gold magnet" href="https://inline.app/booking/-OnKy8jPaRn_LUmJ5tDV:inline-live-4/-OnKy8r2gI9_CX8R2D7X" target="_blank" rel="noopener">Book a table</a>
-      <a class="btn btn-line" href="https://wa.me/60174344398" target="_blank" rel="noopener">WhatsApp us</a>
-    </div>
-    <p class="hero-tel h-rv">or call <a href="tel:+60174344398">+60 17-434 4398</a></p>
-    <p class="pill h-rv" data-status><span class="pill-dot" aria-hidden="true"></span><span class="pill-txt">Wed–Sun · 12pm–2.30pm · 6pm–9.30pm</span></p>
-  </div>
-  <a class="cue" href="#star"><span class="tkm" aria-hidden="true"><i></i><i></i><i></i></span><span class="lbl">Scroll</span></a>
-  <button class="film-btn" id="filmBtn" type="button" aria-pressed="false"><span class="fb-i" aria-hidden="true"></span><span class="fb-t">Pause film</span></button>
+  <div class="wrap hero-foot"><a class="cue" href="#star"><span class="tkm" aria-hidden="true"><i></i><i></i><i></i></span><span class="lbl">Scroll</span></a></div>
 </section>
 
-<!-- 2 THE STAR -->
+<!-- 2 THE STAR + PRESS -->
 <section class="star" id="star" aria-labelledby="star-h">
   <div class="star-bg" aria-hidden="true"></div>
   <div class="wrap star-in">
@@ -119,6 +123,10 @@ d.className=c;setTimeout(function(){if(!window.AG_READY)d.className=d.className.
         </ol>
         <p class="lbl eds-lbl">Four years running</p>
       </div>
+    </div>
+    <div class="press">
+      <p class="lbl press-lbl rv">In the press</p>
+      <ul class="press-list"><li class="rv"><a class="pr" href="https://guide.michelin.com/my/en/article/features/inspectors-reveal-all-auntie-gaik-lean-old-school-eatery-penang" target="_blank" rel="noopener"><span class="lbl pr-pub">MICHELIN Guide</span><span class="pr-t">The inspectors' feature on Auntie Gaik Lean's</span><span class="pr-d">2024<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg></span></a></li><li class="rv"><a class="pr" href="https://www.thestar.com.my/lifestyle/living/2024/12/09/penang-peranakan-pride-auntie-gaik-leans-old-school-eatery-deserves-its-michelin-star" target="_blank" rel="noopener"><span class="lbl pr-pub">The Star</span><span class="pr-t">Why Penang's Auntie Gaik Lean's Old School Eatery deserves its Michelin Star</span><span class="pr-d">December 2024<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg></span></a></li><li class="rv"><a class="pr" href="https://www.malaymail.com/news/malaysia/2022/12/17/a-michelin-star-for-a-nyonya-restaurant-is-recognition-of-penangs-cultural-heritage-says-auntie-gaik-lean/45568" target="_blank" rel="noopener"><span class="lbl pr-pub">Malay Mail</span><span class="pr-t">Auntie Gaik Lean on the star and Penang's Nyonya heritage</span><span class="pr-d">December 2022<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg></span></a></li><li class="rv"><a class="pr" href="https://silverkris.singaporeair.com/inspiration/business-technology/news/penang-wins-big-in-the-michelin-guides-malaysian-debut/" target="_blank" rel="noopener"><span class="lbl pr-pub">SilverKris</span><span class="pr-t">Penang in the MICHELIN Guide's Malaysian debut</span><span class="pr-d">Singapore Airlines<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg></span></a></li></ul>
     </div>
   </div>
   <div class="marquee" role="group" aria-label="Dishes from Auntie's kitchen">
@@ -136,12 +144,12 @@ d.className=c;setTimeout(function(){if(!window.AG_READY)d.className=d.className.
         <p class="sub rv">A fourth-generation Nyonya, and self-taught. Six moments from a life at the stove.</p>
         <p class="lbl ch-hint rv" aria-hidden="true">Keep scrolling <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 12h17M14 6l6 6-6 6"/></svg></p>
       </div>
-      <article class="ch ch-port"><p class="num disp" aria-hidden="true"><span class="num-o">12</span><span class="num-f">12</span></p><div class="ch-txt"><p class="lbl ch-lbl">Age 12</p><h3 class="ch-line disp">Cooks for her family for the first time.</h3></div><figure class="ch-ph"><span class="ch-px"><img src="assets/img/chef-0047-md.webp" srcset="assets/img/chef-0047-md.webp 600w, assets/img/chef-0047-lg.webp 1200w" sizes="(min-width:900px) 34vw, 92vw" width="1200" height="1800" loading="lazy" decoding="async" alt="Auntie Gaik Lean, arms folded, under the glowing script sign in her dining room" style="object-position:50% 30%"></span></figure></article>
-      <article class="ch ch-port ch-alt"><p class="num disp" aria-hidden="true"><span class="num-o">18</span><span class="num-f">18</span></p><div class="ch-txt"><p class="lbl ch-lbl">Age 18</p><h3 class="ch-line disp">Married, and sells homemade kuih by the roadside.</h3></div><figure class="ch-ph"><span class="ch-px"><img src="assets/img/dining-6692-md.webp" srcset="assets/img/dining-6692-md.webp 600w, assets/img/dining-6692-lg.webp 1199w" sizes="(min-width:900px) 34vw, 92vw" width="1199" height="1800" loading="lazy" decoding="async" alt="A bowl of black rice dessert with bananas on a cobalt table" style="object-position:50% 55%"></span></figure></article>
-      <article class="ch ch-port"><p class="num disp" aria-hidden="true"><span class="num-o">21</span><span class="num-f">21</span></p><div class="ch-txt"><p class="lbl ch-lbl">Age 21</p><h3 class="ch-line disp">Cooks in a factory canteen. Later, other factory kitchens.</h3></div><figure class="ch-ph"><span class="ch-px"><img src="assets/img/chef-4314-md.webp" srcset="assets/img/chef-4314-md.webp 600w, assets/img/chef-4314-lg.webp 1200w" sizes="(min-width:900px) 34vw, 92vw" width="1200" height="1800" loading="lazy" decoding="async" alt="A ladle pouring soup into a blue-and-white bowl" style="object-position:50% 45%"></span></figure></article>
-      <article class="ch ch-port ch-alt"><p class="num disp" aria-hidden="true"><span class="num-o">40s</span><span class="num-f">40s</span></p><div class="ch-txt"><p class="lbl ch-lbl">In her forties</p><h3 class="ch-line disp">Trains chefs in Kuala Lumpur.</h3></div><figure class="ch-ph"><span class="ch-px"><img src="assets/img/chef-4324-md.webp" srcset="assets/img/chef-4324-md.webp 600w, assets/img/chef-4324-lg.webp 1200w" sizes="(min-width:900px) 34vw, 92vw" width="1200" height="1800" loading="lazy" decoding="async" alt="Hands holding a blue-and-white bowl of soup" style="object-position:50% 55%"></span></figure></article>
-      <article class="ch ch-land"><p class="num disp" aria-hidden="true"><span class="num-o">2013</span><span class="num-f">2013</span></p><div class="ch-txt"><p class="lbl ch-lbl">2013</p><h3 class="ch-line disp">Comes home to Penang. Her eldest son opens this eatery in her name.</h3></div><figure class="ch-ph"><span class="ch-px"><img src="assets/img/restaurant-exterior-md.webp" srcset="assets/img/restaurant-exterior-md.webp 900w, assets/img/restaurant-exterior-lg.webp 1800w" sizes="(min-width:900px) 34vw, 92vw" width="1800" height="1262" loading="lazy" decoding="async" alt="The cream shophouse with a blue ground floor on Lebuh Bishop" style="object-position:50% 60%"></span></figure></article>
-      <article class="ch ch-land ch-alt"><p class="num disp" aria-hidden="true"><span class="num-o">69</span><span class="num-f">69</span></p><div class="ch-txt"><p class="lbl ch-lbl">Age 69</p><h3 class="ch-line disp">One MICHELIN Star.</h3></div><figure class="ch-ph"><span class="ch-px"><img src="assets/img/chef-0140-md.webp" srcset="assets/img/chef-0140-md.webp 900w, assets/img/chef-0140-lg.webp 1800w" sizes="(min-width:900px) 34vw, 92vw" width="1800" height="1200" loading="lazy" decoding="async" alt="Auntie Gaik Lean at a table with her MICHELIN plaques" style="object-position:62% 50%"></span></figure></article>
+      <article class="ch ch-port"><p class="num disp" aria-hidden="true"><span class="num-o">12</span><span class="num-f"><span>12</span></span></p><div class="ch-txt"><p class="lbl ch-lbl">Age 12</p><h3 class="ch-line disp">Cooks for her family for the first time.</h3></div><figure class="ch-ph"><span class="ch-px"><img src="assets/img/chef-0047-md.webp" srcset="assets/img/chef-0047-md.webp 600w, assets/img/chef-0047-lg.webp 1200w" sizes="(min-width:900px) 34vw, 92vw" width="1200" height="1800" loading="lazy" decoding="async" alt="Auntie Gaik Lean, arms folded, under the glowing script sign in her dining room" style="object-position:50% 30%"></span></figure></article>
+      <article class="ch ch-port ch-alt"><p class="num disp" aria-hidden="true"><span class="num-o">18</span><span class="num-f"><span>18</span></span></p><div class="ch-txt"><p class="lbl ch-lbl">Age 18</p><h3 class="ch-line disp">Married, and sells homemade kuih by the roadside.</h3></div><figure class="ch-ph"><span class="ch-px"><img src="assets/img/food-0135-md.webp" srcset="assets/img/food-0135-md.webp 600w, assets/img/food-0135-lg.webp 1200w" sizes="(min-width:900px) 34vw, 92vw" width="1200" height="1800" loading="lazy" decoding="async" alt="Parcels wrapped in banana leaf on a blue-and-white plate" style="object-position:50% 55%"></span></figure></article>
+      <article class="ch ch-port"><p class="num disp" aria-hidden="true"><span class="num-o">21</span><span class="num-f"><span>21</span></span></p><div class="ch-txt"><p class="lbl ch-lbl">Age 21</p><h3 class="ch-line disp">Cooks in a factory canteen. Later, other factory kitchens.</h3></div><figure class="ch-ph"><span class="ch-px"><img src="assets/img/chef-4314-md.webp" srcset="assets/img/chef-4314-md.webp 600w, assets/img/chef-4314-lg.webp 1200w" sizes="(min-width:900px) 34vw, 92vw" width="1200" height="1800" loading="lazy" decoding="async" alt="A ladle pouring soup into a blue-and-white bowl" style="object-position:50% 45%"></span></figure></article>
+      <article class="ch ch-port ch-alt"><p class="num disp" aria-hidden="true"><span class="num-o">40s</span><span class="num-f"><span>40s</span></span></p><div class="ch-txt"><p class="lbl ch-lbl">In her forties</p><h3 class="ch-line disp">Trains chefs in Kuala Lumpur.</h3></div><figure class="ch-ph"><span class="ch-px"><img src="assets/img/chef-4324-md.webp" srcset="assets/img/chef-4324-md.webp 600w, assets/img/chef-4324-lg.webp 1200w" sizes="(min-width:900px) 34vw, 92vw" width="1200" height="1800" loading="lazy" decoding="async" alt="Hands holding a blue-and-white bowl of soup" style="object-position:50% 55%"></span></figure></article>
+      <article class="ch ch-land"><p class="num disp" aria-hidden="true"><span class="num-o">2013</span><span class="num-f"><span>2013</span></span></p><div class="ch-txt"><p class="lbl ch-lbl">2013</p><h3 class="ch-line disp">Comes home to Penang. Her eldest son opens this eatery in her name.</h3></div><figure class="ch-ph"><span class="ch-px"><img src="assets/img/restaurant-exterior-md.webp" srcset="assets/img/restaurant-exterior-md.webp 900w, assets/img/restaurant-exterior-lg.webp 1800w" sizes="(min-width:900px) 34vw, 92vw" width="1800" height="1262" loading="lazy" decoding="async" alt="The cream shophouse with a blue ground floor on Lebuh Bishop" style="object-position:50% 60%"></span></figure></article>
+      <article class="ch ch-land ch-alt"><p class="num disp" aria-hidden="true"><span class="num-o">69</span><span class="num-f"><span>69</span></span></p><div class="ch-txt"><p class="lbl ch-lbl">Age 69</p><h3 class="ch-line disp">One MICHELIN Star.</h3></div><figure class="ch-ph"><span class="ch-px"><img src="assets/img/chef-0140-md.webp" srcset="assets/img/chef-0140-md.webp 900w, assets/img/chef-0140-lg.webp 1800w" sizes="(min-width:900px) 34vw, 92vw" width="1800" height="1200" loading="lazy" decoding="async" alt="Auntie Gaik Lean at a table with her MICHELIN plaques" style="object-position:62% 50%"></span></figure></article>
     </div>
     <div class="thread" aria-hidden="true"><span class="thread-fill"></span></div>
   </div>
@@ -173,10 +181,64 @@ d.className=c;setTimeout(function(){if(!window.AG_READY)d.className=d.className.
     <button class="rail-btn" id="railPrev" type="button" aria-label="Previous"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12H4M10 6l-6 6 6 6"/></svg></button>
     <button class="rail-btn" id="railNext" type="button" aria-label="Next"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 12h17M14 6l6 6-6 6"/></svg></button>
   </div>
-  <p class="wrap also rv"><span class="lbl">Also from Auntie's kitchen</span> Nasi Ulam · Otak-otak · Gulai Tumis · Bee Koh Moy · Pie Tee</p>
 </section>
 
-<!-- 5 THE REMPAH -->
+<!-- 5 AUNTIE'S SIGNATURE -->
+<section class="sig" id="signature" aria-labelledby="sig-h">
+  <div class="wrap sig-grid">
+    <figure class="sig-ph">
+      <span class="sig-frame" aria-hidden="true"></span>
+      <span class="sig-px"><img src="assets/img/dish-curry-kapitan-md.webp" srcset="assets/img/dish-curry-kapitan-md.webp 900w, assets/img/dish-curry-kapitan-lg.webp 1800w" sizes="(min-width:900px) 54vw, 100vw" width="1800" height="1273" loading="lazy" decoding="async" alt="Curry Kapitan in a blue-and-white bowl, with lemongrass and galangal on a dark table"></span>
+      <span class="lbl sig-tag">No. 01 · Curry Kapitan</span>
+    </figure>
+    <div class="sig-txt">
+      <p class="lbl kicker rv">Auntie's signature</p>
+      <h2 class="disp sig-h" id="sig-h" data-split>Curry <i>Kapitan</i></h2>
+      <p class="sig-line rv">A rich Nyonya chicken curry: chilli, lemongrass and candlenut, simmered down in coconut milk.</p>
+      <p class="lbl sig-facts rv"><span>Heirloom recipe</span><span class="loz" aria-hidden="true"></span><span>Made by hand</span><span class="loz" aria-hidden="true"></span><span>From scratch</span></p>
+      <div class="cta rv"><a class="btn btn-cobalt" href="menu/index.html">See the full menu</a><a class="btn btn-ghost" href="https://inline.app/booking/-OnKy8jPaRn_LUmJ5tDV:inline-live-4/-OnKy8r2gI9_CX8R2D7X" target="_blank" rel="noopener">Book a table</a></div>
+    </div>
+  </div>
+  <div class="wrap picks">
+    <div class="picks-head">
+      <p class="lbl kicker rv">The inspectors' picks</p>
+      <h3 class="disp picks-h" data-split>Five dishes the MICHELIN inspectors <i>wrote about.</i></h3>
+      <figure class="picks-ph rv"><img src="assets/site/crop-pie-tee.webp" width="390" height="340" loading="lazy" decoding="async" alt="Kuih Pie Tee: golden pastry cups with a savoury filling">
+        <figcaption class="lbl">Pictured: Kuih Pie Tee</figcaption></figure>
+    </div>
+    <ol class="picks-list"><li class="pk"><span class="pk-n">01</span><span class="pk-name disp">Nasi Ulam</span><span class="pk-d">Rice tossed with finely cut fresh herbs.</span></li><li class="pk"><span class="pk-n">02</span><span class="pk-name disp">Otak-Otak</span><span class="pk-d">Spiced fish custard, steamed in a leaf parcel.</span></li><li class="pk"><span class="pk-n">03</span><span class="pk-name disp">Gulai Tumis</span><span class="pk-d">A sour, spicy tamarind fish curry.</span></li><li class="pk"><span class="pk-n">04</span><span class="pk-name disp">Bee Koh Moy</span><span class="pk-d">Black glutinous rice with coconut milk.</span></li><li class="pk"><span class="pk-n">05</span><span class="pk-name disp">Pie Tee</span><span class="pk-d">Crisp pastry cups filled with braised jicama.</span></li></ol>
+  </div>
+</section>
+
+<!-- 6 THE MENU: AUNTIE'S TINGKAT -->
+<section class="mn" id="menu" aria-labelledby="menu-h">
+  <div class="wrap mn-grid">
+    <div class="mn-head">
+      <p class="lbl kicker rv">The menu</p>
+      <h2 class="disp" id="menu-h" data-split>Five tiers, one <i>tingkat.</i></h2>
+      <p class="sub rv">Lift a tier to see what is inside. Dishes change with the market; ask the team for today's menu.</p>
+      <div class="mn-panel rv">
+        <div class="mn-phs"><figure class="mn-ph on" data-i="0"><img src="assets/img/food-0054-md.webp" srcset="assets/img/food-0054-md.webp 601w, assets/img/food-0054-lg.webp 1203w" sizes="(min-width:900px) 34vw, 90vw" width="1203" height="1800" loading="lazy" decoding="async" alt="Kuih Pie Tee, back left, beside a tingkat" style="object-position:40% 62%"></figure><figure class="mn-ph" data-i="1"><img src="assets/img/food-1624-md.webp" srcset="assets/img/food-1624-md.webp 600w, assets/img/food-1624-lg.webp 1199w" sizes="(min-width:900px) 34vw, 90vw" width="1199" height="1800" loading="lazy" decoding="async" alt="Assam Prawns" style="object-position:50% 62%"></figure><figure class="mn-ph" data-i="2"><img src="assets/img/dish-kerabu-pucuk-paku-md.webp" srcset="assets/img/dish-kerabu-pucuk-paku-md.webp 900w, assets/img/dish-kerabu-pucuk-paku-lg.webp 1800w" sizes="(min-width:900px) 34vw, 90vw" width="1800" height="1357" loading="lazy" decoding="async" alt="Kerabu Pucuk Paku" style="object-position:50% 50%"></figure><figure class="mn-ph" data-i="3"><span class="mn-type" aria-hidden="true"><span class="disp">Nasi Ulam</span><span class="disp"><i>Kerabu Bee Hoon</i></span><span class="disp">Nyonya Fried Rice</span></span></figure><figure class="mn-ph" data-i="4"><img src="assets/img/dining-6692-md.webp" srcset="assets/img/dining-6692-md.webp 600w, assets/img/dining-6692-lg.webp 1199w" sizes="(min-width:900px) 34vw, 90vw" width="1199" height="1800" loading="lazy" decoding="async" alt="Pengat" style="object-position:50% 58%"></figure><span class="mn-frame" aria-hidden="true"></span></div>
+        <p class="lbl mn-caps" aria-hidden="true"><span class="mn-cap on" data-i="0">Pictured: Kuih Pie Tee, back left, beside a tingkat</span><span class="mn-cap" data-i="1">Pictured: Assam Prawns</span><span class="mn-cap" data-i="2">Pictured: Kerabu Pucuk Paku</span><span class="mn-cap" data-i="3">Rice, three ways</span><span class="mn-cap" data-i="4">Pictured: Pengat</span></p>
+      </div>
+      <a class="btn btn-gold mn-cta rv" href="menu/index.html">See the full menu</a>
+    </div>
+    <div class="tkg-wrap">
+      <div class="tkg" id="tkg" data-open="0" role="group" aria-label="The menu, by course">
+        <span class="tkg-handle" aria-hidden="true"></span>
+        <span class="tkg-lid" aria-hidden="true"><span class="tkg-knob"></span></span>
+        <div class="tier" style="--tc:var(--porcelain);--i:0" data-band="cobalt"><div class="tier-in" id="tier-0"><p class="lbl tier-k">Small plates</p><p class="tier-ds disp"><span class="td">Baba Delight platter</span><span class="loz" aria-hidden="true"></span><span class="td">Kuih Pie Tee</span><span class="loz" aria-hidden="true"></span><span class="td">Otak-Otak</span><span class="loz" aria-hidden="true"></span><span class="td">Jiu Hu Char</span></p></div><button class="tier-btn" type="button" aria-expanded="true" aria-controls="tier-0" data-i="0"><span class="tier-band" aria-hidden="true"></span><span class="tier-lab"><span class="lbl">01</span><span class="tier-name disp">Small plates</span></span><span class="sr">, show the dishes</span></button></div>
+        <div class="tier" style="--tc:var(--cobalt);--i:1" data-band="gold"><div class="tier-in" id="tier-1"><p class="lbl tier-k">Curries</p><p class="tier-ds disp"><span class="td">Curry Kapitan</span><span class="loz" aria-hidden="true"></span><span class="td">Nyonya Beef Rendang</span><span class="loz" aria-hidden="true"></span><span class="td">Gulai Tumis</span><span class="loz" aria-hidden="true"></span><span class="td">Assam Prawns</span></p></div><button class="tier-btn" type="button" aria-expanded="false" aria-controls="tier-1" data-i="1"><span class="tier-band" aria-hidden="true"></span><span class="tier-lab"><span class="lbl">02</span><span class="tier-name disp">Curries</span></span><span class="sr">, show the dishes</span></button></div>
+        <div class="tier" style="--tc:var(--porcelain-2);--i:2" data-band="cobalt"><div class="tier-in" id="tier-2"><p class="lbl tier-k">Vegetables</p><p class="tier-ds disp"><span class="td">Terung Sambal</span><span class="loz" aria-hidden="true"></span><span class="td">Kerabu Pucuk Paku</span><span class="loz" aria-hidden="true"></span><span class="td">Sambal Kangkung</span></p></div><button class="tier-btn" type="button" aria-expanded="false" aria-controls="tier-2" data-i="2"><span class="tier-band" aria-hidden="true"></span><span class="tier-lab"><span class="lbl">03</span><span class="tier-name disp">Vegetables</span></span><span class="sr">, show the dishes</span></button></div>
+        <div class="tier" style="--tc:var(--indigo);--i:3" data-band="sky"><div class="tier-in" id="tier-3"><p class="lbl tier-k">Rice</p><p class="tier-ds disp"><span class="td">Nasi Ulam</span><span class="loz" aria-hidden="true"></span><span class="td">Kerabu Bee Hoon</span><span class="loz" aria-hidden="true"></span><span class="td">Nyonya Fried Rice</span></p></div><button class="tier-btn" type="button" aria-expanded="false" aria-controls="tier-3" data-i="3"><span class="tier-band" aria-hidden="true"></span><span class="tier-lab"><span class="lbl">04</span><span class="tier-name disp">Rice</span></span><span class="sr">, show the dishes</span></button></div>
+        <div class="tier" style="--tc:var(--porcelain);--i:4" data-band="gold"><div class="tier-in" id="tier-4"><p class="lbl tier-k">Desserts & drinks</p><p class="tier-ds disp"><span class="td">Bee Koh Moy</span><span class="loz" aria-hidden="true"></span><span class="td">Pengat</span><span class="loz" aria-hidden="true"></span><span class="td">Sago Gula Melaka</span><span class="loz" aria-hidden="true"></span><span class="td">Rose Selasih</span></p></div><button class="tier-btn" type="button" aria-expanded="false" aria-controls="tier-4" data-i="4"><span class="tier-band" aria-hidden="true"></span><span class="tier-lab"><span class="lbl">05</span><span class="tier-name disp">Desserts & drinks</span></span><span class="sr">, show the dishes</span></button></div>
+        <span class="tkg-base" aria-hidden="true"></span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 7 THE REMPAH -->
 <section class="rempah" id="rempah" aria-labelledby="rempah-h">
   <div class="rp-pin">
     <div class="wrap rp-head">
@@ -204,15 +266,35 @@ d.className=c;setTimeout(function(){if(!window.AG_READY)d.className=d.className.
   </div>
 </section>
 
-<!-- 6 THE ROOM -->
+<!-- 8 WHAT WE KEEP TO -->
+<section class="vals" id="values" aria-labelledby="vals-h">
+  <div class="wrap vals-grid">
+    <div class="vals-head">
+      <p class="lbl kicker rv">What we keep to</p>
+      <h2 class="disp" id="vals-h" data-split>Five things Auntie's kitchen <i>never skips.</i></h2>
+    </div>
+    <div class="vals-media" aria-hidden="true"><div class="vals-win"><figure class="vm on" data-i="0"><img src="assets/img/chef-0275-md.webp" srcset="assets/img/chef-0275-md.webp 900w, assets/img/chef-0275-lg.webp 1800w" sizes="(min-width:900px) 40vw, 92vw" width="1800" height="1200" loading="lazy" decoding="async" alt="A cook in a black apron, arms folded, under the glowing script sign" style="object-position:50% 40%"></figure><figure class="vm" data-i="1"><img src="assets/img/dining-6809-md.webp" srcset="assets/img/dining-6809-md.webp 600w, assets/img/dining-6809-lg.webp 1200w" sizes="(min-width:900px) 40vw, 92vw" width="1200" height="1800" loading="lazy" decoding="async" alt="Fresh ginger root beside a bowl of curry" style="object-position:50% 60%"></figure><figure class="vm" data-i="2"><img src="assets/img/chef-0134-md.webp" srcset="assets/img/chef-0134-md.webp 600w, assets/img/chef-0134-lg.webp 1200w" sizes="(min-width:900px) 40vw, 92vw" width="1200" height="1800" loading="lazy" decoding="async" alt="Auntie Gaik Lean standing at a laid table in her dining room" style="object-position:50% 35%"></figure><figure class="vm" data-i="3"><img src="assets/img/dining-6768-md.webp" srcset="assets/img/dining-6768-md.webp 600w, assets/img/dining-6768-lg.webp 1200w" sizes="(min-width:900px) 40vw, 92vw" width="1200" height="1800" loading="lazy" decoding="async" alt="A curry in a dark bowl with fresh herbs" style="object-position:50% 60%"></figure><figure class="vm" data-i="4"><img src="assets/img/food-0036-md.webp" srcset="assets/img/food-0036-md.webp 600w, assets/img/food-0036-lg.webp 1200w" sizes="(min-width:900px) 40vw, 92vw" width="1200" height="1800" loading="lazy" decoding="async" alt="An omelette and a platter of grilled wings on blue-and-white plates" style="object-position:50% 50%"></figure></div><span class="vals-arch"></span><span class="lbl vals-count"><b>01</b> / 05</span></div>
+    <ol class="vals-list">
+      <li class="val" data-i="0"><span class="val-n disp" aria-hidden="true">01</span><div class="val-b"><h3 class="disp val-h">Made by hand.</h3><p>Every dish is prepared by hand in our kitchen, the way Auntie has cooked since she was twelve.</p><span class="val-ph"><img src="assets/img/chef-0275-md.webp" srcset="assets/img/chef-0275-md.webp 900w, assets/img/chef-0275-lg.webp 1800w" sizes="92vw" width="1800" height="1200" loading="lazy" decoding="async" alt="A cook in a black apron, arms folded, under the glowing script sign" style="object-position:50% 40%"></span></div></li>
+      <li class="val" data-i="1"><span class="val-n disp" aria-hidden="true">02</span><div class="val-b"><h3 class="disp val-h">From scratch, on site.</h3><p>Everything is made from scratch in the kitchen on Bishop Street, from the rempah to the desserts.</p><span class="val-ph"><img src="assets/img/dining-6809-md.webp" srcset="assets/img/dining-6809-md.webp 600w, assets/img/dining-6809-lg.webp 1200w" sizes="92vw" width="1200" height="1800" loading="lazy" decoding="async" alt="Fresh ginger root beside a bowl of curry" style="object-position:50% 60%"></span></div></li>
+      <li class="val" data-i="2"><span class="val-n disp" aria-hidden="true">03</span><div class="val-b"><h3 class="disp val-h">Family recipes.</h3><p>Heirloom recipes from a fourth-generation Nyonya family, cooked the way they were handed down.</p><span class="val-ph"><img src="assets/img/chef-0134-md.webp" srcset="assets/img/chef-0134-md.webp 600w, assets/img/chef-0134-lg.webp 1200w" sizes="92vw" width="1200" height="1800" loading="lazy" decoding="async" alt="Auntie Gaik Lean standing at a laid table in her dining room" style="object-position:50% 35%"></span></div></li>
+      <li class="val" data-i="3"><span class="val-n disp" aria-hidden="true">04</span><div class="val-b"><h3 class="disp val-h">A pork-free kitchen.</h3><p>Our kitchen is pork-free. Tell the team about any other dietary needs when you book.</p><span class="val-ph"><img src="assets/img/dining-6768-md.webp" srcset="assets/img/dining-6768-md.webp 600w, assets/img/dining-6768-lg.webp 1200w" sizes="92vw" width="1200" height="1800" loading="lazy" decoding="async" alt="A curry in a dark bowl with fresh herbs" style="object-position:50% 60%"></span></div></li>
+      <li class="val" data-i="4"><span class="val-n disp" aria-hidden="true">05</span><div class="val-b"><h3 class="disp val-h">One table, shared.</h3><p>Nyonya food is made for sharing. The dishes go to the middle and everyone helps themselves.</p><span class="val-ph"><img src="assets/img/food-0036-md.webp" srcset="assets/img/food-0036-md.webp 600w, assets/img/food-0036-lg.webp 1200w" sizes="92vw" width="1200" height="1800" loading="lazy" decoding="async" alt="An omelette and a platter of grilled wings on blue-and-white plates" style="object-position:50% 50%"></span></div></li>
+    </ol>
+  </div>
+</section>
+
+<!-- 9 THE ROOM -->
 <section class="room" id="room" aria-labelledby="room-h">
   <div class="rm-pin">
     <div class="wrap rm-top">
       <p class="lbl kicker">The room</p>
       <h2 class="disp" id="room-h" data-split>A room full of <i>1960s</i> nostalgia.</h2>
     </div>
-    <div class="rm-film">
-      <video class="rm-v" muted playsinline preload="none" poster="assets/site/scrub-room.webp" aria-hidden="true" tabindex="-1"></video>
+    <div class="wrap rm-film">
+      <div class="rm-win">
+        <video class="rm-v" muted playsinline preload="none" poster="assets/site/scrub-room.webp" aria-hidden="true" tabindex="-1" width="1280" height="800"></video>
+      </div>
     </div>
     <ol class="wrap rm-lines">
       <li><span class="lbl">01</span><span class="rm-l disp">60s music.</span></li>
@@ -222,33 +304,172 @@ d.className=c;setTimeout(function(){if(!window.AG_READY)d.className=d.className.
   </div>
   <div class="wrap gal">
     <figure class="g g1"><button class="g-btn" type="button" data-cursor="Open" data-group="room" data-name="The dining room" data-sub="" data-kind="The room" data-lg="assets/img/restaurant-interior-lg.webp"><span class="g-ph"><span class="g-px"><img src="assets/img/restaurant-interior-md.webp" srcset="assets/img/restaurant-interior-md.webp 900w, assets/img/restaurant-interior-lg.webp 1800w" sizes="(min-width:900px) 58vw, 100vw" width="1800" height="1200" loading="lazy" decoding="async" alt="The dining room with round tables, Peranakan floor tiles and a blue-and-white mural"></span></span><span class="sr">Open a larger photo: The dining room</span></button></figure>
-    <figure class="g g2"><button class="g-btn" type="button" data-cursor="Open" data-group="room" data-name="A round table under the sign" data-sub="" data-kind="The room" data-lg="assets/img/food-5521-lg.webp"><span class="g-ph"><span class="g-px"><img src="assets/img/food-5521-md.webp" srcset="assets/img/food-5521-md.webp 600w, assets/img/food-5521-lg.webp 1200w" sizes="(min-width:900px) 34vw, 50vw" width="1200" height="1800" loading="lazy" decoding="async" alt="A round table laid under the glowing Auntie Gaik Lean's script sign"></span></span><span class="sr">Open a larger photo: A round table under the sign</span></button></figure>
+    <figure class="g g2"><button class="g-btn" type="button" data-cursor="Open" data-group="room" data-name="Long tables under the lanterns" data-sub="" data-kind="The room" data-lg="assets/img/food-5512-lg.webp"><span class="g-ph"><span class="g-px"><img src="assets/img/food-5512-md.webp" srcset="assets/img/food-5512-md.webp 600w, assets/img/food-5512-lg.webp 1200w" sizes="(min-width:900px) 32vw, 50vw" width="1200" height="1800" loading="lazy" decoding="async" alt="Long tables under lanterns, with the script sign painted on the mural"></span></span><span class="sr">Open a larger photo: Long tables under the lanterns</span></button></figure>
     <figure class="g g3"><button class="g-btn" type="button" data-cursor="Open" data-group="room" data-name="A long table for a group" data-sub="" data-kind="The room" data-lg="assets/img/food-5535-lg.webp"><span class="g-ph"><span class="g-px"><img src="assets/img/food-5535-md.webp" srcset="assets/img/food-5535-md.webp 900w, assets/img/food-5535-lg.webp 1800w" sizes="(min-width:900px) 42vw, 100vw" width="1800" height="1199" loading="lazy" decoding="async" alt="A long table laid for a group, with flowers, gilded screens and cobalt walls"></span></span><span class="sr">Open a larger photo: A long table for a group</span></button></figure>
-    <figure class="g g4"><button class="g-btn" type="button" data-cursor="Open" data-group="room" data-name="Gilded screens and cobalt walls" data-sub="" data-kind="The room" data-lg="assets/img/food-5547-lg.webp"><span class="g-ph"><span class="g-px"><img src="assets/img/food-5547-md.webp" srcset="assets/img/food-5547-md.webp 900w, assets/img/food-5547-lg.webp 1800w" sizes="(min-width:900px) 42vw, 100vw" width="1800" height="1199" loading="lazy" decoding="async" alt="A long laid table between cobalt walls and gilded screens"></span></span><span class="sr">Open a larger photo: Gilded screens and cobalt walls</span></button></figure>
-    <figure class="g g5"><button class="g-btn" type="button" data-cursor="Open" data-group="room" data-name="Long tables under the sign" data-sub="" data-kind="The room" data-lg="assets/img/food-5506-lg.webp"><span class="g-ph"><span class="g-px"><img src="assets/img/food-5506-md.webp" srcset="assets/img/food-5506-md.webp 900w, assets/img/food-5506-lg.webp 1800w" sizes="(min-width:900px) 42vw, 100vw" width="1800" height="1200" loading="lazy" decoding="async" alt="Long laid tables under the script sign and lanterns"></span></span><span class="sr">Open a larger photo: Long tables under the sign</span></button></figure>
-    <p class="gal-cap rv"><span class="lbl">Groups</span><span class="disp">Large tables seat groups of ten or more.</span> Booking ahead is advised.</p>
+    <figure class="g g4"><button class="g-btn" type="button" data-cursor="Open" data-group="room" data-name="A lantern over the long table" data-sub="" data-kind="The room" data-lg="assets/img/food-5496-lg.webp"><span class="g-ph"><span class="g-px"><img src="assets/img/food-5496-md.webp" srcset="assets/img/food-5496-md.webp 600w, assets/img/food-5496-lg.webp 1200w" sizes="(min-width:900px) 24vw, 50vw" width="1200" height="1800" loading="lazy" decoding="async" alt="A long laid table under a lantern and a painted ceiling"></span></span><span class="sr">Open a larger photo: A lantern over the long table</span></button></figure>
+    <figure class="g g5"><button class="g-btn" type="button" data-cursor="Open" data-group="room" data-name="The room before service" data-sub="" data-kind="The room" data-lg="assets/img/restaurant-interior-2-lg.webp"><span class="g-ph"><span class="g-px"><img src="assets/img/restaurant-interior-2-md.webp" srcset="assets/img/restaurant-interior-2-md.webp 900w, assets/img/restaurant-interior-2-lg.webp 1800w" sizes="(min-width:900px) 32vw, 100vw" width="1800" height="1200" loading="lazy" decoding="async" alt="The dining room set for service, with the mural and cobalt pillars"></span></span><span class="sr">Open a larger photo: The room before service</span></button></figure>
+    <figure class="g g6"><button class="g-btn" type="button" data-cursor="Open" data-group="room" data-name="Laid tables under the mural" data-sub="" data-kind="The room" data-lg="assets/img/food-5510-lg.webp"><span class="g-ph"><span class="g-px"><img src="assets/img/food-5510-md.webp" srcset="assets/img/food-5510-md.webp 600w, assets/img/food-5510-lg.webp 1200w" sizes="(min-width:900px) 30vw, 50vw" width="1200" height="1800" loading="lazy" decoding="async" alt="Laid tables beneath the mural and a lantern"></span></span><span class="sr">Open a larger photo: Laid tables under the mural</span></button></figure>
+    <figure class="g g7"><button class="g-btn" type="button" data-cursor="Open" data-group="room" data-name="Gilded screens and cobalt walls" data-sub="" data-kind="The room" data-lg="assets/img/food-5547-lg.webp"><span class="g-ph"><span class="g-px"><img src="assets/img/food-5547-md.webp" srcset="assets/img/food-5547-md.webp 900w, assets/img/food-5547-lg.webp 1800w" sizes="(min-width:900px) 50vw, 100vw" width="1800" height="1199" loading="lazy" decoding="async" alt="A long laid table between cobalt walls and gilded screens"></span></span><span class="sr">Open a larger photo: Gilded screens and cobalt walls</span></button></figure>
+    <p class="gal-cap rv"><span class="lbl">The room</span><span class="disp">Cobalt walls, gilded screens and Auntie's name in lights.</span> Tap a photo for a closer look.</p>
   </div>
 </section>
 
-<!-- 7 THE PEOPLE -->
+<!-- 9b STEP INSIDE: 360 tour facade -->
+<section class="tour" id="tour" aria-labelledby="tour-h">
+  <div class="wrap">
+    <div class="tour-head">
+      <div>
+        <p class="lbl kicker rv">Step inside</p>
+        <h2 class="disp" id="tour-h" data-split>Walk the dining room <i>in 360&deg;.</i></h2>
+      </div>
+      <p class="sub rv">Look around the room before you book: the cobalt walls, the tiles, the long tables and the glowing sign. Drag to turn, tap the hotspots to move.</p>
+    </div>
+    <div class="tour-stage rv">
+      <span class="tour-line" aria-hidden="true"></span>
+      <div class="tour-win" id="tourWin" data-lenis-prevent>
+        <a class="tour-play" id="tourPlay" href="https://auntie-gaik-lean.penang360.my/" target="_blank" rel="noopener" aria-label="Start the 360 degree tour of the dining room (opens inside this page, or in a new tab without JavaScript)">
+          <span class="tour-ph"><img src="assets/img/restaurant-interior-2-md.webp" srcset="assets/img/restaurant-interior-2-md.webp 900w, assets/img/restaurant-interior-2-lg.webp 1800w" sizes="(min-width:1500px) 1480px, 92vw" width="1800" height="1200" loading="lazy" decoding="async" alt="The dining room set for service, with the mural and cobalt pillars"></span>
+          <span class="tour-shade" aria-hidden="true"></span>
+          <span class="tour-ctl" aria-hidden="true">
+            <svg class="tour-ring" viewBox="0 0 120 120"><circle cx="60" cy="60" r="56"/><ellipse cx="60" cy="60" rx="56" ry="20"/><path d="M104 70l8-8 4 11"/></svg>
+            <span class="tour-deg disp">360&deg;</span>
+          </span>
+          <span class="tour-cta"><span class="lbl">Start the tour</span><span class="disp">Walk the dining room in 360&deg;</span></span>
+        </a>
+      </div>
+    </div>
+    <p class="tour-foot rv"><a class="tour-open" href="https://auntie-gaik-lean.penang360.my/" target="_blank" rel="noopener">Open the tour in a new tab<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg></a><span class="lbl tour-credit">Virtual tour by Penang360</span></p>
+  </div>
+</section>
+
+<!-- 10 CELEBRATIONS -->
+<section class="ev" id="events" aria-labelledby="ev-h">
+  <div class="wrap ev-grid">
+    <div class="ev-media">
+      <span class="ev-arch" aria-hidden="true"></span>
+      <figure class="ev-b"><span class="ev-in"><img src="assets/img/food-5506-md.webp" srcset="assets/img/food-5506-md.webp 900w, assets/img/food-5506-lg.webp 1800w" sizes="(min-width:900px) 26vw, 60vw" width="1800" height="1200" loading="lazy" decoding="async" alt="Long tables laid under the script sign and lanterns"></span></figure>
+      <figure class="ev-a"><span class="ev-in"><img src="assets/img/food-5523-md.webp" srcset="assets/img/food-5523-md.webp 600w, assets/img/food-5523-lg.webp 1200w" sizes="(min-width:900px) 28vw, 64vw" width="1200" height="1800" loading="lazy" decoding="async" alt="A round table for ten laid under the glowing Auntie Gaik Lean's sign"></span></figure>
+      <figure class="ev-c"><span class="ev-in"><img src="assets/img/food-5521-md.webp" srcset="assets/img/food-5521-md.webp 600w, assets/img/food-5521-lg.webp 1200w" sizes="(min-width:900px) 18vw, 42vw" width="1200" height="1800" loading="lazy" decoding="async" alt="A round table laid with a lazy susan under the script sign"></span></figure>
+    </div>
+    <div class="ev-txt">
+      <p class="lbl kicker rv">Celebrations and private dining</p>
+      <h2 class="disp" id="ev-h" data-split>Round tables for <i>ten or more.</i></h2>
+      <p class="sub rv">We host weddings, private events, corporate events and year-end dinners, with large round tables for groups of ten or more.</p>
+      <ul class="ev-list"><li class="rv"><span class="lbl">01</span><span class="disp">Weddings</span></li><li class="rv"><span class="lbl">02</span><span class="disp">Private events</span></li><li class="rv"><span class="lbl">03</span><span class="disp">Corporate events</span></li><li class="rv"><span class="lbl">04</span><span class="disp">Year-end dinners</span></li></ul>
+      <div class="cta rv"><a class="btn btn-gold" href="https://wa.me/60174344398?text=Hello%2C%20I%20would%20like%20to%20plan%20an%20event%20at%20Auntie%20Gaik%20Lean%27s." target="_blank" rel="noopener">Plan an event · WhatsApp</a><a class="btn btn-line" href="tel:+60174344398">Call us</a></div>
+    </div>
+  </div>
+  <figure class="wrap ev-team"><span class="pp-in ev-team-in"><img src="assets/img/chef-0213-md.webp" srcset="assets/img/chef-0213-md.webp 900w, assets/img/chef-0213-lg.webp 1800w" sizes="(min-width:900px) 92vw, 100vw" width="1800" height="926" loading="lazy" decoding="async" alt="Auntie Gaik Lean with her family and the team under the script sign"><span class="curtain" aria-hidden="true"></span></span>
+    <figcaption class="lbl">The team who will look after your table</figcaption></figure>
+</section>
+
+<!-- 11 THE PEOPLE -->
 <section class="people" id="people" aria-labelledby="people-h">
   <div class="wrap">
     <div class="pp-head">
       <p class="lbl kicker rv">The people</p>
       <h2 class="disp" id="people-h" data-split>The family and the team on <i>Bishop Street.</i></h2>
+      <p class="sub rv">Auntie Gaik Lean, her family and the team who cook and serve every table.</p>
     </div>
-    <figure class="pp pp1"><span class="pp-in"><img src="assets/img/chef-0213-md.webp" srcset="assets/img/chef-0213-md.webp 900w, assets/img/chef-0213-lg.webp 1800w" sizes="(min-width:900px) 92vw, 100vw" width="1800" height="926" loading="lazy" decoding="async" alt="Auntie Gaik Lean with her family and the team under the script sign"></span></figure>
-    <div class="pp-row">
-      <figure class="pp pp2"><span class="pp-in"><img src="assets/img/chef-0181-md.webp" srcset="assets/img/chef-0181-md.webp 900w, assets/img/chef-0181-lg.webp 1800w" sizes="(min-width:900px) 52vw, 100vw" width="1800" height="1262" loading="lazy" decoding="async" alt="Auntie Gaik Lean with her family and kitchen staff at a table"></span></figure>
-      <figure class="pp pp3"><span class="pp-in"><img src="assets/img/chef-0154-md.webp" srcset="assets/img/chef-0154-md.webp 900w, assets/img/chef-0154-lg.webp 1800w" sizes="(min-width:900px) 40vw, 100vw" width="1800" height="1200" loading="lazy" decoding="async" alt="Auntie Gaik Lean with two members of her family at a table"></span></figure>
-    </div>
+    <figure class="pp pp1"><span class="pp-in"><img src="assets/img/chef-0181-md.webp" srcset="assets/img/chef-0181-md.webp 900w, assets/img/chef-0181-lg.webp 1800w" sizes="(min-width:900px) 92vw, 100vw" width="1800" height="1262" loading="lazy" decoding="async" alt="Auntie Gaik Lean with her family and kitchen staff at a table"><span class="curtain" aria-hidden="true"></span></span></figure>
+    <div class="pp-row"><figure class="pp pr1"><span class="pp-in"><img src="assets/img/chef-0038-md.webp" srcset="assets/img/chef-0038-md.webp 900w, assets/img/chef-0038-lg.webp 1800w" sizes="(min-width:900px) 24vw, 50vw" width="1800" height="1199" loading="lazy" decoding="async" alt="Auntie Gaik Lean under the glowing script sign" style="object-position:55% 40%"><span class="curtain" aria-hidden="true"></span></span></figure><figure class="pp pr2"><span class="pp-in"><img src="assets/img/chef-0154-md.webp" srcset="assets/img/chef-0154-md.webp 900w, assets/img/chef-0154-lg.webp 1800w" sizes="(min-width:900px) 24vw, 50vw" width="1800" height="1200" loading="lazy" decoding="async" alt="Auntie Gaik Lean with two members of her family at a table" style="object-position:50% 45%"><span class="curtain" aria-hidden="true"></span></span></figure><figure class="pp pr3"><span class="pp-in"><img src="assets/img/chef-0239-md.webp" srcset="assets/img/chef-0239-md.webp 900w, assets/img/chef-0239-lg.webp 1800w" sizes="(min-width:900px) 24vw, 50vw" width="1800" height="1200" loading="lazy" decoding="async" alt="A man in a batik shirt, arms folded, under the script sign" style="object-position:50% 35%"><span class="curtain" aria-hidden="true"></span></span></figure><figure class="pp pr4"><span class="pp-in"><img src="assets/img/chef-0269-md.webp" srcset="assets/img/chef-0269-md.webp 900w, assets/img/chef-0269-lg.webp 1800w" sizes="(min-width:900px) 24vw, 50vw" width="1800" height="1200" loading="lazy" decoding="async" alt="A cook in a black apron smiling under the script sign" style="object-position:50% 35%"><span class="curtain" aria-hidden="true"></span></span></figure></div>
   </div>
 </section>
 
-<!-- 8 VISIT -->
+<!-- 12 FROM THE KITCHEN -->
+<section class="kit" id="kitchen" aria-labelledby="kit-h">
+  <div class="wrap kit-head">
+    <div>
+      <p class="lbl kicker rv">From the kitchen</p>
+      <h2 class="disp" id="kit-h" data-split>A table that keeps <i>filling up.</i></h2>
+    </div>
+    <p class="sub rv">Plates, bowls and glasses from a day in Auntie's kitchen. Tap any one for a closer look.</p>
+  </div>
+  <div class="wrap">
+    <ul class="kit-grid">
+      <li class="ki a2"><button class="ki-btn" type="button" data-cursor="Open" data-group="kitchen" data-name="From the kitchen" data-sub="" data-kind="Auntie's kitchen" data-lg="assets/img/dining-6898-lg.webp"><span class="ki-ph"><img src="assets/img/dining-6898-md.webp" srcset="assets/img/dining-6898-md.webp 600w, assets/img/dining-6898-lg.webp 1199w" sizes="(min-width:1200px) 15vw, (min-width:600px) 30vw, 46vw" width="1199" height="1800" loading="lazy" decoding="async" alt="Small dishes, herbs and flowers seen from above on a cobalt table"></span><span class="sr">Open a larger photo</span></button></li>
+      <li class="ki a1"><button class="ki-btn" type="button" data-cursor="Open" data-group="kitchen" data-name="From the kitchen" data-sub="" data-kind="Auntie's kitchen" data-lg="assets/img/food-0022-lg.webp"><span class="ki-ph"><img src="assets/img/food-0022-md.webp" srcset="assets/img/food-0022-md.webp 600w, assets/img/food-0022-lg.webp 1200w" sizes="(min-width:1200px) 15vw, (min-width:600px) 30vw, 46vw" width="1200" height="1800" loading="lazy" decoding="async" alt="Fried chicken with prawn crackers and a dipping sauce"></span><span class="sr">Open a larger photo</span></button></li>
+      <li class="ki a3"><button class="ki-btn" type="button" data-cursor="Open" data-group="kitchen" data-name="From the kitchen" data-sub="" data-kind="Auntie's kitchen" data-lg="assets/img/dining-9950-lg.webp"><span class="ki-ph"><img src="assets/img/dining-9950-md.webp" srcset="assets/img/dining-9950-md.webp 600w, assets/img/dining-9950-lg.webp 1200w" sizes="(min-width:1200px) 15vw, (min-width:600px) 30vw, 46vw" width="1200" height="1800" loading="lazy" decoding="async" alt="Fried fish with long beans on a gold-rimmed plate"></span><span class="sr">Open a larger photo</span></button></li>
+      <li class="ki a1"><button class="ki-btn" type="button" data-cursor="Open" data-group="kitchen" data-name="From the kitchen" data-sub="" data-kind="Auntie's kitchen" data-lg="assets/img/food-1734-lg.webp"><span class="ki-ph"><img src="assets/img/food-1734-md.webp" srcset="assets/img/food-1734-md.webp 600w, assets/img/food-1734-lg.webp 1200w" sizes="(min-width:1200px) 15vw, (min-width:600px) 30vw, 46vw" width="1200" height="1800" loading="lazy" decoding="async" alt="A vegetable dish beside a blue-and-white napkin"></span><span class="sr">Open a larger photo</span></button></li>
+      <li class="ki a4"><button class="ki-btn" type="button" data-cursor="Open" data-group="kitchen" data-name="From the kitchen" data-sub="" data-kind="Auntie's kitchen" data-lg="assets/img/dining-6711-lg.webp"><span class="ki-ph"><img src="assets/img/dining-6711-md.webp" srcset="assets/img/dining-6711-md.webp 600w, assets/img/dining-6711-lg.webp 1199w" sizes="(min-width:1200px) 15vw, (min-width:600px) 30vw, 46vw" width="1199" height="1800" loading="lazy" decoding="async" alt="A dessert in a blue-and-white bowl with coconut milk"></span><span class="sr">Open a larger photo</span></button></li>
+      <li class="ki a2"><button class="ki-btn" type="button" data-cursor="Open" data-group="kitchen" data-name="From the kitchen" data-sub="" data-kind="Auntie's kitchen" data-lg="assets/img/food-1814-lg.webp"><span class="ki-ph"><img src="assets/img/food-1814-md.webp" srcset="assets/img/food-1814-md.webp 600w, assets/img/food-1814-lg.webp 1199w" sizes="(min-width:1200px) 15vw, (min-width:600px) 30vw, 46vw" width="1199" height="1800" loading="lazy" decoding="async" alt="A salad of greens on a blue-and-white plate"></span><span class="sr">Open a larger photo</span></button></li>
+      <li class="ki a1"><button class="ki-btn" type="button" data-cursor="Open" data-group="kitchen" data-name="From the kitchen" data-sub="" data-kind="Auntie's kitchen" data-lg="assets/img/dining-8911-lg.webp"><span class="ki-ph"><img src="assets/img/dining-8911-md.webp" srcset="assets/img/dining-8911-md.webp 738w, assets/img/dining-8911-lg.webp 1476w" sizes="(min-width:1200px) 15vw, (min-width:600px) 30vw, 46vw" width="1476" height="1800" loading="lazy" decoding="async" alt="A long platter of fried and grilled dishes"></span><span class="sr">Open a larger photo</span></button></li>
+      <li class="ki a3"><button class="ki-btn" type="button" data-cursor="Open" data-group="kitchen" data-name="From the kitchen" data-sub="" data-kind="Auntie's kitchen" data-lg="assets/img/food-0049-lg.webp"><span class="ki-ph"><img src="assets/img/food-0049-md.webp" srcset="assets/img/food-0049-md.webp 600w, assets/img/food-0049-lg.webp 1200w" sizes="(min-width:1200px) 15vw, (min-width:600px) 30vw, 46vw" width="1200" height="1800" loading="lazy" decoding="async" alt="A curry in a blue-and-white bowl with spring onion"></span><span class="sr">Open a larger photo</span></button></li>
+      <li class="ki a2"><button class="ki-btn" type="button" data-cursor="Open" data-group="kitchen" data-name="From the kitchen" data-sub="" data-kind="Auntie's kitchen" data-lg="assets/img/dining-6626-lg.webp"><span class="ki-ph"><img src="assets/img/dining-6626-md.webp" srcset="assets/img/dining-6626-md.webp 602w, assets/img/dining-6626-lg.webp 1205w" sizes="(min-width:1200px) 15vw, (min-width:600px) 30vw, 46vw" width="1205" height="1800" loading="lazy" decoding="async" alt="A rose-red iced drink with herbs"></span><span class="sr">Open a larger photo</span></button></li>
+      <li class="ki a4"><button class="ki-btn" type="button" data-cursor="Open" data-group="kitchen" data-name="From the kitchen" data-sub="" data-kind="Auntie's kitchen" data-lg="assets/img/food-1662-lg.webp"><span class="ki-ph"><img src="assets/img/food-1662-md.webp" srcset="assets/img/food-1662-md.webp 600w, assets/img/food-1662-lg.webp 1200w" sizes="(min-width:1200px) 15vw, (min-width:600px) 30vw, 46vw" width="1200" height="1800" loading="lazy" decoding="async" alt="A curry with lettuce in a white bowl"></span><span class="sr">Open a larger photo</span></button></li>
+      <li class="ki a1"><button class="ki-btn" type="button" data-cursor="Open" data-group="kitchen" data-name="From the kitchen" data-sub="" data-kind="Auntie's kitchen" data-lg="assets/img/dining-9153-lg.webp"><span class="ki-ph"><img src="assets/img/dining-9153-md.webp" srcset="assets/img/dining-9153-md.webp 600w, assets/img/dining-9153-lg.webp 1199w" sizes="(min-width:1200px) 15vw, (min-width:600px) 30vw, 46vw" width="1199" height="1800" loading="lazy" decoding="async" alt="A curry with long beans in a dark bowl"></span><span class="sr">Open a larger photo</span></button></li>
+      <li class="ki a3"><button class="ki-btn" type="button" data-cursor="Open" data-group="kitchen" data-name="From the kitchen" data-sub="" data-kind="Auntie's kitchen" data-lg="assets/img/food-1767-lg.webp"><span class="ki-ph"><img src="assets/img/food-1767-md.webp" srcset="assets/img/food-1767-md.webp 600w, assets/img/food-1767-lg.webp 1200w" sizes="(min-width:1200px) 15vw, (min-width:600px) 30vw, 46vw" width="1200" height="1800" loading="lazy" decoding="async" alt="Fried dishes and a dipping sauce on a woven mat"></span><span class="sr">Open a larger photo</span></button></li>
+      <li class="ki a2"><button class="ki-btn" type="button" data-cursor="Open" data-group="kitchen" data-name="From the kitchen" data-sub="" data-kind="Auntie's kitchen" data-lg="assets/img/dining-7058-lg.webp"><span class="ki-ph"><img src="assets/img/dining-7058-md.webp" srcset="assets/img/dining-7058-md.webp 600w, assets/img/dining-7058-lg.webp 1200w" sizes="(min-width:1200px) 15vw, (min-width:600px) 30vw, 46vw" width="1200" height="1800" loading="lazy" decoding="async" alt="A bowl of crisp fritters beside fresh eggs"></span><span class="sr">Open a larger photo</span></button></li>
+      <li class="ki a1"><button class="ki-btn" type="button" data-cursor="Open" data-group="kitchen" data-name="From the kitchen" data-sub="" data-kind="Auntie's kitchen" data-lg="assets/img/food-0086-lg.webp"><span class="ki-ph"><img src="assets/img/food-0086-md.webp" srcset="assets/img/food-0086-md.webp 600w, assets/img/food-0086-lg.webp 1200w" sizes="(min-width:1200px) 15vw, (min-width:600px) 30vw, 46vw" width="1200" height="1800" loading="lazy" decoding="async" alt="A vegetable dish on a blue-and-white plate"></span><span class="sr">Open a larger photo</span></button></li>
+      <li class="ki a4"><button class="ki-btn" type="button" data-cursor="Open" data-group="kitchen" data-name="From the kitchen" data-sub="" data-kind="Auntie's kitchen" data-lg="assets/img/dining-6969-lg.webp"><span class="ki-ph"><img src="assets/img/dining-6969-md.webp" srcset="assets/img/dining-6969-md.webp 660w, assets/img/dining-6969-lg.webp 1319w" sizes="(min-width:1200px) 15vw, (min-width:600px) 30vw, 46vw" width="1319" height="1800" loading="lazy" decoding="async" alt="A noodle dish on a patterned plate"></span><span class="sr">Open a larger photo</span></button></li>
+      <li class="ki a2"><button class="ki-btn" type="button" data-cursor="Open" data-group="kitchen" data-name="From the kitchen" data-sub="" data-kind="Auntie's kitchen" data-lg="assets/img/food-1722-lg.webp"><span class="ki-ph"><img src="assets/img/food-1722-md.webp" srcset="assets/img/food-1722-md.webp 600w, assets/img/food-1722-lg.webp 1199w" sizes="(min-width:1200px) 15vw, (min-width:600px) 30vw, 46vw" width="1199" height="1800" loading="lazy" decoding="async" alt="A yellow curry in a white bowl with flowers behind"></span><span class="sr">Open a larger photo</span></button></li>
+      <li class="ki a3"><button class="ki-btn" type="button" data-cursor="Open" data-group="kitchen" data-name="From the kitchen" data-sub="" data-kind="Auntie's kitchen" data-lg="assets/img/dining-9004-lg.webp"><span class="ki-ph"><img src="assets/img/dining-9004-md.webp" srcset="assets/img/dining-9004-md.webp 600w, assets/img/dining-9004-lg.webp 1200w" sizes="(min-width:1200px) 15vw, (min-width:600px) 30vw, 46vw" width="1200" height="1800" loading="lazy" decoding="async" alt="Fried noodles on a plate with chillies"></span><span class="sr">Open a larger photo</span></button></li>
+      <li class="ki a1"><button class="ki-btn" type="button" data-cursor="Open" data-group="kitchen" data-name="From the kitchen" data-sub="" data-kind="Auntie's kitchen" data-lg="assets/img/food-4822-lg.webp"><span class="ki-ph"><img src="assets/img/food-4822-md.webp" srcset="assets/img/food-4822-md.webp 600w, assets/img/food-4822-lg.webp 1200w" sizes="(min-width:1200px) 15vw, (min-width:600px) 30vw, 46vw" width="1200" height="1800" loading="lazy" decoding="async" alt="A spread of small dishes on a cobalt table"></span><span class="sr">Open a larger photo</span></button></li>
+      <li class="ki a2"><button class="ki-btn" type="button" data-cursor="Open" data-group="kitchen" data-name="From the kitchen" data-sub="" data-kind="Auntie's kitchen" data-lg="assets/img/dining-6533-lg.webp"><span class="ki-ph"><img src="assets/img/dining-6533-md.webp" srcset="assets/img/dining-6533-md.webp 687w, assets/img/dining-6533-lg.webp 1373w" sizes="(min-width:1200px) 15vw, (min-width:600px) 30vw, 46vw" width="1373" height="1800" loading="lazy" decoding="async" alt="Fresh herbs, chillies and flowers on a dark table"></span><span class="sr">Open a larger photo</span></button></li>
+      <li class="ki a4"><button class="ki-btn" type="button" data-cursor="Open" data-group="kitchen" data-name="From the kitchen" data-sub="" data-kind="Auntie's kitchen" data-lg="assets/img/food-1784-lg.webp"><span class="ki-ph"><img src="assets/img/food-1784-md.webp" srcset="assets/img/food-1784-md.webp 600w, assets/img/food-1784-lg.webp 1200w" sizes="(min-width:1200px) 15vw, (min-width:600px) 30vw, 46vw" width="1200" height="1800" loading="lazy" decoding="async" alt="A stir-fried dish on lettuce among green leaves"></span><span class="sr">Open a larger photo</span></button></li>
+      <li class="ki a1"><button class="ki-btn" type="button" data-cursor="Open" data-group="kitchen" data-name="From the kitchen" data-sub="" data-kind="Auntie's kitchen" data-lg="assets/img/dining-9248-lg.webp"><span class="ki-ph"><img src="assets/img/dining-9248-md.webp" srcset="assets/img/dining-9248-md.webp 600w, assets/img/dining-9248-lg.webp 1200w" sizes="(min-width:1200px) 15vw, (min-width:600px) 30vw, 46vw" width="1200" height="1800" loading="lazy" decoding="async" alt="A green salad with chilli paste on the side"></span><span class="sr">Open a larger photo</span></button></li>
+      <li class="ki a3"><button class="ki-btn" type="button" data-cursor="Open" data-group="kitchen" data-name="From the kitchen" data-sub="" data-kind="Auntie's kitchen" data-lg="assets/img/food-0050-lg.webp"><span class="ki-ph"><img src="assets/img/food-0050-md.webp" srcset="assets/img/food-0050-md.webp 600w, assets/img/food-0050-lg.webp 1200w" sizes="(min-width:1200px) 15vw, (min-width:600px) 30vw, 46vw" width="1200" height="1800" loading="lazy" decoding="async" alt="A rice dish on a green plate beside a covered bowl"></span><span class="sr">Open a larger photo</span></button></li>
+      <li class="ki a2"><button class="ki-btn" type="button" data-cursor="Open" data-group="kitchen" data-name="From the kitchen" data-sub="" data-kind="Auntie's kitchen" data-lg="assets/img/dining-7071-lg.webp"><span class="ki-ph"><img src="assets/img/dining-7071-md.webp" srcset="assets/img/dining-7071-md.webp 600w, assets/img/dining-7071-lg.webp 1200w" sizes="(min-width:1200px) 15vw, (min-width:600px) 30vw, 46vw" width="1200" height="1800" loading="lazy" decoding="async" alt="Thin crisp wafers in a white bowl"></span><span class="sr">Open a larger photo</span></button></li>
+      <li class="ki a1"><button class="ki-btn" type="button" data-cursor="Open" data-group="kitchen" data-name="From the kitchen" data-sub="" data-kind="Auntie's kitchen" data-lg="assets/img/food-1833-lg.webp"><span class="ki-ph"><img src="assets/img/food-1833-md.webp" srcset="assets/img/food-1833-md.webp 600w, assets/img/food-1833-lg.webp 1199w" sizes="(min-width:1200px) 15vw, (min-width:600px) 30vw, 46vw" width="1199" height="1800" loading="lazy" decoding="async" alt="A stir-fried vegetable dish on a blue plate"></span><span class="sr">Open a larger photo</span></button></li>
+      <li class="ki a4"><button class="ki-btn" type="button" data-cursor="Open" data-group="kitchen" data-name="From the kitchen" data-sub="" data-kind="Auntie's kitchen" data-lg="assets/img/dining-8932-lg.webp"><span class="ki-ph"><img src="assets/img/dining-8932-md.webp" srcset="assets/img/dining-8932-md.webp 653w, assets/img/dining-8932-lg.webp 1307w" sizes="(min-width:1200px) 15vw, (min-width:600px) 30vw, 46vw" width="1307" height="1800" loading="lazy" decoding="async" alt="A mixed dish in a blue-and-white bowl"></span><span class="sr">Open a larger photo</span></button></li>
+      <li class="ki a2"><button class="ki-btn" type="button" data-cursor="Open" data-group="kitchen" data-name="From the kitchen" data-sub="" data-kind="Auntie's kitchen" data-lg="assets/img/dining-6729-lg.webp"><span class="ki-ph"><img src="assets/img/dining-6729-md.webp" srcset="assets/img/dining-6729-md.webp 600w, assets/img/dining-6729-lg.webp 1200w" sizes="(min-width:1200px) 15vw, (min-width:600px) 30vw, 46vw" width="1200" height="1800" loading="lazy" decoding="async" alt="Glazed chicken with salad on a white plate"></span><span class="sr">Open a larger photo</span></button></li>
+      <li class="ki a3"><button class="ki-btn" type="button" data-cursor="Open" data-group="kitchen" data-name="From the kitchen" data-sub="" data-kind="Auntie's kitchen" data-lg="assets/img/dining-6986-lg.webp"><span class="ki-ph"><img src="assets/img/dining-6986-md.webp" srcset="assets/img/dining-6986-md.webp 605w, assets/img/dining-6986-lg.webp 1210w" sizes="(min-width:1200px) 15vw, (min-width:600px) 30vw, 46vw" width="1210" height="1800" loading="lazy" decoding="async" alt="A soup with mushrooms in a blue-and-white bowl"></span><span class="sr">Open a larger photo</span></button></li>
+      <li class="ki a1"><button class="ki-btn" type="button" data-cursor="Open" data-group="kitchen" data-name="From the kitchen" data-sub="" data-kind="Auntie's kitchen" data-lg="assets/img/dining-7067-lg.webp"><span class="ki-ph"><img src="assets/img/dining-7067-md.webp" srcset="assets/img/dining-7067-md.webp 600w, assets/img/dining-7067-lg.webp 1200w" sizes="(min-width:1200px) 15vw, (min-width:600px) 30vw, 46vw" width="1200" height="1800" loading="lazy" decoding="async" alt="Crisp fried snacks in a white bowl"></span><span class="sr">Open a larger photo</span></button></li>
+      <li class="ki a2"><button class="ki-btn" type="button" data-cursor="Open" data-group="kitchen" data-name="From the kitchen" data-sub="" data-kind="Auntie's kitchen" data-lg="assets/img/dining-9050-lg.webp"><span class="ki-ph"><img src="assets/img/dining-9050-md.webp" srcset="assets/img/dining-9050-md.webp 600w, assets/img/dining-9050-lg.webp 1200w" sizes="(min-width:1200px) 15vw, (min-width:600px) 30vw, 46vw" width="1200" height="1800" loading="lazy" decoding="async" alt="A braised dish on a white plate"></span><span class="sr">Open a larger photo</span></button></li>
+      <li class="ki a4"><button class="ki-btn" type="button" data-cursor="Open" data-group="kitchen" data-name="From the kitchen" data-sub="" data-kind="Auntie's kitchen" data-lg="assets/img/food-1735-lg.webp"><span class="ki-ph"><img src="assets/img/food-1735-md.webp" srcset="assets/img/food-1735-md.webp 600w, assets/img/food-1735-lg.webp 1200w" sizes="(min-width:1200px) 15vw, (min-width:600px) 30vw, 46vw" width="1200" height="1800" loading="lazy" decoding="async" alt="A braised dish with egg in a white bowl"></span><span class="sr">Open a larger photo</span></button></li>
+    </ul>
+  </div>
+</section>
+
+<!-- 13 #GAIKLEANMOMENT -->
+<section class="soc" id="social" aria-labelledby="soc-h">
+  <div class="wrap soc-head">
+    <div>
+      <p class="lbl kicker rv">On Instagram · @auntiegaiklean</p>
+      <h2 class="disp" id="soc-h" data-split>Share your <i>#GaikLeanMoment.</i></h2>
+    </div>
+    <div>
+      <p class="sub rv">Tag @auntiegaiklean and #GaikLeanMoment when you post your table. We love seeing who came to dinner.</p>
+      <div class="cta rv"><a class="btn btn-line" href="https://www.instagram.com/auntiegaiklean/" target="_blank" rel="noopener">Follow on Instagram</a><a class="btn btn-line" href="https://www.facebook.com/profile.php?id=100063562363254" target="_blank" rel="noopener">Facebook</a></div>
+    </div>
+  </div>
+  <div class="soc-strip">
+    <ul class="soc-track" aria-label="Recent posts"><li class="soc-i"><a href="https://www.instagram.com/auntiegaiklean/" target="_blank" rel="noopener"><img src="samples/exports/web/01-auntiegaik-post-meet-auntie.webp" width="720" height="960" loading="lazy" decoding="async" alt="Instagram post: meet auntie"></a></li><li class="soc-i"><a href="https://www.instagram.com/auntiegaiklean/" target="_blank" rel="noopener"><img src="samples/exports/web/02-auntiegaik-post-curry-kapitan.webp" width="720" height="960" loading="lazy" decoding="async" alt="Instagram post: curry kapitan"></a></li><li class="soc-i"><a href="https://www.instagram.com/auntiegaiklean/" target="_blank" rel="noopener"><img src="samples/exports/web/03-auntiegaik-post-find-the-blue-doors.webp" width="720" height="960" loading="lazy" decoding="async" alt="Instagram post: find the blue doors"></a></li><li class="soc-i"><a href="https://www.instagram.com/auntiegaiklean/" target="_blank" rel="noopener"><img src="samples/exports/web/04-auntiegaik-post-sour-then-sweet.webp" width="720" height="960" loading="lazy" decoding="async" alt="Instagram post: sour then sweet"></a></li><li class="soc-i"><a href="https://www.instagram.com/auntiegaiklean/" target="_blank" rel="noopener"><img src="samples/exports/web/05-auntiegaik-post-everything-starts-here.webp" width="720" height="960" loading="lazy" decoding="async" alt="Instagram post: everything starts here"></a></li><li class="soc-i"><a href="https://www.instagram.com/auntiegaiklean/" target="_blank" rel="noopener"><img src="samples/exports/web/06-auntiegaik-post-pie-tee.webp" width="720" height="960" loading="lazy" decoding="async" alt="Instagram post: pie tee"></a></li><li class="soc-i"><a href="https://www.instagram.com/auntiegaiklean/" target="_blank" rel="noopener"><img src="samples/exports/web/07-auntiegaik-post-four-years-running.webp" width="720" height="960" loading="lazy" decoding="async" alt="Instagram post: four years running"></a></li><li class="soc-i"><a href="https://www.instagram.com/auntiegaiklean/" target="_blank" rel="noopener"><img src="samples/exports/web/08-auntiegaik-post-tables-for-ten.webp" width="720" height="960" loading="lazy" decoding="async" alt="Instagram post: tables for ten"></a></li><li class="soc-i"><a href="https://www.instagram.com/auntiegaiklean/" target="_blank" rel="noopener"><img src="samples/exports/web/09-auntiegaik-post-table-for-six.webp" width="720" height="960" loading="lazy" decoding="async" alt="Instagram post: table for six"></a></li><li class="soc-i"><a href="https://www.instagram.com/auntiegaiklean/" target="_blank" rel="noopener"><img src="samples/exports/web/10-auntiegaik-post-three-drinks.webp" width="720" height="960" loading="lazy" decoding="async" alt="Instagram post: three drinks"></a></li><li class="soc-i"><a href="https://www.instagram.com/auntiegaiklean/" target="_blank" rel="noopener"><img src="samples/exports/web/11-auntiegaik-post-bishop-street-since-2013.webp" width="720" height="960" loading="lazy" decoding="async" alt="Instagram post: bishop street since 2013"></a></li><li class="soc-i"><a href="https://www.instagram.com/auntiegaiklean/" target="_blank" rel="noopener"><img src="samples/exports/web/12-auntiegaik-post-the-team.webp" width="720" height="960" loading="lazy" decoding="async" alt="Instagram post: the team"></a></li><li class="soc-i"><a href="https://www.instagram.com/auntiegaiklean/" target="_blank" rel="noopener"><img src="samples/exports/web/13-auntiegaik-post-pengat.webp" width="720" height="960" loading="lazy" decoding="async" alt="Instagram post: pengat"></a></li><li class="soc-i"><a href="https://www.instagram.com/auntiegaiklean/" target="_blank" rel="noopener"><img src="samples/exports/web/14-auntiegaik-post-before-you-come.webp" width="720" height="960" loading="lazy" decoding="async" alt="Instagram post: before you come"></a></li><li class="soc-i soc-dup" aria-hidden="true"><a href="https://www.instagram.com/auntiegaiklean/" target="_blank" rel="noopener" tabindex="-1"><img src="samples/exports/web/01-auntiegaik-post-meet-auntie.webp" width="720" height="960" loading="lazy" decoding="async" alt=""></a></li><li class="soc-i soc-dup" aria-hidden="true"><a href="https://www.instagram.com/auntiegaiklean/" target="_blank" rel="noopener" tabindex="-1"><img src="samples/exports/web/02-auntiegaik-post-curry-kapitan.webp" width="720" height="960" loading="lazy" decoding="async" alt=""></a></li><li class="soc-i soc-dup" aria-hidden="true"><a href="https://www.instagram.com/auntiegaiklean/" target="_blank" rel="noopener" tabindex="-1"><img src="samples/exports/web/03-auntiegaik-post-find-the-blue-doors.webp" width="720" height="960" loading="lazy" decoding="async" alt=""></a></li><li class="soc-i soc-dup" aria-hidden="true"><a href="https://www.instagram.com/auntiegaiklean/" target="_blank" rel="noopener" tabindex="-1"><img src="samples/exports/web/04-auntiegaik-post-sour-then-sweet.webp" width="720" height="960" loading="lazy" decoding="async" alt=""></a></li><li class="soc-i soc-dup" aria-hidden="true"><a href="https://www.instagram.com/auntiegaiklean/" target="_blank" rel="noopener" tabindex="-1"><img src="samples/exports/web/05-auntiegaik-post-everything-starts-here.webp" width="720" height="960" loading="lazy" decoding="async" alt=""></a></li><li class="soc-i soc-dup" aria-hidden="true"><a href="https://www.instagram.com/auntiegaiklean/" target="_blank" rel="noopener" tabindex="-1"><img src="samples/exports/web/06-auntiegaik-post-pie-tee.webp" width="720" height="960" loading="lazy" decoding="async" alt=""></a></li><li class="soc-i soc-dup" aria-hidden="true"><a href="https://www.instagram.com/auntiegaiklean/" target="_blank" rel="noopener" tabindex="-1"><img src="samples/exports/web/07-auntiegaik-post-four-years-running.webp" width="720" height="960" loading="lazy" decoding="async" alt=""></a></li><li class="soc-i soc-dup" aria-hidden="true"><a href="https://www.instagram.com/auntiegaiklean/" target="_blank" rel="noopener" tabindex="-1"><img src="samples/exports/web/08-auntiegaik-post-tables-for-ten.webp" width="720" height="960" loading="lazy" decoding="async" alt=""></a></li><li class="soc-i soc-dup" aria-hidden="true"><a href="https://www.instagram.com/auntiegaiklean/" target="_blank" rel="noopener" tabindex="-1"><img src="samples/exports/web/09-auntiegaik-post-table-for-six.webp" width="720" height="960" loading="lazy" decoding="async" alt=""></a></li><li class="soc-i soc-dup" aria-hidden="true"><a href="https://www.instagram.com/auntiegaiklean/" target="_blank" rel="noopener" tabindex="-1"><img src="samples/exports/web/10-auntiegaik-post-three-drinks.webp" width="720" height="960" loading="lazy" decoding="async" alt=""></a></li><li class="soc-i soc-dup" aria-hidden="true"><a href="https://www.instagram.com/auntiegaiklean/" target="_blank" rel="noopener" tabindex="-1"><img src="samples/exports/web/11-auntiegaik-post-bishop-street-since-2013.webp" width="720" height="960" loading="lazy" decoding="async" alt=""></a></li><li class="soc-i soc-dup" aria-hidden="true"><a href="https://www.instagram.com/auntiegaiklean/" target="_blank" rel="noopener" tabindex="-1"><img src="samples/exports/web/12-auntiegaik-post-the-team.webp" width="720" height="960" loading="lazy" decoding="async" alt=""></a></li><li class="soc-i soc-dup" aria-hidden="true"><a href="https://www.instagram.com/auntiegaiklean/" target="_blank" rel="noopener" tabindex="-1"><img src="samples/exports/web/13-auntiegaik-post-pengat.webp" width="720" height="960" loading="lazy" decoding="async" alt=""></a></li><li class="soc-i soc-dup" aria-hidden="true"><a href="https://www.instagram.com/auntiegaiklean/" target="_blank" rel="noopener" tabindex="-1"><img src="samples/exports/web/14-auntiegaik-post-before-you-come.webp" width="720" height="960" loading="lazy" decoding="async" alt=""></a></li></ul>
+  </div>
+</section>
+
+<!-- 14 RESERVE -->
+<section class="rsv" id="reserve" aria-labelledby="rsv-h">
+  <div class="wrap rsv-grid">
+    <div class="rsv-main">
+      <p class="lbl kicker rv">Reserve</p>
+      <h2 class="disp rsv-h" id="rsv-h" data-split>Book a table at <i>Auntie's.</i></h2>
+      <p class="sub rv">Booking ahead is advised. Book online in a minute, or call or WhatsApp the team.</p>
+      <a class="rsv-book rv" href="https://inline.app/booking/-OnKy8jPaRn_LUmJ5tDV:inline-live-4/-OnKy8r2gI9_CX8R2D7X" target="_blank" rel="noopener"><span class="lbl">Online booking</span><span class="disp rb-t">Book a table</span><span class="rb-a"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 12h17M14 6l6 6-6 6"/></svg></span></a>
+      <div class="rsv-alt rv">
+        <a class="ra" href="tel:+60174344398"><span class="lbl">Call</span><span>+60 17-434 4398</span></a>
+        <a class="ra" href="https://wa.me/60174344398" target="_blank" rel="noopener"><span class="lbl">WhatsApp</span><span>Message the team</span></a>
+      </div>
+      <ul class="rsv-notes">
+        <li class="rv"><span class="loz" aria-hidden="true"></span>Booking ahead is advised</li>
+        <li class="rv"><span class="loz" aria-hidden="true"></span>A deposit may be required</li>
+        <li class="rv"><span class="loz" aria-hidden="true"></span>Groups of ten or more welcome</li>
+        <li class="rv"><span class="loz" aria-hidden="true"></span>Wednesday to Sunday, lunch and dinner</li>
+      </ul>
+      <p class="pill pill-light rv" data-status><span class="pill-dot" aria-hidden="true"></span><span class="pill-txt">Wed–Sun · 12pm–2.30pm · 6pm–9.30pm</span></p>
+    </div>
+    <figure class="rsv-ph"><span class="rsv-in"><img src="assets/img/chef-0088-md.webp" srcset="assets/img/chef-0088-md.webp 600w, assets/img/chef-0088-lg.webp 1200w" sizes="(min-width:900px) 34vw, 92vw" width="1200" height="1800" loading="lazy" decoding="async" alt="Auntie Gaik Lean holding a MICHELIN plaque in front of gilded doors" style="object-position:50% 30%"></span><span class="rsv-arch" aria-hidden="true"></span></figure>
+  </div>
+  <div class="wrap faq">
+    <div class="faq-head"><p class="lbl kicker rv">Good to know</p><h3 class="disp faq-h" data-split>Before you <i>come.</i></h3></div>
+    <div class="faq-list"><details class="qa"><summary><span class="disp qa-q">When are you open?</span><span class="qa-i" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v16M4 12h16"/></svg></span></summary><div class="qa-a"><p>Wednesday to Sunday. Lunch is 12pm to 2.30pm and dinner is 6pm to 9.30pm. We are closed on Monday and Tuesday.</p></div></details><details class="qa"><summary><span class="disp qa-q">Do I need to book?</span><span class="qa-i" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v16M4 12h16"/></svg></span></summary><div class="qa-a"><p>Booking ahead is advised. <a href="https://inline.app/booking/-OnKy8jPaRn_LUmJ5tDV:inline-live-4/-OnKy8r2gI9_CX8R2D7X" target="_blank" rel="noopener">Book online</a>, call <a href="tel:+60174344398">+60 17-434 4398</a> or <a href="https://wa.me/60174344398" target="_blank" rel="noopener">WhatsApp us</a>.</p></div></details><details class="qa"><summary><span class="disp qa-q">Is there a deposit?</span><span class="qa-i" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v16M4 12h16"/></svg></span></summary><div class="qa-a"><p>A deposit may be required when you book. The team will let you know when you reserve.</p></div></details><details class="qa"><summary><span class="disp qa-q">Can you seat a big group?</span><span class="qa-i" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v16M4 12h16"/></svg></span></summary><div class="qa-a"><p>Yes. We have large tables for groups of ten or more, and we host weddings, private and corporate events and year-end dinners.</p></div></details><details class="qa"><summary><span class="disp qa-q">Is the kitchen pork-free?</span><span class="qa-i" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v16M4 12h16"/></svg></span></summary><div class="qa-a"><p>Yes. Ours is a pork-free kitchen. Tell us about any other dietary needs when you book.</p></div></details><details class="qa"><summary><span class="disp qa-q">Where can I park?</span><span class="qa-i" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v16M4 12h16"/></svg></span></summary><div class="qa-a"><p>There is street parking nearby, around Lebuh Bishop in the heart of George Town.</p></div></details></div>
+  </div>
+</section>
+
+<!-- 15 VISIT -->
 <section class="visit" id="visit" aria-labelledby="visit-h">
   <div class="vs-grid">
-    <figure class="vs-ph"><span class="vs-in"><img src="assets/img/restaurant-exterior-md.webp" srcset="assets/img/restaurant-exterior-md.webp 900w, assets/img/restaurant-exterior-lg.webp 1800w" sizes="(min-width:900px) 64vw, 100vw" width="1800" height="1262" loading="lazy" decoding="async" alt="The cream shophouse with a blue ground floor on Lebuh Bishop"></span></figure>
+    <figure class="vs-ph"><span class="vs-in"><img src="assets/img/restaurant-exterior-2-md.webp" srcset="assets/img/restaurant-exterior-2-md.webp 900w, assets/img/restaurant-exterior-2-lg.webp 1800w" sizes="(min-width:900px) 64vw, 100vw" width="1800" height="1199" loading="lazy" decoding="async" alt="The blue shopfront with gilded doors and potted plants on Lebuh Bishop"></span></figure>
     <div class="vcard">
       <p class="lbl kicker">Visit</p>
       <h2 class="disp" id="visit-h" data-split>Find the <i>blue</i> shopfront.</h2>
@@ -259,13 +480,12 @@ d.className=c;setTimeout(function(){if(!window.AG_READY)d.className=d.className.
       </div>
       <p class="pill pill-light" data-status><span class="pill-dot" aria-hidden="true"></span><span class="pill-txt">Wed–Sun · 12pm–2.30pm · 6pm–9.30pm</span></p>
       <table class="hours"><caption class="sr">Opening hours</caption><tbody><tr data-day="1"><th scope="row">Monday</th><td>Closed</td></tr><tr data-day="2"><th scope="row">Tuesday</th><td>Closed</td></tr><tr data-day="3"><th scope="row">Wednesday</th><td>12–2.30pm<span class=sep> · </span>6–9.30pm</td></tr><tr data-day="4"><th scope="row">Thursday</th><td>12–2.30pm<span class=sep> · </span>6–9.30pm</td></tr><tr data-day="5"><th scope="row">Friday</th><td>12–2.30pm<span class=sep> · </span>6–9.30pm</td></tr><tr data-day="6"><th scope="row">Saturday</th><td>12–2.30pm<span class=sep> · </span>6–9.30pm</td></tr><tr data-day="0"><th scope="row">Sunday</th><td>12–2.30pm<span class=sep> · </span>6–9.30pm</td></tr></tbody></table>
-      <p class="advise">Booking ahead is advised.</p>
+      <p class="advise">Booking ahead is advised. Street parking nearby.</p>
       <div class="v-cta">
         <a class="btn btn-cobalt" href="https://inline.app/booking/-OnKy8jPaRn_LUmJ5tDV:inline-live-4/-OnKy8r2gI9_CX8R2D7X" target="_blank" rel="noopener">Book a table</a>
         <a class="btn btn-ghost" href="tel:+60174344398">Call</a>
         <a class="btn btn-ghost" href="https://wa.me/60174344398" target="_blank" rel="noopener">WhatsApp</a>
       </div>
-      <p class="v-tel">+60 17-434 4398 · call or WhatsApp</p>
       <p class="sr" id="copyMsg" aria-live="polite"></p>
     </div>
   </div>
@@ -278,7 +498,7 @@ d.className=c;setTimeout(function(){if(!window.AG_READY)d.className=d.className.
     <img class="ftr-logo" src="assets/site/logo-white.webp" width="1144" height="368" loading="lazy" decoding="async" alt="Auntie Gaik Lean's Old School Eatery">
     <div class="ftr-cols">
       <div><p class="lbl">Find us</p><p>1 Lebuh Bishop, George Town<br>10200 Penang, Malaysia</p></div>
-      <div><p class="lbl">Book</p><p><a href="https://inline.app/booking/-OnKy8jPaRn_LUmJ5tDV:inline-live-4/-OnKy8r2gI9_CX8R2D7X" target="_blank" rel="noopener">Book a table online</a><br><a href="tel:+60174344398">+60 17-434 4398</a><br>Call or <a href="https://wa.me/60174344398" target="_blank" rel="noopener">WhatsApp</a></p></div>
+      <div><p class="lbl">Book</p><p><a href="https://inline.app/booking/-OnKy8jPaRn_LUmJ5tDV:inline-live-4/-OnKy8r2gI9_CX8R2D7X" target="_blank" rel="noopener">Book a table online</a><br><a href="tel:+60174344398">+60 17-434 4398</a><br>Call or <a href="https://wa.me/60174344398" target="_blank" rel="noopener">WhatsApp</a><br><a href="menu/index.html">See the full menu</a></p></div>
       <div><p class="lbl">Hours</p><p>Wednesday to Sunday<br>Lunch 12pm–2.30pm<br>Dinner 6pm–9.30pm<br>Closed Monday and Tuesday</p></div>
       <div><p class="lbl">Follow</p><p><a href="https://www.instagram.com/auntiegaiklean/" target="_blank" rel="noopener">Instagram</a><br><a href="https://www.facebook.com/profile.php?id=100063562363254" target="_blank" rel="noopener">Facebook</a><br><span class="tag">#GaikLeanMoment</span></p></div>
     </div>
@@ -288,6 +508,10 @@ d.className=c;setTimeout(function(){if(!window.AG_READY)d.className=d.className.
     </div>
   </div>
 </footer>
+
+<nav class="abar" id="abar" aria-label="Quick actions">
+  <a class="ab-book" href="https://inline.app/booking/-OnKy8jPaRn_LUmJ5tDV:inline-live-4/-OnKy8r2gI9_CX8R2D7X" target="_blank" rel="noopener">Book a table</a><a href="tel:+60174344398">Call</a><a href="https://wa.me/60174344398" target="_blank" rel="noopener">WhatsApp</a>
+</nav>
 
 <div class="sheet" id="sheet" role="dialog" aria-modal="true" aria-labelledby="sheetName" hidden>
   <div class="sheet-bg"></div>
@@ -305,11 +529,12 @@ d.className=c;setTimeout(function(){if(!window.AG_READY)d.className=d.className.
   </div>
 </div>
 
+<script>window.AG_CLIPS=['menu-4', 'menu-2', 'menu-1', 'menu-6'];</script>
 <script src="assets/vendor/gsap.min.js"></script>
 <script src="assets/vendor/ScrollTrigger.min.js"></script>
 <script src="assets/vendor/SplitText.min.js"></script>
 <script src="assets/vendor/Flip.min.js"></script>
 <script src="assets/vendor/lenis.min.js"></script>
-<script src="assets/site/site.js?v=8"></script>
+<script src="assets/site/site.js?v=10"></script>
 </body>
 </html>

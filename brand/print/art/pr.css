@@ -1,0 +1,6 @@
+@page{margin:0}
+html,body{background:#fff}
+.pg{position:relative;overflow:hidden;break-after:page;page-break-after:always}
+.pg:last-child{break-after:auto;page-break-after:auto}
+.pg>*{position:absolute}
+.tt{position:absolute;inset:0}

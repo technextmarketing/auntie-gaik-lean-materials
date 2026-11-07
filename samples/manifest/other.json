@@ -1,0 +1,93 @@
+[
+ {
+  "stem": "ad3-feed",
+  "file": "ads/ad3-auntiegaik-meta-celebrate-4x5.png",
+  "title": "Celebrate at Auntie's round table (feed 4:5)",
+  "kind": "ad",
+  "copy": "Weddings, private events, corporate events, year-end dinners. Round tables for ten or more. CTA: Plan an event, WhatsApp."
+ },
+ {
+  "stem": "ad3-story",
+  "file": "ads/ad3-auntiegaik-meta-celebrate-9x16.png",
+  "title": "Celebrate at Auntie's round table (story 9:16)",
+  "kind": "ad",
+  "copy": "Weddings, private events, corporate events, year-end dinners. Round tables for ten or more. CTA: Plan an event, WhatsApp."
+ },
+ {
+  "stem": "ad4-feed",
+  "file": "ads/ad4-auntiegaik-meta-dessert-first-4x5.png",
+  "title": "Dessert first - Pengat (feed 4:5)",
+  "kind": "ad",
+  "copy": "Dessert first. Pengat: Pisang Raja, sweet potato and yam in coconut milk. Book a table."
+ },
+ {
+  "stem": "ad4-story",
+  "file": "ads/ad4-auntiegaik-meta-dessert-first-9x16.png",
+  "title": "Dessert first - Pengat (story 9:16)",
+  "kind": "ad",
+  "copy": "Dessert first. Pengat: Pisang Raja, sweet potato and yam in coconut milk. Book a table, Wed-Sun."
+ },
+ {
+  "stem": "email-welcome",
+  "file": "email/01-auntiegaik-email-welcome.png",
+  "title": "Welcome email",
+  "kind": "email",
+  "copy": "Welcome to Auntie's table. Story, 2013 / One MICHELIN Star / 4 years running, Curry Kapitan, Kerabu Pucuk Paku, Chye Por Omelette, Book a table."
+ },
+ {
+  "stem": "email-booking",
+  "file": "email/02-auntiegaik-email-booking.png",
+  "title": "Booking confirmed email (sample)",
+  "kind": "email",
+  "copy": "Your table is booked. [Date] [Time] [Guests] [Guest name] [Booking no.]. Arrive on time, deposit may be required, hours, groups of ten or more, address + Maps QR."
+ },
+ {
+  "stem": "email-birthday",
+  "file": "email/03-auntiegaik-email-birthday.png",
+  "title": "Birthday invitation email",
+  "kind": "email",
+  "copy": "A table for your birthday. Warm invite to book the round table, tables for ten or more welcome. No offer."
+ },
+ {
+  "stem": "email-thankyou",
+  "file": "email/04-auntiegaik-email-thankyou.png",
+  "title": "Thank-you email",
+  "kind": "email",
+  "copy": "Thank you for coming. Leave a review, follow @auntiegaiklean, share with #GaikLeanMoment."
+ },
+ {
+  "stem": "instore-table-qr",
+  "file": "instore/01-auntiegaik-instore-table-qr.png",
+  "title": "Table card: booking + Instagram QR",
+  "kind": "instore",
+  "copy": "Come back to Auntie's table. QR 1: online booking (inline). QR 2: instagram.com/auntiegaiklean."
+ },
+ {
+  "stem": "instore-whatsapp",
+  "file": "instore/02-auntiegaik-instore-whatsapp.png",
+  "title": "WhatsApp booking card",
+  "kind": "instore",
+  "copy": "Book by WhatsApp. QR to wa.me/60174344398, +60 17-434 4398, Wed-Sun lunch 12pm-2.30pm dinner 6pm-9.30pm. Booking ahead advised, deposit may be required."
+ },
+ {
+  "stem": "gbp-hours",
+  "file": "google/01-auntiegaik-gbp-hours.png",
+  "title": "Google post: opening hours",
+  "kind": "gbp",
+  "copy": "Open Wednesday to Sunday. Lunch 12pm-2.30pm, dinner 6pm-9.30pm, closed Mon and Tue. Book ahead online."
+ },
+ {
+  "stem": "gbp-michelin",
+  "file": "google/02-auntiegaik-gbp-michelin.png",
+  "title": "Google post: Four years running",
+  "kind": "gbp",
+  "copy": "Four years running. One MICHELIN Star, kept in every MICHELIN Guide Malaysia since the first (2023-2026)."
+ },
+ {
+  "stem": "gbp-events",
+  "file": "google/03-auntiegaik-gbp-events.png",
+  "title": "Google post: celebrations",
+  "kind": "gbp",
+  "copy": "Celebrate at Auntie's. Weddings, private events, corporate events, year-end dinners. Round tables for ten or more. Plan an event on WhatsApp."
+ }
+]

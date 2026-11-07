@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="robots" content="noindex">
+<meta name="export" content="stories/story-05-auntiegaik-four-years-running.png"><meta name="size" content="1080x1920">
+<title>Story 05 - Four years running</title>
+<link rel="stylesheet" href="../../assets/css/brand.css"><link rel="stylesheet" href="art.css">
+<style>
+.s{background:var(--night)}
+.s .tiles{position:absolute;inset:0;background:url("../../assets/pattern/tile-gold.svg") 0 0/120px 120px;opacity:.09}
+.s .glow1{position:absolute;inset:0;background:radial-gradient(70% 38% at 50% 58%,rgba(47,92,184,.6),transparent 70%)}
+.s .lbl{position:absolute;left:0;right:0;text-align:center;top:270px;font-size:34px;color:var(--gold-hi)}
+.s h1{position:absolute;left:0;right:0;text-align:center;top:330px;font-size:132px;color:var(--porcelain);line-height:1.02}
+.s h1 i{color:var(--gold-hi)}
+.s .stack{position:absolute;left:240px;top:760px;width:600px}
+.tier{position:absolute;left:0;width:600px;height:172px;border-radius:26px 26px 54px 54px / 26px 26px 40px 40px;background:linear-gradient(to bottom,#2f5cb8 0%,#1d3f8f 40%,#14215a 100%);border:3px solid var(--gold);display:flex;align-items:center;justify-content:center;overflow:hidden}
+.tier::before{content:"";position:absolute;inset:0;background:url("../../assets/pattern/tile-gold.svg") 0 0/80px 80px;opacity:.28}
+.tier b{position:relative;font-family:var(--f-display);font-weight:500;font-size:104px;font-variation-settings:"opsz" 28;font-optical-sizing:none;letter-spacing:.02em;color:var(--gold-hi)}
+.lid{position:absolute;left:-14px;width:628px;height:50px;border-radius:50% 50% 0 0 / 100% 100% 0 0;background:linear-gradient(to bottom,#e4c57e,#c9a14a 60%,#8f6d2a)}
+.knob{position:absolute;left:276px;width:48px;height:48px;border-radius:50%;background:radial-gradient(circle at 35% 30%,#f3e2b3,#c9a14a 60%,#8f6d2a)}
+.s .foot{position:absolute;left:0;right:0;top:1478px;text-align:center;font-size:34px;color:var(--porcelain)}
+.s .foot span{color:var(--gold-hi)}
+</style></head><body>
+<div class="ab story s">
+ <div class="tiles"></div><div class="glow1"></div>
+ <div class="lbl lbl" data-in="0.2" data-y="30">One MICHELIN Star</div>
+ <h1 class="disp" data-in="0.4" data-y="50">Four years<br><i>running.</i></h1>
+ <div class="stack">
+  <div class="tier" style="top:516px" data-in="1.0" data-y="-420"><b>2023</b></div>
+  <div class="tier" style="top:344px" data-in="1.7" data-y="-420"><b>2024</b></div>
+  <div class="tier" style="top:172px" data-in="2.4" data-y="-420"><b>2025</b></div>
+  <div class="tier" style="top:0px" data-in="3.1" data-y="-420"><b>2026</b></div>
+  <div style="position:absolute;left:0;top:-170px;width:600px;height:200px" data-in="3.9" data-y="-110"><div class="lid" style="top:122px"></div><div class="knob" style="top:68px"></div></div>
+ </div>
+ <div class="foot lbl" data-in="4.6" data-y="20">MICHELIN Guide Malaysia <span>·</span> 2023 to 2026</div>
+ <div class="grain"></div>
+</div>
+<script>
+const q=new URLSearchParams(location.search);
+window.setT=function(t){document.querySelectorAll("[data-in]").forEach(e=>{const s=+e.dataset.in,d=+(e.dataset.d||.8),p=Math.min(1,Math.max(0,(t-s)/d)),k=1-Math.pow(1-p,3);e.style.opacity=k;e.style.transform="translateY("+((1-k)*(+(e.dataset.y||40)))+"px)"})};
+if(q.has("t"))setT(+q.get("t"));
+</script>
+</body></html>

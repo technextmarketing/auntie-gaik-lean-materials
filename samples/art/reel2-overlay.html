@@ -1,0 +1,69 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="robots" content="noindex">
+<title>Reel 2 / 3 + ad overlays</title>
+<link rel="stylesheet" href="../../assets/css/brand.css"><link rel="stylesheet" href="art.css">
+<style>
+html,body{background:transparent!important}
+.p{display:none;position:absolute;inset:0}
+body[data-part="r2t1"] .r2t1,body[data-part="r2t2"] .r2t2,body[data-part="r2t3"] .r2t3,body[data-part="r2t4"] .r2t4,
+body[data-part="r3t1"] .r3t1,body[data-part="r3t2"] .r3t2,body[data-part="r3t3"] .r3t3,body[data-part="r3t4"] .r3t4,
+body[data-part="e2"] .e2,body[data-part="e3"] .e3,body[data-part="ea"] .ea,body[data-part="a1"] .a1{display:block}
+.band-top{position:absolute;left:0;right:0;top:0;height:820px;background:linear-gradient(to bottom,rgba(12,20,51,.92) 0%,rgba(12,20,51,.84) 38%,rgba(12,20,51,.5) 70%,rgba(12,20,51,0) 100%)}
+.band-bot{position:absolute;left:0;right:0;bottom:0;height:820px;background:linear-gradient(to top,rgba(12,20,51,.94) 0%,rgba(12,20,51,.86) 40%,rgba(12,20,51,.5) 72%,rgba(12,20,51,0) 100%)}
+.t{position:absolute;left:90px;right:90px}
+.lab{font-family:var(--f-sans);font-weight:500;font-size:34px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold-hi);white-space:nowrap}
+.h{font-family:var(--f-display);font-weight:500;font-optical-sizing:none;font-variation-settings:"opsz" 28;letter-spacing:-.015em;line-height:1.06;color:var(--porcelain)}
+.h i{font-style:italic;font-weight:400;color:var(--gold-hi)}
+.sub{font-family:var(--f-sans);font-weight:400;font-size:44px;line-height:1.3;color:var(--porcelain)}
+.rule{width:96px;height:2px;background:var(--gold)}
+/* window grounds: opaque night with a transparent hole; photo plays underneath */
+.gr{position:absolute;inset:0;background:var(--night)}
+.gr::before{content:"";position:absolute;inset:0;background:url("../../assets/pattern/tile-gold.svg") 0 0/150px 150px;opacity:.14}
+.gr::after{content:"";position:absolute;inset:0;background:radial-gradient(80% 45% at 50% 55%,rgba(47,92,184,.45),transparent 70%)}
+.arch{clip-path:path(evenodd,"M0 0H1080V1920H0Z M90 1500V1110A450 450 0 0 1 990 1110V1500Z")}
+.rect{clip-path:path(evenodd,"M0 0H1080V1920H0Z M0 700H1080V1256H0Z")}
+.stroke{position:absolute;inset:0}
+/* end cards (opaque) */
+.e{background:radial-gradient(95% 70% at 50% 42%,#1b3a8a 0%,#14215a 48%,#0c1433 100%)}
+.e::before{content:"";position:absolute;inset:0;background:url("../../assets/pattern/tile-gold.svg") 0 0/150px 150px;opacity:.2}
+.e::after{content:"";position:absolute;inset:0;background:radial-gradient(80% 60% at 50% 45%,rgba(12,20,51,.55),rgba(12,20,51,0) 70%)}
+.e .col{position:absolute;left:0;right:0;top:470px;display:flex;flex-direction:column;align-items:center;text-align:center;z-index:2}
+.cta{margin-top:64px;font-family:var(--f-sans);font-weight:600;font-size:46px;letter-spacing:.16em;text-transform:uppercase;color:var(--night);background:var(--gold-hi);padding:30px 56px}
+.tel{margin-top:44px;font-family:var(--f-sans);font-weight:500;font-size:40px;letter-spacing:.08em;color:var(--porcelain)}
+</style></head><body>
+<div class="ab story" style="background:transparent">
+ <!-- reel 2 -->
+ <div class="p r2t1"><div class="band-top" style="height:1000px"></div>
+  <div class="t" style="top:290px"><div class="lab">Spice paste · the start of the curry</div><div class="rule" style="margin:30px 0 34px"></div>
+   <div class="h" style="font-size:150px">The <i>rempah.</i></div></div></div>
+ <div class="p r2t2"><div class="band-top" style="height:760px"></div>
+  <div class="t" style="top:290px"><div class="h" style="font-size:78px">Made by hand,<br><i>from scratch.</i></div></div></div>
+ <div class="p r2t3"><div class="band-top" style="height:700px"></div>
+  <div class="t" style="top:290px"><div class="h" style="font-size:120px">Then,<br>the <i>curry.</i></div></div></div>
+ <div class="p r2t4"><div class="band-top" style="height:700px"></div>
+  <div class="t" style="top:290px"><div class="h" style="font-size:120px">Then,<br>the <i>table.</i></div></div></div>
+ <!-- reel 3 -->
+ <div class="p r3t1"><div class="band-top" style="height:900px"></div>
+  <div class="t" style="top:290px"><div class="lab">1 Bishop Street · George Town</div><div class="rule" style="margin:30px 0 34px"></div>
+   <div class="h" style="font-size:118px">Tables for<br><i>ten or more.</i></div></div></div>
+ <div class="p r3t2"><div class="gr arch"></div>
+  <svg class="stroke" width="1080" height="1920"><path d="M90 1500V1110A450 450 0 0 1 990 1110V1500Z" fill="none" stroke="#c9a14a" stroke-width="3"/></svg>
+  <div class="t" style="top:290px"><div class="lab">At Bishop Street</div><div class="h" style="font-size:108px;margin-top:26px">Round tables,<br><i>shared</i> dishes.</div></div></div>
+ <div class="p r3t3"><div class="band-bot" style="height:900px"></div>
+  <div class="t" style="bottom:400px"><div class="h" style="font-size:104px">Peranakan tiles.<br><i>Cobalt</i> walls.</div></div></div>
+ <div class="p r3t4"><div class="gr rect"></div>
+  <svg class="stroke" width="1080" height="1920"><path d="M0 700H1080M0 1256H1080" stroke="#c9a14a" stroke-width="3"/></svg>
+  <div class="t" style="top:290px"><div class="lab">The team</div><div class="h" style="font-size:112px;margin-top:22px">Every dish,<br>every <i>day.</i></div></div>
+  <div class="t" style="top:1330px"><div class="sub" style="font-size:44px">By this team, on Bishop Street.</div></div></div>
+ <!-- end cards -->
+ <div class="p e e2"><div class="col"><img src="../../assets/logo/logo-white.png" style="width:720px;height:auto"><div class="rule" style="margin:64px 0 56px"></div>
+   <div class="h" style="font-size:92px">Made by hand,<br><i>from scratch.</i></div><div class="cta">Book a table</div><div class="tel">Wed–Sun · +60 17-434 4398</div></div></div>
+ <div class="p e e3"><div class="col"><img src="../../assets/logo/logo-white.png" style="width:720px;height:auto"><div class="rule" style="margin:64px 0 56px"></div>
+   <div class="h" style="font-size:92px">Tables for<br><i>ten or more.</i></div><div class="cta">Book a table</div><div class="tel">Wed–Sun · +60 17-434 4398</div></div></div>
+ <div class="p e ea"><div class="col"><img src="../../assets/logo/logo-white.png" style="width:760px;height:auto"><div class="rule" style="margin:64px 0 56px"></div>
+   <div class="h" style="font-size:84px">One <span style="font-family:var(--f-sans);font-weight:500;font-size:.5em;letter-spacing:.14em;vertical-align:.18em">MICHELIN</span> <i>Star</i></div><div class="cta">Book a table</div><div class="tel">Wed–Sun · Lunch &amp; dinner</div></div></div>
+ <!-- ad -->
+ <div class="p a1"><div class="band-top" style="height:900px"></div>
+  <div class="t" style="top:290px"><div class="h" style="font-size:88px">Nyonya cooking,<br>the <i>old school</i> way.</div></div></div>
+</div>
+<script>document.body.dataset.part=new URLSearchParams(location.search).get('part')||'r2t1'</script>
+</body></html>
