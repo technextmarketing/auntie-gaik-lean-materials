@@ -117,11 +117,6 @@
   .weeks h3 { font-family: var(--f-display); font-weight: 500; font-size: 24px; color: var(--indigo); margin-bottom: 8px; }
   .weeks p { font-size: 15px; line-height: 1.55; color: var(--ink-2); }
   @media (max-width: 860px) { .weeks { grid-template-columns: 1fr 1fr; } }
-  .kpis { list-style: none; display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
-  .kpis li { background: #fff; border: 1px solid var(--line-light); padding: 22px; }
-  .kpis b { font-family: var(--f-display); font-weight: 500; font-size: 22px; color: var(--indigo); display: block; margin-bottom: 6px; }
-  .kpis span { font-size: 14px; color: var(--ink-2); line-height: 1.5; }
-  @media (max-width: 860px) { .kpis { grid-template-columns: 1fr; } }
   .dl { columns: 3 260px; column-gap: 32px; list-style: none; }
   .dl li { break-inside: avoid; padding: 9px 0; border-bottom: 1px solid var(--line-dark); font-size: 14px; display: flex; justify-content: space-between; gap: 12px; }
   .dl a { color: var(--sky); text-decoration: none; word-break: break-all; } .dl a:hover { text-decoration: underline; color: var(--porcelain); }
@@ -152,7 +147,7 @@
       <div>
         <span class="lbl kick">Campaign · Auntie's Table · November 2026</span>
         <h1 class="disp">A month at <i>Auntie's</i> table.</h1>
-        <p>Every piece is made from the restaurant's own shoot and films: their editorial look, plus what the feed is missing today, a reason to book, Chinese lines and a steady rhythm.</p>
+        <p>Every piece is made from the restaurant's own shoot and films, in their editorial look: posts, covers, stories, reels, ads, emails, in-store cards and Google posts, ready to use.</p>
         <div class="counts" id="counts"></div>
       </div>
       <div class="fan" id="fan" aria-hidden="true"></div>
@@ -161,8 +156,8 @@
 
   <section class="blk" id="calendar">
     <div class="wrap">
-      <div class="head reveal"><div><span class="n">01</span><h2 class="disp">Four weeks, three posts a week.</h2></div>
-        <p>A reel or story, a carousel and a single post each week, on the pillars that already work: dishes, people, the room, Penang and moments.</p></div>
+      <div class="head reveal"><div><span class="n">01</span><h2 class="disp">Four weeks of posts.</h2></div>
+        <p>Where each piece sits in the month: dishes, people, the room, Penang and moments. The full day-by-day schedule, with times and captions, is in the <a href="../social/index.html" style="color:var(--cobalt)">social posting plan</a>.</p></div>
       <div class="cal reveal" id="cal"></div>
     </div>
   </section>
@@ -178,7 +173,7 @@
   <section class="blk cobalt" id="xhs">
     <div class="wrap">
       <div class="head reveal"><div><span class="n">03</span><h2 class="disp">For Xiaohongshu.</h2></div>
-        <p>Bilingual covers for Chinese-speaking travellers planning Penang, a channel the restaurant does not use yet.</p></div>
+        <p>Bilingual covers for Chinese-speaking travellers planning a trip to Penang.</p></div>
       <div class="grid g3" id="xhsGrid"></div>
     </div>
   </section>
@@ -234,34 +229,19 @@
   <section class="blk" id="plan">
     <div class="wrap">
       <div class="head reveal"><div><span class="n">09</span><h2 class="disp">The first month.</h2></div>
-        <p>What each week is for, so every post has a job.</p></div>
+        <p>When each group of materials goes out. The day-by-day posting plan is on its own page.</p></div>
       <div class="weeks reveal">
-        <div><h3>Week 1 · Auntie</h3><p>Meet Auntie, the MICHELIN story and the first reel. Fix the bio: booking link first, then hours and address.</p></div>
-        <div><h3>Week 2 · The table</h3><p>Dish stories (Curry Kapitan, Assam Prawns, Pie Tee), the first Xiaohongshu covers and the Singapore ad.</p></div>
-        <div><h3>Week 3 · The room</h3><p>Round tables, celebrations and private events; the events ad; table QR cards go out.</p></div>
-        <div><h3>Week 4 · Come back</h3><p>Desserts and drinks, the thank-you email asking for reviews, and a look at what worked.</p></div>
+        <div><h3>Week 1 &middot; Auntie</h3><p>Meet Auntie, the MICHELIN story and the first reel go up, with the video bumper. The bio carries the booking link, then hours and address.</p></div>
+        <div><h3>Week 2 &middot; The table</h3><p>Dish posts (Curry Kapitan, Assam Prawns, Pie Tee), the first Xiaohongshu covers and the Singapore and Kuala Lumpur ad.</p></div>
+        <div><h3>Week 3 &middot; The room</h3><p>Round tables, celebrations and private events, with the events ad. The table QR cards are set out.</p></div>
+        <div><h3>Week 4 &middot; Come back</h3><p>Desserts and drinks, the dessert ad, the thank-you email and the favourite posts shared again.</p></div>
       </div>
-    </div>
-  </section>
-
-  <section class="blk" id="measure" style="padding-top:0">
-    <div class="wrap">
-      <div class="head reveal"><div><span class="n">10</span><h2 class="disp">What we will measure.</h2></div>
-        <p>Reported monthly, in plain English.</p></div>
-      <ul class="kpis reveal">
-        <li><b>Bookings from social</b><span>Clicks on the online booking link and WhatsApp chats started from posts, stories and ads.</span></li>
-        <li><b>Saves and shares</b><span>The sign a post was useful, not just liked.</span></li>
-        <li><b>Reach beyond followers</b><span>Reel and Xiaohongshu views from people who do not follow the account yet.</span></li>
-        <li><b>Ad return</b><span>Cost per booking-link click and per WhatsApp chat for the Singapore, Kuala Lumpur and events ads.</span></li>
-        <li><b>Reviews</b><span>New Google reviews after the thank-you email and the table cards; the rating trend over the month.</span></li>
-        <li><b>Search</b><span>Google Business Profile views and direction requests, before and after.</span></li>
-      </ul>
     </div>
   </section>
 
   <section class="blk dark" id="downloads">
     <div class="wrap">
-      <div class="head reveal"><div><span class="n">11</span><h2 class="disp">Every file, ready to post.</h2></div>
+      <div class="head reveal"><div><span class="n">10</span><h2 class="disp">Every file, ready to post.</h2></div>
         <p>Full-size files. Captions and ad copy are above.</p></div>
       <ul class="dl" id="dl"></ul>
     </div>
