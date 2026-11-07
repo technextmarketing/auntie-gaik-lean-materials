@@ -1,7 +1,7 @@
 [
  {
-  "stem": "post-06",
-  "file": "posts/06-auntiegaik-post-pie-tee.png",
+  "stem": "post-04",
+  "file": "posts/04-auntiegaik-post-sour-then-sweet.png",
   "issues": [],
   "fonts": [
    true,
@@ -11,8 +11,19 @@
   "broken": []
  },
  {
-  "stem": "xhs-01",
-  "file": "xhs/01-auntiegaik-xhs-michelin-nyonya.png",
+  "stem": "post-07",
+  "file": "posts/07-auntiegaik-post-four-years-running.png",
+  "issues": [],
+  "fonts": [
+   true,
+   true,
+   true
+  ],
+  "broken": []
+ },
+ {
+  "stem": "post-12",
+  "file": "posts/12-auntiegaik-post-the-team.png",
   "issues": [],
   "fonts": [
    true,
