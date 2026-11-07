@@ -757,3 +757,13 @@ html.lenis,html.lenis body{height:auto}
 .cc-porcelain .cc-k{color:var(--cobalt)}.cc-porcelain .cc-b i{color:var(--cobalt)}
 .ch-px .ch-card{inset:0}
 .pin .ch-px:has(.ch-card){inset:0}
+
+/* funnel: next-step strip at the end of a section */
+.next{position:relative;z-index:2;display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:center;column-gap:clamp(24px,4vw,64px);row-gap:10px;margin-top:clamp(48px,6vw,88px);padding-top:clamp(24px,2.4vw,34px);padding-bottom:clamp(56px,6vw,96px);border-top:1px solid rgba(201,162,74,.45)}
+.next-step{grid-column:1;margin:0;color:var(--gold-hi);font-size:11px}
+.next-line{grid-column:1;margin:0;font-family:var(--f-display);font-size:clamp(22px,1.2vw + 14px,32px);line-height:1.2;color:var(--porcelain);text-wrap:balance}
+.next .cta{grid-column:2;grid-row:1 / span 2;justify-content:flex-end}
+.next-light{border-top-color:rgba(31,63,149,.35)}
+.next-light .next-step{color:var(--cobalt)}
+.next-light .next-line{color:var(--ink)}
+@media (max-width:760px){.next{grid-template-columns:1fr}.next .cta{grid-column:1;grid-row:auto;justify-content:stretch;margin-top:10px}}
