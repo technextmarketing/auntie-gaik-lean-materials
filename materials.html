@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Auntie Gaik Lean's · Brand &amp; marketing materials</title>
+<link rel="icon" href="assets/logo/logo-ink.png">
+<link rel="stylesheet" href="assets/css/brand.css">
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { min-height: 100vh; display: grid; align-content: center; padding: 64px 0; color: var(--porcelain); font-family: var(--f-sans);
+    background: radial-gradient(ellipse 70% 50% at 50% 0%, #1d3270 0%, var(--night) 70%); -webkit-font-smoothing: antialiased; position: relative; overflow-x: hidden; }
+  body::before { content: ""; position: fixed; inset: 0; background: url("assets/pattern/tile-gold.svg") 0 0 / 110px; opacity: .07; pointer-events: none;
+    -webkit-mask-image: radial-gradient(ellipse 80% 60% at 50% 0%, #000, transparent 75%); mask-image: radial-gradient(ellipse 80% 60% at 50% 0%, #000, transparent 75%); }
+  .wrap { width: min(1240px, calc(100% - 32px)); margin-inline: auto; position: relative; }
+  header { text-align: center; margin-bottom: clamp(40px, 6vw, 72px); }
+  header img { width: min(420px, 78vw); margin: 0 auto 22px; display: block; opacity: 0; transform: translateY(10px); animation: rise 1.1s .15s cubic-bezier(.2,.7,.2,1) forwards; }
+  header p { color: var(--mist); letter-spacing: .24em; text-transform: uppercase; font-size: 12px; font-weight: 500; opacity: 0; animation: rise 1s .45s ease forwards; }
+  .rule { width: min(360px, 60vw); margin: 22px auto 0; color: var(--gold); opacity: 0; animation: rise 1s .6s ease forwards; }
+  @keyframes rise { to { opacity: 1; transform: none; } }
+
+  .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 228px), 1fr)); gap: 1px; background: var(--line-dark); border: 1px solid var(--line-dark); }
+  a.card { background: var(--night); padding: 28px 24px 30px; display: grid; gap: 10px; min-height: 300px; align-content: start; position: relative; overflow: hidden;
+    color: inherit; text-decoration: none; isolation: isolate; opacity: 0; transform: translateY(14px); animation: rise .9s cubic-bezier(.2,.7,.2,1) forwards; }
+  a.card:nth-child(1) { animation-delay: .7s } a.card:nth-child(2) { animation-delay: .8s } a.card:nth-child(3) { animation-delay: .9s }
+  a.card:nth-child(4) { animation-delay: 1s } a.card:nth-child(5) { animation-delay: 1.1s }
+  a.card .thumb { position: absolute; inset: 0; z-index: -1; background-size: cover; background-position: center; opacity: 0; transform: scale(1.08);
+    transition: opacity .6s ease, transform 1.2s cubic-bezier(.2,.7,.2,1); }
+  a.card .thumb::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(12,20,51,.92) 0%, rgba(12,20,51,.7) 45%, rgba(12,20,51,.94) 100%); }
+  a.card:hover .thumb, a.card:focus-visible .thumb { opacity: 1; transform: scale(1); }
+  a.card:focus-visible { outline: 2px solid var(--gold-hi); outline-offset: -2px; }
+  a.card .label { color: var(--gold-hi); font-size: 12px; letter-spacing: .24em; text-transform: uppercase; font-weight: 500; }
+  a.card h2 { font-family: var(--f-display); font-weight: 500; font-variation-settings: "opsz" 28; font-size: clamp(1.8rem, 1.3rem + 1.1vw, 2.4rem); line-height: 1.06; padding-bottom: .06em; }
+  a.card h2 i { color: var(--gold-hi); }
+  a.card p { color: var(--mist); font-size: .95rem; line-height: 1.5; }
+  a.card .go { margin-top: auto; padding-top: 18px; font-size: .74rem; letter-spacing: .24em; text-transform: uppercase; font-weight: 600; color: var(--porcelain); }
+  a.card .go::after { content: ' \2192'; display: inline-block; transition: transform .4s cubic-bezier(.2,.7,.2,1); }
+  a.card:hover .go::after { transform: translateX(8px); }
+  a.card .num { position: absolute; right: 18px; top: 10px; font-family: var(--f-display); font-style: italic; font-size: 64px; color: rgba(201,161,74,.16); line-height: 1; pointer-events: none; }
+  footer { margin-top: 40px; text-align: center; color: var(--mist); font-size: .85rem; line-height: 1.6; opacity: 0; animation: rise 1s 1.3s ease forwards; }
+  @media (prefers-reduced-motion: reduce) { header img, header p, .rule, a.card, footer { animation: none; opacity: 1; transform: none; } a.card .thumb { transition: none; } }
+</style>
+</head>
+<body>
+<main class="wrap">
+  <header>
+    <img src="assets/logo/logo-white.png" alt="Auntie Gaik Lean's Old School Eatery" width="1144" height="371">
+    <p>Brand and marketing materials · Edition 1 · Preview</p>
+    <div class="rule lozenge-rule" aria-hidden="true"><span></span></div>
+  </header>
+  <nav class="grid" aria-label="Materials">
+    <a class="card" href="index.html"><span class="thumb" style="background-image:url('assets/img/restaurant-interior-md.webp')"></span><span class="num" aria-hidden="true">I</span>
+      <span class="label">I · Website</span><h2>The <i>website</i></h2><p>The blue doors open: film hero, Auntie's life, her table, the rempah, the room and how to book.</p><span class="go">Open</span></a>
+    <a class="card" href="brand/index.html"><span class="thumb" style="background-image:url('assets/img/studio-016-md.webp')"></span><span class="num" aria-hidden="true">II</span>
+      <span class="label">II · Brand kit</span><h2>Brand <i>guidelines</i></h2><p>Logo, colour, type, the Peranakan tile, photography and voice.</p><span class="go">Open</span></a>
+    <a class="card" href="samples/index.html"><span class="thumb" style="background-image:url('assets/img/dish-curry-kapitan-md.webp')"></span><span class="num" aria-hidden="true">III</span>
+      <span class="label">III · Campaign</span><h2>Posts, ads <i>&amp;</i> reel</h2><p>Three feed posts, two Meta ads in two sizes and a short reel, with captions.</p><span class="go">Open</span></a>
+    <a class="card" href="library/index.html"><span class="thumb" style="background-image:url('assets/img/food-0054-md.webp')"></span><span class="num" aria-hidden="true">IV</span>
+      <span class="label">IV · Library</span><h2>Photo <i>&amp;</i> film</h2><p>The whole shoot, sorted and searchable, with films and downloads.</p><span class="go">Open</span></a>
+    <a class="card" href="social/index.html"><span class="thumb" style="background-image:url('assets/img/chef-0154-md.webp')"></span><span class="num" aria-hidden="true">V</span>
+      <span class="label">V · Review</span><h2>Social <i>media</i></h2><p>How Instagram and Facebook work today, the gaps, and what we would change.</p><span class="go">Open</span></a>
+  </nav>
+  <footer>Preview build for review. Photos and films are from the restaurant's own shoot.<br>Hours, booking and facts checked 7 November 2026.</footer>
+</main>
+</body>
+</html>

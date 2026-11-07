@@ -1,0 +1,50 @@
+/* Auntie Gaik Lean's Old School Eatery - shared brand tokens (website + sample artboards).
+   Palette is sampled from the client's own shoot: Peranakan cobalt backdrop, blue-and-white
+   porcelain, gilded screens, Nyonya rose (Rose Selasih) and pandan/jade greens. */
+@import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Jost:wght@300..700&display=swap');
+
+:root {
+  /* blues */
+  --night: #0c1433;      /* deepest ground (night sky / dark panels) */
+  --indigo: #14215a;     /* deep cloth blue */
+  --cobalt: #1d3f8f;     /* Peranakan cobalt, main brand blue */
+  --cobalt-hi: #2f5cb8;  /* lit backdrop blue */
+  --sky: #9fb6e3;        /* pale porcelain-paint blue (text on night, rules) */
+  /* whites */
+  --porcelain: #f5f7fb;  /* blue-white porcelain (light ground) */
+  --porcelain-2: #e6ebf5;
+  /* metals + accents */
+  --gold: #c9a14a;       /* gilded screen */
+  --gold-hi: #e4c57e;
+  --gold-lo: #8f6d2a;
+  --rose: #c8285e;       /* Nyonya rose - accents only, never large fields */
+  --chili: #b3261e;      /* sambal red - tiny accents only */
+  --jade: #2f6b4f;       /* pandan / kerabu green - tiny accents only */
+  /* neutrals */
+  --ink: #111629;        /* text on light */
+  --ink-2: #3a4260;      /* secondary text on light */
+  --mist: #b9c3dc;       /* secondary text on dark */
+  --line-dark: rgba(201,161,74,.45);  /* gold hairline on dark */
+  --line-light: rgba(29,63,143,.22);  /* cobalt hairline on light */
+
+  --f-display: 'Bodoni Moda', 'Didot', 'Bodoni 72', Georgia, serif;
+  --f-sans: 'Jost', 'Futura', 'Century Gothic', system-ui, sans-serif;
+  --f-zh: 'Noto Serif SC', 'Songti SC', 'SimSun', serif;
+}
+
+/* Reusable type roles */
+/* opsz pinned at 28: the 96 master's hairlines vanish at poster sizes (N, y lose strokes) */
+.disp { font-family: var(--f-display); font-weight: 500; font-optical-sizing: none; font-variation-settings: "opsz" 28; letter-spacing: -.015em; line-height: 1.04; }
+.disp i, .disp em { font-style: italic; font-weight: 400; }
+.lbl  { font-family: var(--f-sans); font-weight: 500; text-transform: uppercase; letter-spacing: .26em; }
+.body { font-family: var(--f-sans); font-weight: 400; line-height: 1.45; }
+.zh   { font-family: var(--f-zh); font-weight: 600; letter-spacing: .08em; }
+
+/* Peranakan tile pattern (blue-on-porcelain or gold-on-night via mask) */
+.tile-bg { background-image: url("../pattern/tile-cobalt.svg"); background-size: 120px 120px; }
+.tile-bg-gold { background-image: url("../pattern/tile-gold.svg"); background-size: 120px 120px; }
+
+/* Thin gold rule with a centred lozenge */
+.lozenge-rule { display: flex; align-items: center; gap: 14px; color: var(--gold); }
+.lozenge-rule::before, .lozenge-rule::after { content: ""; height: 1px; flex: 1; background: currentColor; opacity: .7; }
+.lozenge-rule > span { width: 9px; height: 9px; transform: rotate(45deg); border: 1px solid currentColor; }

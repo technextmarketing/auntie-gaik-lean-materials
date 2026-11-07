@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Social media review · Auntie Gaik Lean's Old School Eatery</title>
+<meta name="description" content="How Auntie Gaik Lean's posts on Instagram and Facebook today, how the materials are made, and where the gaps are.">
+<link rel="icon" href="../assets/logo/logo-ink.png">
+<link rel="stylesheet" href="../assets/css/brand.css">
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: var(--porcelain); color: var(--ink); font-family: var(--f-sans); -webkit-font-smoothing: antialiased; }
+  a { color: inherit; }
+  .wrap { width: min(1160px, calc(100% - 32px)); margin-inline: auto; }
+  .bar { position: sticky; top: 0; z-index: 10; background: rgba(245,247,251,.92); backdrop-filter: blur(8px); border-bottom: 1px solid var(--line-light); }
+  .bar .wrap { display: flex; align-items: center; justify-content: space-between; height: 64px; gap: 16px; }
+  .bar img { height: 34px; width: auto; }
+  .bar a.back { font-size: 12px; letter-spacing: .22em; text-transform: uppercase; text-decoration: none; color: var(--cobalt); font-weight: 500; }
+
+  .hero { background: var(--night); color: var(--porcelain); position: relative; overflow: hidden; }
+  .hero::after { content: ""; position: absolute; inset: 0; background: url("../assets/pattern/tile-gold.svg") 0 0 / 96px; opacity: .16;
+    -webkit-mask-image: linear-gradient(100deg, transparent 35%, #000 90%); mask-image: linear-gradient(100deg, transparent 35%, #000 90%); }
+  .hero .wrap { position: relative; z-index: 1; padding: clamp(56px, 8vw, 104px) 0 clamp(48px, 6vw, 80px); }
+  .hero .lbl { color: var(--gold-hi); font-size: 13px; }
+  .hero h1 { font-size: clamp(42px, 6vw, 84px); margin: 16px 0 18px; padding-bottom: .08em; }
+  .hero h1 i { color: var(--gold-hi); }
+  .hero p { color: var(--mist); max-width: 40em; font-size: clamp(16px, 1.5vw, 19px); line-height: 1.6; }
+
+  .stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; background: var(--line-dark); border: 1px solid var(--line-dark); margin-top: 44px; }
+  .stat { background: var(--night); padding: 22px 22px 24px; }
+  .stat .k { font-size: 11px; letter-spacing: .22em; text-transform: uppercase; color: var(--gold-hi); }
+  .stat .v { font-family: var(--f-display); font-size: clamp(34px, 3.6vw, 48px); margin: 8px 0 4px; font-variation-settings: "opsz" 28; }
+  .stat .s { font-size: 14px; color: var(--mist); line-height: 1.45; }
+  @media (max-width: 860px) { .stats { grid-template-columns: 1fr 1fr; } }
+
+  section.blk { padding: clamp(56px, 7vw, 96px) 0; }
+  section.blk + section.blk { border-top: 1px solid var(--line-light); }
+  .head { margin-bottom: 32px; max-width: 760px; }
+  .head .n { font-family: var(--f-display); font-style: italic; color: var(--gold-lo); font-size: 20px; }
+  .head h2 { font-size: clamp(32px, 4vw, 52px); color: var(--indigo); margin-top: 4px; padding-bottom: .06em; }
+  .head p { margin-top: 10px; color: var(--ink-2); line-height: 1.6; }
+
+  /* anatomy */
+  .anatomy { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 20px; align-items: stretch; }
+  .an.feature { grid-row: span 2; display: flex; flex-direction: column; }
+  .an.feature .titlecard { flex: 1; aspect-ratio: auto; min-height: 340px; }
+  .an.wide { grid-column: 1 / -1; display: grid; grid-template-columns: 220px 1fr; gap: 6px 28px; align-items: baseline; }
+  .an.wide .lbl { grid-column: 1; } .an.wide b { grid-column: 1; margin: 0; } .an.wide p { grid-column: 2; grid-row: 1 / span 2; }
+  .an { background: #fff; border: 1px solid var(--line-light); padding: 24px; position: relative; }
+  .an b { display: block; font-family: var(--f-display); font-weight: 500; font-size: 22px; color: var(--indigo); margin: 8px 0; }
+  .an .lbl { font-size: 11px; color: var(--gold-lo); }
+  .an p { font-size: 15px; line-height: 1.55; color: var(--ink-2); }
+  .an q { display: block; margin-top: 10px; font-family: var(--f-display); font-style: italic; color: var(--cobalt); font-size: 17px; }
+  @media (max-width: 960px) { .anatomy { grid-template-columns: 1fr 1fr; } .an.feature { grid-row: auto; grid-column: 1 / -1; } .an.feature .titlecard { min-height: 0; aspect-ratio: 4/3; } }
+  @media (max-width: 620px) { .anatomy { grid-template-columns: 1fr; } .an.wide { display: block; } }
+
+  /* mock title card */
+  .titlecard { aspect-ratio: 3/4; background: url("../assets/img/food-0942-md.webp") center 80%/cover; position: relative; display: grid; place-items: start center; padding-top: 14%; text-align: center; color: var(--porcelain); margin-bottom: 14px; }
+  .titlecard::before { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(12,20,51,.55), rgba(12,20,51,.05) 45%, rgba(12,20,51,.1)); }
+  .titlecard div { position: relative; }
+  .titlecard strong { display: block; font-family: var(--f-display); font-weight: 500; font-size: 30px; color: var(--gold-hi); font-variation-settings: "opsz" 28; }
+  .titlecard small { font-size: 10px; letter-spacing: .22em; text-transform: uppercase; }
+
+  /* lists */
+  .two { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; }
+  @media (max-width: 860px) { .two { grid-template-columns: 1fr; } }
+  .list { list-style: none; border-top: 1px solid var(--line-light); }
+  .list li { display: grid; grid-template-columns: 44px 1fr; gap: 14px; padding: 18px 0; border-bottom: 1px solid var(--line-light); }
+  .list li span { font-family: var(--f-display); font-size: 26px; color: var(--gold-lo); line-height: 1; }
+  .list li b { display: block; font-weight: 600; color: var(--indigo); margin-bottom: 4px; }
+  .list li p { font-size: 15px; line-height: 1.55; color: var(--ink-2); }
+  .good li span { color: var(--jade); }
+  .gap li span { color: var(--rose); }
+
+  /* plan */
+  .plan { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: var(--line-light); border: 1px solid var(--line-light); }
+  .plan div { background: #fff; padding: 24px; }
+  .plan .lbl { font-size: 11px; color: var(--cobalt); }
+  .plan h3 { font-family: var(--f-display); font-weight: 500; font-size: 24px; color: var(--indigo); margin: 8px 0 10px; }
+  .plan p { font-size: 15px; line-height: 1.55; color: var(--ink-2); }
+  @media (max-width: 860px) { .plan { grid-template-columns: 1fr; } }
+  .services { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 28px; }
+  .services span { border: 1px solid var(--cobalt); color: var(--cobalt); padding: 10px 16px; font-size: 12px; letter-spacing: .18em; text-transform: uppercase; font-weight: 500; }
+  .note { margin-top: 26px; font-size: 13px; color: var(--ink-2); }
+
+  footer { background: var(--night); color: var(--mist); padding: 36px 0; font-size: 13px; }
+  footer .wrap { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 14px; align-items: center; }
+  footer img { height: 34px; width: auto; }
+  .reveal { opacity: 0; transform: translateY(16px); transition: opacity .7s ease, transform .7s cubic-bezier(.2,.7,.2,1); }
+  .reveal.in { opacity: 1; transform: none; }
+  @media (prefers-reduced-motion: reduce) { .reveal { opacity: 1; transform: none; transition: none; } }
+</style>
+</head>
+<body>
+<header class="bar"><div class="wrap">
+  <img src="../assets/logo/logo-ink.png" alt="Auntie Gaik Lean's Old School Eatery" width="1144" height="372">
+  <a class="back" href="../materials.html">All materials</a>
+</div></header>
+
+<main>
+  <section class="hero">
+    <div class="wrap">
+      <span class="lbl">Social media review · checked 7 November 2026</span>
+      <h1 class="disp">A beautiful feed<br>that <i>talks quietly</i>.</h1>
+      <p>Instagram and Facebook are already premium and consistent. The posts look right; what is missing is reach, conversation and a reason to book.</p>
+      <div class="stats">
+        <div class="stat"><div class="k">Instagram</div><div class="v">7,887</div><div class="s">followers · @auntiegaiklean, verified · 306 posts</div></div>
+        <div class="stat"><div class="k">Facebook</div><div class="v">9.8K</div><div class="s">followers · verified page · WhatsApp button</div></div>
+        <div class="stat"><div class="k">Rhythm</div><div class="v">~2 a week</div><div class="s">16, 19, 21, 24, 27 Oct and 3 Nov</div></div>
+        <div class="stat"><div class="k">Typical likes</div><div class="v">18–44</div><div class="s">per Instagram post, 0–5 comments. The 2026 MICHELIN post: 430</div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="blk">
+    <div class="wrap">
+      <div class="head reveal"><span class="n">01</span><h2 class="disp">How their materials are made</h2>
+        <p>One professional shoot, one editorial template, and long story-led captions, copied to Facebook.</p></div>
+      <div class="anatomy">
+        <div class="an feature reveal">
+          <div class="titlecard" aria-hidden="true"><div><strong>Made by hand</strong><small>The old-school Nyonya way</small></div></div>
+          <span class="lbl">Template</span><b>Editorial title card</b>
+          <p>A shoot photo with a centred high-contrast serif title, often gold, and a small tracked-caps subtitle. Our recreation is shown above.</p>
+        </div>
+        <div class="an reveal"><span class="lbl">Photography</span><b>Their own shoot</b>
+          <p>Cobalt backdrops, blue-and-white porcelain, gilded screens and spice bowls. The same set we used for the sample pack, plus market and street photography.</p>
+          <q>Same set, many stories.</q></div>
+        <div class="an reveal"><span class="lbl">Carousels</span><b>Story series</b>
+          <p>Four to six titled slides on one theme, such as the morning market series: where a Nyonya kitchen begins, then from the stall to the table.</p></div>
+        <div class="an reveal"><span class="lbl">Reels</span><b>Kitchen and people</b>
+          <p>Gloved hands at the wok, guests toasting, and Adrian explaining Peranakan food and how to order on camera.</p></div>
+        <div class="an reveal"><span class="lbl">Moments</span><b>Milestones and promos</b>
+          <p>MICHELIN posts are pinned. Then year-end and private dining promos, festive greetings such as Merdeka Day, and guest visits.</p></div>
+        <div class="an wide reveal"><span class="lbl">Captions</span><b>Long-form, editorial</b>
+          <p>Four to six short paragraphs in calm UK English, ending with four or five hashtags including #GaikLeanMoment. The same text goes to Facebook.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="blk">
+    <div class="wrap two">
+      <div class="reveal">
+        <div class="head"><span class="n">02</span><h2 class="disp">What works</h2></div>
+        <ol class="list good">
+          <li><span>1</span><div><b>A premium, consistent look</b><p>Real photography and one type style keep the grid recognisable.</p></div></li>
+          <li><span>2</span><div><b>Depth of story</b><p>Ingredients, the market, the street and the table. Every post teaches something.</p></div></li>
+          <li><span>3</span><div><b>Proof up front</b><p>The MICHELIN Star, four years running, is pinned and in the bio.</p></div></li>
+          <li><span>4</span><div><b>Real faces</b><p>Auntie, Adrian and the team appear on camera, which is hard to copy.</p></div></li>
+        </ol>
+      </div>
+      <div class="reveal">
+        <div class="head"><span class="n">03</span><h2 class="disp">The gaps</h2></div>
+        <ol class="list gap">
+          <li><span>1</span><div><b>Quiet engagement</b><p>18–44 likes a post on 7.9K followers. Captions rarely ask a question or give a reason to save or share.</p></div></li>
+          <li><span>2</span><div><b>No call to book</b><p>The booking link sits only in the bio. Posts never say how to reserve.</p></div></li>
+          <li><span>3</span><div><b>English only</b><p>No Chinese or Malay lines, and no Xiaohongshu account found, though Penang draws many Chinese-speaking travellers.</p></div></li>
+          <li><span>4</span><div><b>Facebook repeats Instagram</b><p>The same captions, 16–20 reactions a post, and a Featured section from 2023 that could be refreshed.</p></div></li>
+          <li><span>5</span><div><b>A few covers off-style</b><p>Some reel covers use other fonts and colours, such as a yellow title. One cover style would keep the grid whole.</p></div></li>
+          <li><span>6</span><div><b>Little for Google to find</b><p>auntiegaiklean.com shows a "Launching Soon" page, so search and AI answers have little of their own to cite.</p></div></li>
+        </ol>
+      </div>
+    </div>
+  </section>
+
+  <section class="blk">
+    <div class="wrap">
+      <div class="head reveal"><span class="n">04</span><h2 class="disp">What we would change</h2>
+        <p>Keep their look and voice. Add reach, conversation and a booking path.</p></div>
+      <div class="plan reveal">
+        <div><span class="lbl">Rhythm</span><h3>Three a week</h3><p>One reel, one carousel and one single post, using the same pillars: dish stories, people, the room, Penang and moments.</p></div>
+        <div><span class="lbl">Booking</span><h3>A line on every post</h3><p>Every caption ends with how to book: the online link, call or WhatsApp. Stories carry a link sticker to the booking page.</p></div>
+        <div><span class="lbl">Reach</span><h3>Bilingual and paid</h3><p>Add English plus Chinese lines, start Xiaohongshu, and run Meta ads to Singapore and Kuala Lumpur travellers.</p></div>
+        <div><span class="lbl">Conversation</span><h3>Ask, reply, repost</h3><p>End posts with a question, reply to every comment, and share guests' posts with their permission.</p></div>
+        <div><span class="lbl">Facebook</span><h3>Native, not copied</h3><p>Shorter captions, Events for festive menus, albums for celebrations, and a refreshed Featured section.</p></div>
+        <div><span class="lbl">System</span><h3>One template kit</h3><p>Fixed cover styles for reels, carousels and promos so the grid never breaks. See the brand guidelines.</p></div>
+      </div>
+      <div class="services reveal"><span>Social media management</span><span>Reels and video editing</span><span>Meta ads</span><span>Website</span><span>Google profile and reviews</span><span>Xiaohongshu setup</span></div>
+      <p class="note">Figures were read from the public Instagram and Facebook pages on 7 November 2026 and will change over time.</p>
+    </div>
+  </section>
+</main>
+
+<footer><div class="wrap"><img src="../assets/logo/logo-white.png" alt="Auntie Gaik Lean's Old School Eatery" width="1144" height="371"><span>Prepared by TechNext · November 2026 · For review only</span></div></footer>
+<script>
+  const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } }), { rootMargin: '0px 0px -8% 0px' });
+  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+  if (new URLSearchParams(location.search).has('static')) document.querySelectorAll('.reveal').forEach(el => el.classList.add('in'));
+</script>
+</body>
+</html>

@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="120" height="120">
+  <g fill="none" stroke="#c9a14a" stroke-width="2" opacity="0.55">
+    <!-- corner quarter-rosettes (form a full rosette where four tiles meet) -->
+    <path d="M0 26 A26 26 0 0 0 26 0 M94 0 A26 26 0 0 0 120 26 M120 94 A26 26 0 0 0 94 120 M26 120 A26 26 0 0 0 0 94"/>
+    <path d="M0 14 A14 14 0 0 0 14 0 M106 0 A14 14 0 0 0 120 14 M120 106 A14 14 0 0 0 106 120 M14 120 A14 14 0 0 0 0 106"/>
+    <!-- central quatrefoil -->
+    <path d="M60 30 C72 30 76 44 66 52 C74 44 90 48 90 60 C90 72 74 76 66 68 C76 76 72 90 60 90 C48 90 44 76 54 68 C46 76 30 72 30 60 C30 48 46 44 54 52 C44 44 48 30 60 30 Z"/>
+    <circle cx="60" cy="60" r="7"/>
+    <!-- petal tips toward the edges -->
+    <path d="M60 4 L64 14 L60 22 L56 14 Z M116 60 L106 64 L98 60 L106 56 Z M60 116 L56 106 L60 98 L64 106 Z M4 60 L14 56 L22 60 L14 64 Z"/>
+  </g>
+</svg>

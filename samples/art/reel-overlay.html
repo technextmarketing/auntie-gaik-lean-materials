@@ -1,0 +1,52 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="robots" content="noindex">
+<link rel="stylesheet" href="../../assets/css/brand.css"><link rel="stylesheet" href="art.css">
+<style>
+html,body{background:transparent!important}
+.p{display:none;position:absolute;inset:0}
+body[data-part="1"] .p1,body[data-part="2"] .p2,body[data-part="3"] .p3,body[data-part="4"] .p4,body[data-part="5"] .p5,body[data-part="6"] .p6{display:block}
+.band-top{position:absolute;left:0;right:0;top:0;height:900px;
+ background:linear-gradient(to bottom,rgba(12,20,51,.9) 0%,rgba(12,20,51,.84) 30%,rgba(12,20,51,.55) 58%,rgba(12,20,51,.2) 82%,rgba(12,20,51,0) 100%)}
+.band-bot{position:absolute;left:0;right:0;bottom:0;height:900px;
+ background:linear-gradient(to top,rgba(12,20,51,.92) 0%,rgba(12,20,51,.86) 34%,rgba(12,20,51,.55) 62%,rgba(12,20,51,.2) 84%,rgba(12,20,51,0) 100%)}
+.t{position:absolute;left:90px;right:90px}
+.lab{font-family:var(--f-sans);font-weight:500;font-size:34px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold-hi);white-space:nowrap}
+.h{font-family:var(--f-display);font-weight:500;font-optical-sizing:none;font-variation-settings:"opsz" 28;letter-spacing:-.015em;line-height:1.06;color:var(--porcelain)}
+.h i{font-style:italic;font-weight:400;color:var(--gold-hi)}
+.sub{font-family:var(--f-sans);font-weight:400;font-size:44px;line-height:1.3;color:var(--porcelain)}
+.rule{width:96px;height:2px;background:var(--gold)}
+/* end card */
+.p5 .col{position:absolute;left:0;right:0;top:560px;display:flex;flex-direction:column;align-items:center;text-align:center}
+.p6{background:radial-gradient(95% 70% at 50% 42%,#1b3a8a 0%,#14215a 48%,#0c1433 100%)}
+.p6::before{content:"";position:absolute;inset:0;background:url("../../assets/pattern/tile-gold.svg") 0 0/150px 150px;opacity:.2}
+.p6::after{content:"";position:absolute;inset:0;background:radial-gradient(80% 60% at 50% 45%,rgba(12,20,51,.55),rgba(12,20,51,0) 70%)}
+</style></head><body>
+<div class="ab story" style="background:transparent">
+ <!-- A: exterior -->
+ <div class="p p1"><div class="band-top" style="height:1100px;background:linear-gradient(to bottom,rgba(12,20,51,.96) 0%,rgba(12,20,51,.95) 62%,rgba(12,20,51,.6) 78%,rgba(12,20,51,.22) 91%,rgba(12,20,51,0) 100%)"></div>
+  <div class="t" style="top:290px"><div class="lab">1 Bishop Street · George Town</div>
+   <div class="rule" style="margin:30px 0 34px"></div>
+   <div class="h" style="font-size:118px">Penang's<br><i style="color:#f3e2b3">Nyonya</i> kitchen</div></div></div>
+ <!-- B: Auntie, lower third -->
+ <div class="p p2"><div class="band-bot" style="height:1000px;background:linear-gradient(to top,rgba(12,20,51,.9) 0%,rgba(12,20,51,.84) 52%,rgba(12,20,51,.68) 68%,rgba(12,20,51,.28) 86%,rgba(12,20,51,0) 100%)"></div>
+  <div class="t" style="bottom:400px"><div class="h" style="font-size:96px">Auntie Gaik Lean</div>
+   <div class="rule" style="margin:26px 0 26px"></div>
+   <div class="sub">Cooking since she was twelve</div></div></div>
+ <!-- C: dish, bottom -->
+ <div class="p p3"><div class="band-bot" style="height:700px;background:linear-gradient(to top,rgba(12,20,51,.97) 0%,rgba(12,20,51,.95) 74%,rgba(12,20,51,.5) 90%,rgba(12,20,51,0) 100%)"></div>
+  <div class="t" style="bottom:388px"><div class="h" style="font-size:66px">Made by hand.<br><i>Made from scratch.</i></div></div></div>
+ <!-- D: dining room, top -->
+ <div class="p p4"><div class="band-top" style="height:760px"></div>
+  <div class="t" style="top:290px"><div class="h" style="font-size:112px">Big tables.<br><i>60s</i> music.</div></div></div>
+ <!-- end card text -->
+ <div class="p p5"><div class="col">
+   <img src="../../assets/logo/logo-white.png" style="width:720px;height:auto">
+   <div class="rule" style="margin:64px 0 56px"></div>
+   <div class="h" style="font-size:84px">One <span style="font-family:var(--f-sans);font-weight:500;font-size:.5em;letter-spacing:.14em;vertical-align:.18em">MICHELIN</span> <i>Star</i></div>
+   <div class="sub" style="font-size:40px;margin-top:34px;letter-spacing:.04em;color:var(--mist)">Wed–Sun · Lunch &amp; dinner</div>
+   <div class="lab" style="margin-top:70px;font-size:40px;letter-spacing:.12em;color:var(--porcelain);border:2px solid var(--gold);padding:26px 40px;text-transform:none">Reserve <b style="font-weight:600;color:var(--gold-hi)">+60 17-434 4398</b></div>
+ </div></div>
+ <!-- end card background (opaque) -->
+ <div class="p p6"></div>
+</div>
+<script>document.body.dataset.part=new URLSearchParams(location.search).get('part')||'1'</script>
+</body></html>

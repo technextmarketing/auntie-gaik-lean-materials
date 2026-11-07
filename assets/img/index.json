@@ -1,0 +1,646 @@
+[
+ {
+  "slug": "drink-bandung",
+  "src": "Bandung.jpg",
+  "w": 1803,
+  "h": 2676,
+  "orient": "portrait"
+ },
+ {
+  "slug": "dish-chye-por-omelette",
+  "src": "Chye por omelette.jpg",
+  "w": 3648,
+  "h": 2516,
+  "orient": "landscape"
+ },
+ {
+  "slug": "dish-curry-kapitan",
+  "src": "Curry Kapitan.jpg",
+  "w": 3524,
+  "h": 2493,
+  "orient": "landscape"
+ },
+ {
+  "slug": "dish-ikan-goreng-kunyit",
+  "src": "Ikan Goreng Kunyit with Nanchut sauce (left).jpg",
+  "w": 2055,
+  "h": 2735,
+  "orient": "portrait"
+ },
+ {
+  "slug": "dish-kerabu-pucuk-paku",
+  "src": "Kerabu Pucuk paku.jpg",
+  "w": 2779,
+  "h": 2095,
+  "orient": "landscape"
+ },
+ {
+  "slug": "drink-nutmeg-juice",
+  "src": "Nutmeg Juice.jpg",
+  "w": 2101,
+  "h": 3480,
+  "orient": "portrait"
+ },
+ {
+  "slug": "drink-rose-selasih",
+  "src": "Rose Selasih.jpg",
+  "w": 1906,
+  "h": 2943,
+  "orient": "portrait"
+ },
+ {
+  "slug": "chef-0023",
+  "src": "chef-0023.jpg",
+  "w": 1920,
+  "h": 1280,
+  "orient": "landscape"
+ },
+ {
+  "slug": "chef-0028",
+  "src": "chef-0028.jpg",
+  "w": 1920,
+  "h": 1183,
+  "orient": "landscape"
+ },
+ {
+  "slug": "chef-0038",
+  "src": "chef-0038.jpg",
+  "w": 1920,
+  "h": 1279,
+  "orient": "landscape"
+ },
+ {
+  "slug": "chef-0047",
+  "src": "chef-0047.jpg",
+  "w": 1280,
+  "h": 1920,
+  "orient": "portrait"
+ },
+ {
+  "slug": "chef-0088",
+  "src": "chef-0088.jpg",
+  "w": 1280,
+  "h": 1920,
+  "orient": "portrait"
+ },
+ {
+  "slug": "chef-0134",
+  "src": "chef-0134.jpg",
+  "w": 1280,
+  "h": 1920,
+  "orient": "portrait"
+ },
+ {
+  "slug": "chef-0140",
+  "src": "chef-0140.jpg",
+  "w": 1920,
+  "h": 1280,
+  "orient": "landscape"
+ },
+ {
+  "slug": "chef-0154",
+  "src": "chef-0154.jpg",
+  "w": 1920,
+  "h": 1280,
+  "orient": "landscape"
+ },
+ {
+  "slug": "chef-0181",
+  "src": "chef-0181.jpg",
+  "w": 1920,
+  "h": 1346,
+  "orient": "landscape"
+ },
+ {
+  "slug": "chef-0213",
+  "src": "chef-0213.jpg",
+  "w": 1920,
+  "h": 988,
+  "orient": "landscape"
+ },
+ {
+  "slug": "chef-0239",
+  "src": "chef-0239.jpg",
+  "w": 1920,
+  "h": 1280,
+  "orient": "landscape"
+ },
+ {
+  "slug": "chef-0249",
+  "src": "chef-0249.jpg",
+  "w": 1920,
+  "h": 1280,
+  "orient": "landscape"
+ },
+ {
+  "slug": "chef-0257",
+  "src": "chef-0257.jpg",
+  "w": 1920,
+  "h": 1280,
+  "orient": "landscape"
+ },
+ {
+  "slug": "chef-0269",
+  "src": "chef-0269.jpg",
+  "w": 1920,
+  "h": 1280,
+  "orient": "landscape"
+ },
+ {
+  "slug": "chef-0275",
+  "src": "chef-0275.jpg",
+  "w": 1920,
+  "h": 1280,
+  "orient": "landscape"
+ },
+ {
+  "slug": "chef-0294",
+  "src": "chef-0294.jpg",
+  "w": 1920,
+  "h": 1280,
+  "orient": "landscape"
+ },
+ {
+  "slug": "chef-4314",
+  "src": "chef-4314.jpg",
+  "w": 1280,
+  "h": 1920,
+  "orient": "portrait"
+ },
+ {
+  "slug": "chef-4324",
+  "src": "chef-4324.jpg",
+  "w": 1280,
+  "h": 1920,
+  "orient": "portrait"
+ },
+ {
+  "slug": "dining-6533",
+  "src": "dining-6533.jpg",
+  "w": 1465,
+  "h": 1920,
+  "orient": "portrait"
+ },
+ {
+  "slug": "dining-6626",
+  "src": "dining-6626.jpg",
+  "w": 1285,
+  "h": 1920,
+  "orient": "portrait"
+ },
+ {
+  "slug": "dining-6692",
+  "src": "dining-6692.jpg",
+  "w": 1279,
+  "h": 1920,
+  "orient": "portrait"
+ },
+ {
+  "slug": "dining-6711",
+  "src": "dining-6711.jpg",
+  "w": 1279,
+  "h": 1920,
+  "orient": "portrait"
+ },
+ {
+  "slug": "dining-6729",
+  "src": "dining-6729.jpg",
+  "w": 1280,
+  "h": 1920,
+  "orient": "portrait"
+ },
+ {
+  "slug": "dining-6768",
+  "src": "dining-6768.jpg",
+  "w": 1280,
+  "h": 1920,
+  "orient": "portrait"
+ },
+ {
+  "slug": "dining-6809",
+  "src": "dining-6809.jpg",
+  "w": 1280,
+  "h": 1920,
+  "orient": "portrait"
+ },
+ {
+  "slug": "dining-6898",
+  "src": "dining-6898.jpg",
+  "w": 1279,
+  "h": 1920,
+  "orient": "portrait"
+ },
+ {
+  "slug": "dining-6969",
+  "src": "dining-6969.jpg",
+  "w": 1407,
+  "h": 1920,
+  "orient": "portrait"
+ },
+ {
+  "slug": "dining-6986",
+  "src": "dining-6986.jpg",
+  "w": 1291,
+  "h": 1920,
+  "orient": "portrait"
+ },
+ {
+  "slug": "dining-7058",
+  "src": "dining-7058.jpg",
+  "w": 1280,
+  "h": 1920,
+  "orient": "portrait"
+ },
+ {
+  "slug": "dining-7067",
+  "src": "dining-7067.jpg",
+  "w": 1280,
+  "h": 1920,
+  "orient": "portrait"
+ },
+ {
+  "slug": "dining-7071",
+  "src": "dining-7071.jpg",
+  "w": 1280,
+  "h": 1920,
+  "orient": "portrait"
+ },
+ {
+  "slug": "dining-8911",
+  "src": "dining-8911.jpg",
+  "w": 1574,
+  "h": 1920,
+  "orient": "portrait"
+ },
+ {
+  "slug": "dining-8932",
+  "src": "dining-8932.jpg",
+  "w": 1394,
+  "h": 1920,
+  "orient": "portrait"
+ },
+ {
+  "slug": "dining-9004",
+  "src": "dining-9004.jpg",
+  "w": 1280,
+  "h": 1920,
+  "orient": "portrait"
+ },
+ {
+  "slug": "dining-9050",
+  "src": "dining-9050.jpg",
+  "w": 1280,
+  "h": 1920,
+  "orient": "portrait"
+ },
+ {
+  "slug": "dining-9103",
+  "src": "dining-9103.jpg",
+  "w": 1417,
+  "h": 1920,
+  "orient": "portrait"
+ },
+ {
+  "slug": "dining-9153",
+  "src": "dining-9153.jpg",
+  "w": 1279,
+  "h": 1920,
+  "orient": "portrait"
+ },
+ {
+  "slug": "dining-9248",
+  "src": "dining-9248.jpg",
+  "w": 1280,
+  "h": 1920,
+  "orient": "portrait"
+ },
+ {
+  "slug": "dining-9950",
+  "src": "dining-9950.jpg",
+  "w": 1280,
+  "h": 1920,
+  "orient": "portrait"
+ },
+ {
+  "slug": "food-0022",
+  "src": "food-0022.jpg",
+  "w": 1280,
+  "h": 1920,
+  "orient": "portrait"
+ },
+ {
+  "slug": "food-0036",
+  "src": "food-0036.jpg",
+  "w": 1280,
+  "h": 1920,
+  "orient": "portrait"
+ },
+ {
+  "slug": "food-0049",
+  "src": "food-0049.jpg",
+  "w": 1280,
+  "h": 1920,
+  "orient": "portrait"
+ },
+ {
+  "slug": "food-0050",
+  "src": "food-0050.jpg",
+  "w": 1280,
+  "h": 1920,
+  "orient": "portrait"
+ },
+ {
+  "slug": "food-0054",
+  "src": "food-0054.jpg",
+  "w": 1283,
+  "h": 1920,
+  "orient": "portrait"
+ },
+ {
+  "slug": "food-0086",
+  "src": "food-0086.jpg",
+  "w": 1280,
+  "h": 1920,
+  "orient": "portrait"
+ },
+ {
+  "slug": "food-0135",
+  "src": "food-0135.jpg",
+  "w": 1280,
+  "h": 1920,
+  "orient": "portrait"
+ },
+ {
+  "slug": "food-0940",
+  "src": "food-0940.jpg",
+  "w": 1280,
+  "h": 1920,
+  "orient": "portrait"
+ },
+ {
+  "slug": "food-0942",
+  "src": "food-0942.jpg",
+  "w": 1280,
+  "h": 1920,
+  "orient": "portrait"
+ },
+ {
+  "slug": "food-0953",
+  "src": "food-0953.jpg",
+  "w": 1280,
+  "h": 1920,
+  "orient": "portrait"
+ },
+ {
+  "slug": "food-0955",
+  "src": "food-0955.jpg",
+  "w": 1280,
+  "h": 1920,
+  "orient": "portrait"
+ },
+ {
+  "slug": "food-0963",
+  "src": "food-0963.jpg",
+  "w": 1280,
+  "h": 1920,
+  "orient": "portrait"
+ },
+ {
+  "slug": "food-0966",
+  "src": "food-0966.jpg",
+  "w": 1280,
+  "h": 1920,
+  "orient": "portrait"
+ },
+ {
+  "slug": "food-1441",
+  "src": "food-1441.jpg",
+  "w": 1280,
+  "h": 1920,
+  "orient": "portrait"
+ },
+ {
+  "slug": "food-1624",
+  "src": "food-1624.jpg",
+  "w": 1279,
+  "h": 1920,
+  "orient": "portrait"
+ },
+ {
+  "slug": "food-1662",
+  "src": "food-1662.jpg",
+  "w": 1280,
+  "h": 1920,
+  "orient": "portrait"
+ },
+ {
+  "slug": "food-1682",
+  "src": "food-1682.jpg",
+  "w": 1279,
+  "h": 1920,
+  "orient": "portrait"
+ },
+ {
+  "slug": "food-1722",
+  "src": "food-1722.jpg",
+  "w": 1279,
+  "h": 1920,
+  "orient": "portrait"
+ },
+ {
+  "slug": "food-1734",
+  "src": "food-1734.jpg",
+  "w": 1280,
+  "h": 1920,
+  "orient": "portrait"
+ },
+ {
+  "slug": "food-1735",
+  "src": "food-1735.jpg",
+  "w": 1280,
+  "h": 1920,
+  "orient": "portrait"
+ },
+ {
+  "slug": "food-1767",
+  "src": "food-1767.jpg",
+  "w": 1280,
+  "h": 1920,
+  "orient": "portrait"
+ },
+ {
+  "slug": "food-1784",
+  "src": "food-1784.jpg",
+  "w": 1280,
+  "h": 1920,
+  "orient": "portrait"
+ },
+ {
+  "slug": "food-1814",
+  "src": "food-1814.jpg",
+  "w": 1279,
+  "h": 1920,
+  "orient": "portrait"
+ },
+ {
+  "slug": "food-1833",
+  "src": "food-1833.jpg",
+  "w": 1279,
+  "h": 1920,
+  "orient": "portrait"
+ },
+ {
+  "slug": "food-4822",
+  "src": "food-4822.jpg",
+  "w": 1280,
+  "h": 1920,
+  "orient": "portrait"
+ },
+ {
+  "slug": "food-4840",
+  "src": "food-4840.jpg",
+  "w": 1280,
+  "h": 1920,
+  "orient": "portrait"
+ },
+ {
+  "slug": "food-5496",
+  "src": "food-5496.jpg",
+  "w": 1280,
+  "h": 1920,
+  "orient": "portrait"
+ },
+ {
+  "slug": "food-5506",
+  "src": "food-5506.jpg",
+  "w": 1920,
+  "h": 1280,
+  "orient": "landscape"
+ },
+ {
+  "slug": "food-5510",
+  "src": "food-5510.jpg",
+  "w": 1280,
+  "h": 1920,
+  "orient": "portrait"
+ },
+ {
+  "slug": "food-5512",
+  "src": "food-5512.jpg",
+  "w": 1280,
+  "h": 1920,
+  "orient": "portrait"
+ },
+ {
+  "slug": "food-5521",
+  "src": "food-5521.jpg",
+  "w": 1280,
+  "h": 1920,
+  "orient": "portrait"
+ },
+ {
+  "slug": "food-5523",
+  "src": "food-5523.jpg",
+  "w": 1280,
+  "h": 1920,
+  "orient": "portrait"
+ },
+ {
+  "slug": "food-5535",
+  "src": "food-5535.jpg",
+  "w": 1920,
+  "h": 1279,
+  "orient": "landscape"
+ },
+ {
+  "slug": "food-5547",
+  "src": "food-5547.jpg",
+  "w": 1920,
+  "h": 1279,
+  "orient": "landscape"
+ },
+ {
+  "slug": "restaurant-exterior-2",
+  "src": "restaurant-exterior-2.jpg",
+  "w": 1920,
+  "h": 1279,
+  "orient": "landscape"
+ },
+ {
+  "slug": "restaurant-exterior",
+  "src": "restaurant-exterior.jpg",
+  "w": 1920,
+  "h": 1346,
+  "orient": "landscape"
+ },
+ {
+  "slug": "restaurant-interior-2",
+  "src": "restaurant-interior-2.jpg",
+  "w": 1920,
+  "h": 1280,
+  "orient": "landscape"
+ },
+ {
+  "slug": "restaurant-interior",
+  "src": "restaurant-interior.jpg",
+  "w": 1920,
+  "h": 1280,
+  "orient": "landscape"
+ },
+ {
+  "slug": "studio-009",
+  "src": "studio-009.jpg",
+  "w": 1279,
+  "h": 1920,
+  "orient": "portrait"
+ },
+ {
+  "slug": "studio-011",
+  "src": "studio-011.jpg",
+  "w": 1279,
+  "h": 1920,
+  "orient": "portrait"
+ },
+ {
+  "slug": "studio-016",
+  "src": "studio-016.jpg",
+  "w": 1279,
+  "h": 1920,
+  "orient": "portrait"
+ },
+ {
+  "slug": "studio-019",
+  "src": "studio-019.jpg",
+  "w": 1279,
+  "h": 1920,
+  "orient": "portrait"
+ },
+ {
+  "slug": "studio-023",
+  "src": "studio-023.jpg",
+  "w": 1279,
+  "h": 1920,
+  "orient": "portrait"
+ },
+ {
+  "slug": "studio-030",
+  "src": "studio-030.jpg",
+  "w": 1279,
+  "h": 1920,
+  "orient": "portrait"
+ },
+ {
+  "slug": "studio-032",
+  "src": "studio-032.jpg",
+  "w": 1279,
+  "h": 1920,
+  "orient": "portrait"
+ },
+ {
+  "slug": "studio-072",
+  "src": "studio-072.jpg",
+  "w": 1272,
+  "h": 1920,
+  "orient": "portrait"
+ }
+]

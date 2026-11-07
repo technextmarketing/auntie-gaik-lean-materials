@@ -1,0 +1,279 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Sample pack · Auntie Gaik Lean's Old School Eatery</title>
+<meta name="description" content="Sample website, social posts, Meta ads and a reel for Auntie Gaik Lean's Old School Eatery, George Town, Penang.">
+<link rel="icon" href="../assets/logo/logo-ink.png">
+<link rel="stylesheet" href="../assets/css/brand.css">
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body { background: var(--porcelain); color: var(--ink); font-family: var(--f-sans); -webkit-font-smoothing: antialiased; }
+  a { color: inherit; }
+  img, video { display: block; max-width: 100%; }
+  .wrap { width: min(1200px, calc(100% - 32px)); margin-inline: auto; }
+
+  /* top bar */
+  .bar { position: sticky; top: 0; z-index: 20; background: rgba(245,247,251,.92); backdrop-filter: blur(8px); border-bottom: 1px solid var(--line-light); }
+  .bar .wrap { display: flex; align-items: center; justify-content: space-between; gap: 16px; height: 64px; }
+  .bar img { height: 34px; width: auto; }
+  .bar nav { display: flex; gap: clamp(12px, 2.4vw, 28px); font-size: 13px; letter-spacing: .2em; text-transform: uppercase; font-weight: 500; }
+  .bar nav a { text-decoration: none; color: var(--ink-2); }
+  .bar nav a:hover, .bar nav a:focus-visible { color: var(--cobalt); }
+  @media (max-width: 720px) { .bar nav { display: none; } }
+
+  /* hero */
+  .hero { position: relative; background: var(--night); color: var(--porcelain); overflow: hidden; }
+  .hero::before { content: ""; position: absolute; inset: 0; background: url("../assets/pattern/tile-gold.svg") 0 0 / 96px 96px; opacity: .22;
+    -webkit-mask-image: linear-gradient(90deg, transparent 0%, #000 55%); mask-image: linear-gradient(90deg, transparent 0%, #000 55%); }
+  .hero .wrap { position: relative; display: grid; grid-template-columns: 1.1fr .9fr; gap: 48px; align-items: center; padding: clamp(56px, 9vw, 120px) 0; }
+  .hero .kick { color: var(--gold-hi); font-size: 13px; }
+  .hero h1 { font-size: clamp(44px, 6.4vw, 92px); margin: 18px 0 20px; padding-bottom: .08em; }
+  .hero h1 i { color: var(--gold-hi); }
+  .hero p { font-size: clamp(17px, 1.6vw, 20px); line-height: 1.55; color: var(--mist); max-width: 34em; }
+  .hero .logo { width: min(420px, 100%); justify-self: end; opacity: .96; }
+  .count { display: flex; flex-wrap: wrap; gap: 10px 28px; margin-top: 30px; font-size: 13px; color: var(--sky); }
+  .count b { color: var(--porcelain); font-family: var(--f-display); font-weight: 500; font-size: 28px; letter-spacing: 0; margin-right: 8px; vertical-align: -3px; }
+  @media (max-width: 860px) { .hero .wrap { grid-template-columns: 1fr; } .hero .logo { justify-self: start; width: min(320px, 80%); order: -1; } }
+
+  /* sections */
+  section.blk { padding: clamp(64px, 8vw, 112px) 0; }
+  section.blk + section.blk { border-top: 1px solid var(--line-light); }
+  .head { display: flex; align-items: end; justify-content: space-between; gap: 24px; margin-bottom: 36px; flex-wrap: wrap; }
+  .head .n { font-family: var(--f-display); font-style: italic; color: var(--gold-lo); font-size: 22px; display: block; margin-bottom: 6px; }
+  .head h2 { font-size: clamp(34px, 4.4vw, 58px); color: var(--indigo); padding-bottom: .06em; }
+  .head p { max-width: 30em; color: var(--ink-2); line-height: 1.55; font-size: 16px; }
+
+  /* website block */
+  .browser { background: #fff; border: 1px solid var(--line-light); box-shadow: 0 30px 60px -30px rgba(12,20,51,.35); }
+  .browser .chrome { display: flex; align-items: center; gap: 8px; height: 40px; padding: 0 14px; background: var(--porcelain-2); border-bottom: 1px solid var(--line-light); }
+  .browser .chrome span { width: 10px; height: 10px; border-radius: 50%; background: #c5cde0; }
+  .browser .chrome em { margin-left: 12px; font-style: normal; font-size: 13px; color: var(--ink-2); background: #fff; padding: 4px 12px; flex: 1; max-width: 520px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  .browser .shot { max-height: 640px; overflow: hidden; position: relative; }
+  .browser .shot img { width: 100%; }
+  .site-grid { display: grid; grid-template-columns: 1fr 260px; gap: 28px; align-items: start; }
+  .phone { border: 10px solid var(--night); border-radius: 30px; overflow: hidden; background: var(--night); box-shadow: 0 30px 60px -30px rgba(12,20,51,.45); max-height: 540px; }
+  @media (max-width: 860px) { .site-grid { grid-template-columns: 1fr; } .phone { max-width: 260px; } }
+  .btn { display: inline-flex; align-items: center; gap: 10px; margin-top: 24px; padding: 14px 22px; background: var(--cobalt); color: #fff; text-decoration: none; font-size: 13px; letter-spacing: .2em; text-transform: uppercase; font-weight: 500; }
+  .btn:hover, .btn:focus-visible { background: var(--indigo); }
+  .btn.ghost { background: transparent; color: var(--cobalt); border: 1px solid var(--cobalt); margin-left: 10px; }
+
+  /* posts */
+  .posts { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+  .card { background: #fff; border: 1px solid var(--line-light); }
+  .card button.zoom { all: unset; cursor: zoom-in; display: block; }
+  .card button.zoom:focus-visible { outline: 2px solid var(--cobalt); outline-offset: 2px; }
+  .card .meta { padding: 18px 18px 20px; }
+  .card .meta .lbl { font-size: 11px; color: var(--gold-lo); }
+  .card .meta h3 { font-family: var(--f-display); font-weight: 500; font-size: 22px; margin: 6px 0 10px; color: var(--indigo); }
+  .cap { font-size: 14px; line-height: 1.55; color: var(--ink-2); white-space: pre-line; }
+  .copy { all: unset; cursor: pointer; margin-top: 12px; font-size: 11px; letter-spacing: .2em; text-transform: uppercase; color: var(--cobalt); font-weight: 500; }
+  .copy:focus-visible { outline: 2px solid var(--cobalt); outline-offset: 3px; }
+  @media (max-width: 900px) { .posts { grid-template-columns: 1fr; max-width: 520px; } }
+
+  /* ads */
+  .ad { display: grid; grid-template-columns: 1.15fr .62fr 1fr; gap: 24px; align-items: start; margin-bottom: 48px; }
+  .ad .copybox { background: var(--night); color: var(--porcelain); padding: 26px; }
+  .ad .copybox h3 { font-family: var(--f-display); font-weight: 500; font-size: 26px; margin-bottom: 18px; padding-bottom: .05em; }
+  .ad dl { display: grid; gap: 14px; }
+  .ad dt { font-size: 11px; letter-spacing: .22em; text-transform: uppercase; color: var(--gold-hi); }
+  .ad dd { font-size: 15px; line-height: 1.55; color: var(--porcelain-2); }
+  .ad figcaption { font-size: 12px; letter-spacing: .18em; text-transform: uppercase; color: var(--ink-2); margin-top: 10px; }
+  @media (max-width: 900px) { .ad { grid-template-columns: 1fr 1fr; } .ad .copybox { grid-column: 1 / -1; } }
+
+  /* reel */
+  .reel { display: grid; grid-template-columns: 360px 1fr; gap: 48px; align-items: center; }
+  .reel video { width: 100%; aspect-ratio: 9 / 16; object-fit: cover; background: var(--night); border: 10px solid var(--night); border-radius: 28px; }
+  .cuts { list-style: none; display: grid; gap: 0; border-top: 1px solid var(--line-light); }
+  .cuts li { display: grid; grid-template-columns: 90px 1fr; gap: 16px; padding: 14px 0; border-bottom: 1px solid var(--line-light); font-size: 15px; color: var(--ink-2); }
+  .cuts li b { font-family: var(--f-display); font-weight: 500; color: var(--cobalt); font-size: 18px; }
+  @media (max-width: 860px) { .reel { grid-template-columns: 1fr; } .reel video { max-width: 320px; } }
+
+  footer { background: var(--night); color: var(--mist); padding: 40px 0; font-size: 13px; letter-spacing: .06em; }
+  footer .wrap { display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; align-items: center; }
+  footer img { height: 36px; width: auto; }
+
+  /* lightbox */
+  .lb { position: fixed; inset: 0; z-index: 50; background: rgba(8,12,30,.92); display: none; place-items: center; padding: 24px; cursor: zoom-out; }
+  .lb.on { display: grid; }
+  .lb img { max-height: calc(100vh - 48px); width: auto; box-shadow: 0 40px 80px rgba(0,0,0,.5); }
+  .reveal { opacity: 0; transform: translateY(18px); transition: opacity .7s ease, transform .7s cubic-bezier(.2,.7,.2,1); }
+  .reveal.in { opacity: 1; transform: none; }
+  @media (prefers-reduced-motion: reduce) { .reveal { opacity: 1; transform: none; transition: none; } html { scroll-behavior: auto; } }
+</style>
+</head>
+<body>
+<header class="bar">
+  <div class="wrap">
+    <a href="#top" aria-label="Back to top"><img src="../assets/logo/logo-ink.png" alt="Auntie Gaik Lean's Old School Eatery" width="1144" height="372"></a>
+    <nav aria-label="Sections"><a href="../materials.html">All materials</a><a href="#website">Website</a><a href="#posts">Posts</a><a href="#ads">Ads</a><a href="#reel">Reel</a></nav>
+  </div>
+</header>
+
+<main id="top">
+  <section class="hero">
+    <div class="wrap">
+      <div>
+        <span class="lbl kick">Sample pack · November 2026</span>
+        <h1 class="disp">Auntie's story, told <i>online</i>.</h1>
+        <p>A website, social posts, Meta ads and a reel, all made from the restaurant's own photo shoot.</p>
+        <div class="count lbl"><span><b>1</b>Website</span><span><b>3</b>Posts</span><span><b>2</b>Ads · 4 sizes</span><span><b>1</b>Reel</span></div>
+      </div>
+      <img class="logo" src="../assets/logo/logo-white.png" alt="" width="1144" height="371">
+    </div>
+  </section>
+
+  <section class="blk" id="website">
+    <div class="wrap">
+      <div class="head reveal">
+        <div><span class="n">01</span><h2 class="disp">Website</h2></div>
+        <p>Replaces the "Launching Soon" page. Story, dishes, the room, hours, and booking through their online booking page, call or WhatsApp.</p>
+      </div>
+      <div class="site-grid reveal">
+        <div>
+          <div class="browser">
+            <div class="chrome"><span></span><span></span><span></span><em>auntiegaiklean.com (proposed)</em></div>
+            <div class="shot"><img src="exports/web/site-1440.png" alt="Homepage sample at desktop width" loading="lazy"></div>
+          </div>
+          <a class="btn" href="../">Open the live sample</a>
+        </div>
+        <div class="phone"><img src="exports/web/site-390.png" alt="Homepage sample on a phone" loading="lazy"></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="blk" id="posts">
+    <div class="wrap">
+      <div class="head reveal">
+        <div><span class="n">02</span><h2 class="disp">Social posts</h2></div>
+        <p>3:4 feed posts for Instagram and Facebook (and Xiaohongshu, if started). Captions are ready to paste.</p>
+      </div>
+      <div class="posts">
+        <article class="card reveal">
+          <button class="zoom" data-full="exports/posts/01-auntiegaik-post-meet-auntie.png" aria-label="Enlarge post 1"><img src="exports/web/01-auntiegaik-post-meet-auntie.webp" alt="Post: Meet Auntie Gaik Lean" width="720" height="960" loading="lazy"></button>
+          <div class="meta"><span class="lbl">Post 01 · People</span><h3>Meet Auntie</h3>
+            <p class="cap">Auntie Gaik Lean started cooking for her family at twelve. She sold homemade kuih by the roadside, cooked in factory canteens and trained chefs in Kuala Lumpur. In 2013 her son Adrian opened this eatery in her name and asked her to come home to run it.
+Her recipes are still made by hand, from scratch, in our kitchen.
+Book a table: link in bio, or call/WhatsApp +60 17-434 4398 · Wed–Sun
+#GaikLeanMoment #AuntieGaikLean #NyonyaCuisine #PeranakanHeritage #GeorgeTown</p>
+            <button class="copy" type="button">Copy caption</button></div>
+        </article>
+        <article class="card reveal">
+          <button class="zoom" data-full="exports/posts/02-auntiegaik-post-curry-kapitan.png" aria-label="Enlarge post 2"><img src="exports/web/02-auntiegaik-post-curry-kapitan.webp" alt="Post: Curry Kapitan" width="720" height="960" loading="lazy"></button>
+          <div class="meta"><span class="lbl">Post 02 · Dish story</span><h3>Curry Kapitan</h3>
+            <p class="cap">Curry Kapitan. A Penang Nyonya classic, made by hand from scratch in Auntie's kitchen, like everything on the menu. Best shared round a big table.
+甲必丹咖哩 · 槟城娘惹菜
+Lunch and dinner, Wednesday to Sunday · 1 Bishop Street, George Town
+Book a table: link in bio
+#GaikLeanMoment #AuntieGaikLean #CurryKapitan #NyonyaCuisine</p>
+            <button class="copy" type="button">Copy caption</button></div>
+        </article>
+        <article class="card reveal">
+          <button class="zoom" data-full="exports/posts/03-auntiegaik-post-find-the-blue-doors.png" aria-label="Enlarge post 3"><img src="exports/web/03-auntiegaik-post-find-the-blue-doors.webp" alt="Post: Look for the blue doors" width="720" height="960" loading="lazy"></button>
+          <div class="meta"><span class="lbl">Post 03 · Visit</span><h3>Find the blue doors</h3>
+            <p class="cap">Look for the blue doors at 1 Bishop Street, George Town.
+Lunch 12–2.30pm and dinner 6–9.30pm, Wednesday to Sunday. Closed Monday and Tuesday.
+Booking ahead is advised: link in bio, or +60 17-434 4398 (call or WhatsApp).
+#GaikLeanMoment #AuntieGaikLean #GeorgeTown #PeranakanHeritage</p>
+            <button class="copy" type="button">Copy caption</button></div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="blk" id="ads">
+    <div class="wrap">
+      <div class="head reveal">
+        <div><span class="n">03</span><h2 class="disp">Meta ads</h2></div>
+        <p>Aimed at Singapore and Kuala Lumpur travellers planning a Penang trip. Each ad comes in feed 4:5 and story 9:16.</p>
+      </div>
+
+      <div class="ad reveal">
+        <figure><button class="zoom" data-full="exports/ads/ad1-auntiegaik-meta-michelin-nyonya-4x5.png" aria-label="Enlarge ad 1 feed"><img src="exports/web/ad1-auntiegaik-meta-michelin-nyonya-4x5.webp" alt="Ad 1, feed 4:5" width="720" height="900" loading="lazy"></button><figcaption>Feed 4:5</figcaption></figure>
+        <figure><button class="zoom" data-full="exports/ads/ad1-auntiegaik-meta-michelin-nyonya-9x16.png" aria-label="Enlarge ad 1 story"><img src="exports/web/ad1-auntiegaik-meta-michelin-nyonya-9x16.webp" alt="Ad 1, story 9:16" width="720" height="1280" loading="lazy"></button><figcaption>Story 9:16</figcaption></figure>
+        <div class="copybox">
+          <h3>Ad 1 · The MICHELIN Nyonya kitchen</h3>
+          <dl>
+            <div><dt>Primary text</dt><dd class="cap">Going to Penang? Auntie Gaik Lean's was the first Nyonya restaurant in Malaysia to earn a MICHELIN Star, and it has kept it every year since. Heirloom recipes, made by hand on Bishop Street, George Town.</dd></div>
+            <div><dt>Headline</dt><dd>Book Auntie's table in Penang</dd></div>
+            <div><dt>Description</dt><dd>Open Wed–Sun · Lunch &amp; dinner</dd></div>
+            <div><dt>Button</dt><dd>Book now, to <a href="https://inline.app/booking/-OnKy8jPaRn_LUmJ5tDV:inline-live-4/-OnKy8r2gI9_CX8R2D7X" target="_blank" rel="noopener">their online booking page</a></dd></div>
+            <div><dt>Suggested audience</dt><dd>Singapore + Kuala Lumpur, 25–55, interested in travel to Penang and dining out</dd></div>
+          </dl>
+        </div>
+      </div>
+
+      <div class="ad reveal">
+        <figure><button class="zoom" data-full="exports/ads/ad2-auntiegaik-meta-penang-weekend-4x5.png" aria-label="Enlarge ad 2 feed"><img src="exports/web/ad2-auntiegaik-meta-penang-weekend-4x5.webp" alt="Ad 2, feed 4:5" width="720" height="900" loading="lazy"></button><figcaption>Feed 4:5</figcaption></figure>
+        <figure><button class="zoom" data-full="exports/ads/ad2-auntiegaik-meta-penang-weekend-9x16.png" aria-label="Enlarge ad 2 story"><img src="exports/web/ad2-auntiegaik-meta-penang-weekend-9x16.webp" alt="Ad 2, story 9:16" width="720" height="1280" loading="lazy"></button><figcaption>Story 9:16</figcaption></figure>
+        <div class="copybox">
+          <h3>Ad 2 · Penang this weekend</h3>
+          <dl>
+            <div><dt>Primary text</dt><dd class="cap">Penang this weekend? Bring the whole family to Auntie's table. Big tables for ten or more, 60s music and Nyonya cooking made from scratch. Lunch and dinner, Wednesday to Sunday.</dd></div>
+            <div><dt>Headline</dt><dd>Big Nyonya tables in George Town</dd></div>
+            <div><dt>Description</dt><dd>1 Bishop Street · Booking advised</dd></div>
+            <div><dt>Button</dt><dd>Send <a href="https://wa.me/60174344398" target="_blank" rel="noopener">WhatsApp message</a>, or Book now</dd></div>
+            <div><dt>Suggested audience</dt><dd>Singapore + Kuala Lumpur families and groups, travel and family-dining interests</dd></div>
+          </dl>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="blk" id="reel">
+    <div class="wrap">
+      <div class="head reveal">
+        <div><span class="n">04</span><h2 class="disp">Reel</h2></div>
+        <p>A 9:16 reel for Instagram and Facebook, cut from the shoot's photos and animated clips. Music is added in the app.</p>
+      </div>
+      <div class="reel reveal">
+        <video src="exports/reel/01-auntiegaik-reel-auntie-s-table-web.mp4" poster="exports/reel/01-auntiegaik-reel-auntie-s-table-poster.jpg" muted loop playsinline controls preload="metadata"></video>
+        <ol class="cuts" id="cuts">
+          <li><b>Open</b>The blue shopfront on Bishop Street</li>
+          <li><b>Auntie</b>Under her own glowing sign</li>
+          <li><b>Kitchen</b>Made by hand, made from scratch</li>
+          <li><b>Table</b>Quick cuts of the dishes</li>
+          <li><b>Room</b>Big tables, 60s music</li>
+          <li><b>End</b>Logo, MICHELIN Star, hours and number</li>
+        </ol>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <img src="../assets/logo/logo-white.png" alt="Auntie Gaik Lean's Old School Eatery" width="1144" height="371">
+    <span>Sample pack prepared by TechNext · November 2026 · For review only</span>
+  </div>
+</footer>
+
+<div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="Enlarged image"><img alt=""></div>
+
+<script>
+  // lightbox
+  const lb = document.getElementById('lb'), lbImg = lb.querySelector('img');
+  document.querySelectorAll('button.zoom').forEach(b => b.addEventListener('click', () => {
+    lbImg.src = b.dataset.full; lbImg.alt = b.querySelector('img').alt; lb.classList.add('on');
+  }));
+  lb.addEventListener('click', () => lb.classList.remove('on'));
+  addEventListener('keydown', e => { if (e.key === 'Escape') lb.classList.remove('on'); });
+  // copy caption / primary text
+  document.querySelectorAll('.copy').forEach(b => b.addEventListener('click', async () => {
+    const t = b.parentElement.querySelector('.cap').innerText.trim();
+    try { await navigator.clipboard.writeText(t); b.textContent = 'Copied'; } catch (e) { b.textContent = 'Select and copy'; }
+    setTimeout(() => b.textContent = 'Copy caption', 1800);
+  }));
+  // reveals
+  const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } }), { rootMargin: '0px 0px -8% 0px' });
+  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+  if (new URLSearchParams(location.search).has('static')) document.querySelectorAll('.reveal').forEach(el => el.classList.add('in'));
+  // play reel when in view
+  const v = document.querySelector('#reel video');
+  new IntersectionObserver(es => es.forEach(e => e.isIntersecting ? v.play().catch(() => {}) : v.pause()), { threshold: .4 }).observe(v);
+</script>
+</body>
+</html>

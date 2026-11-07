@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Photo &amp; film library - Auntie Gaik Lean's Old School Eatery</title>
+<link rel="stylesheet" href="../assets/css/brand.css">
+<link rel="stylesheet" href="library.css">
+</head>
+<body>
+<header class="top">
+  <a class="top-logo" href="../index.html" aria-label="Auntie Gaik Lean's Old School Eatery"><img src="../assets/logo/logo-white.png" alt="Auntie Gaik Lean's Old School Eatery" width="1144" height="371"></a>
+  <a class="top-link lbl" href="../materials.html">All materials</a>
+</header>
+
+<main>
+  <section class="hero">
+    <p class="lbl eyebrow">Materials</p>
+    <h1 class="disp">Photo &amp; <i>film</i> library</h1>
+    <p class="body lede">The whole shoot, sorted. Browse it, open any frame full size, and download what you need.</p>
+    <p class="lbl counts" id="counts" aria-live="polite">&nbsp;</p>
+    <div class="lozenge-rule"><span></span></div>
+  </section>
+
+  <nav class="chips" id="chips" aria-label="Filter the library"></nav>
+  <p class="shown lbl" id="shown" aria-live="polite"></p>
+
+  <ul class="grid" id="grid"></ul>
+  <noscript><p class="body" style="padding:24px">The library needs JavaScript to list the files.</p></noscript>
+</main>
+
+<div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="Preview" hidden>
+  <div class="lb-bar">
+    <p class="lb-count lbl" id="lbCount"></p>
+    <button class="lb-btn lbl" id="lbClose" type="button">Close</button>
+  </div>
+  <button class="lb-nav lb-prev" id="lbPrev" type="button" aria-label="Previous"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M15 4 7 12l8 8" fill="none" stroke="currentColor" stroke-width="1.6"/></svg></button>
+  <button class="lb-nav lb-next" id="lbNext" type="button" aria-label="Next"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="m9 4 8 8-8 8" fill="none" stroke="currentColor" stroke-width="1.6"/></svg></button>
+  <div class="lb-stage" id="lbStage"></div>
+  <div class="lb-foot">
+    <div class="lb-meta">
+      <p class="lb-cat lbl" id="lbCat"></p>
+      <p class="lb-name body" id="lbName"></p>
+    </div>
+    <a class="lb-dl lbl" id="lbDl" href="#" download>Download</a>
+  </div>
+</div>
+
+<script src="../assets/vendor/gsap.min.js"></script>
+<script src="../assets/vendor/Flip.min.js"></script>
+<script src="library.js"></script>
+</body>
+</html>

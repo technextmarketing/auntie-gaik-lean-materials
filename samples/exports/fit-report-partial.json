@@ -1,0 +1,24 @@
+[
+ {
+  "stem": "ad1-feed",
+  "file": "ads/ad1-auntiegaik-meta-michelin-nyonya-4x5.png",
+  "issues": [],
+  "fonts": [
+   true,
+   true,
+   true
+  ],
+  "broken": []
+ },
+ {
+  "stem": "ad1-story",
+  "file": "ads/ad1-auntiegaik-meta-michelin-nyonya-9x16.png",
+  "issues": [],
+  "fonts": [
+   true,
+   true,
+   true
+  ],
+  "broken": []
+ }
+]

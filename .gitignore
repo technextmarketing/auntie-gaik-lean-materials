@@ -1,0 +1,5 @@
+_src/
+samples/art/_smoke.html
+*.tmp
+BRIEF.md
+SITE-SPEC.md
