@@ -29,7 +29,7 @@ main:focus { outline: none; }
 .btn-cobalt { background: var(--cobalt); color: var(--porcelain); } .btn-cobalt:hover { background: var(--indigo); }
 .btn-ghost { border-color: var(--cobalt); color: var(--cobalt); } .btn-ghost:hover { background: var(--cobalt); color: var(--porcelain); }
 .btn[aria-disabled="true"] { opacity: .45; pointer-events: none; }
-.ib { display: inline-flex; align-items: center; justify-content: center; gap: 8px; height: 42px; min-width: 42px; padding: 0 10px; border-radius: 2px;
+.ib { display: inline-flex; align-items: center; justify-content: center; gap: 8px; height: 44px; min-width: 44px; padding: 0 10px; border-radius: 2px;
   color: var(--porcelain); text-decoration: none; transition: background-color .25s, color .25s; }
 .ib:hover { background: rgba(201, 161, 74, .16); color: var(--gold-hi); }
 .ib svg { width: 20px; height: 20px; fill: none; stroke: currentColor; stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round; flex: none; }
@@ -40,22 +40,23 @@ main:focus { outline: none; }
 .bar__logo { flex: none; display: block; }
 .bar__logo img { width: 148px; height: auto; }
 .bar__back { display: flex; gap: 18px; flex: none; }
-.bar__back a { font: 500 11.5px/1 var(--f-sans); letter-spacing: .2em; text-transform: uppercase; color: var(--mist); text-decoration: none; padding: 8px 0;
+.bar__back a { display: inline-flex; align-items: center; min-height: 44px; font: 500 11.5px/1 var(--f-sans); letter-spacing: .2em; text-transform: uppercase; color: var(--mist); text-decoration: none; padding: 0;
   border-bottom: 1px solid transparent; transition: color .25s, border-color .25s; }
 .bar__back a:hover { color: var(--porcelain); border-color: var(--gold); }
 .bar__tools { display: flex; align-items: center; gap: 4px; flex: none; margin-left: auto; }
 .bar__book { min-height: 42px; padding: 0 20px; margin-left: 8px; }
 @media (min-width: 1600px) { .ib__t { display: inline; } }
 @media (max-width: 699px) {
-  :root { --barH: 88px; --gut: 16px; }
-  .bar__in { flex-wrap: wrap; align-content: flex-start; row-gap: 0; column-gap: 4px; }
-  .bar__logo { height: 56px; display: flex; align-items: center; }
+  /* one slim 56px row: logo (links home) | All materials | PDF */
+  :root { --barH: 56px; --gut: 16px; }
+  .bar__in { gap: 4px; }
+  .bar__logo { display: flex; align-items: center; min-height: 44px; }
   .bar__logo img { width: 112px; }
-  .bar__back { order: 3; width: 100%; height: 31px; align-items: center; border-top: 1px solid rgba(201, 161, 74, .2); gap: 20px; }
-  .bar__back a { font-size: 10.5px; padding: 6px 0; }
-  .bar__back a:first-child::before { content: "\2190\00a0"; }
-  .bar__tools { height: 56px; gap: 0; }
-  .ib { min-width: 40px; padding: 0 8px; }
+  .bar__back { margin-left: auto; gap: 0; }
+  .bar__back a:first-child { display: none; }
+  .bar__back a { font-size: 10.5px; letter-spacing: .16em; padding: 0 8px; border-bottom: 0; }
+  .bar__tools { margin-left: 0; gap: 0; }
+  .ib { padding: 0 8px; }
   .bar__book { min-height: 38px; padding: 0 13px; font-size: 10.5px; letter-spacing: .16em; margin-left: 4px; }
 }
 /* phones and narrow tablets: the list view has its own sticky dock, so the bar keeps only the PDF */

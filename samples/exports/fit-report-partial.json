@@ -1,29 +1,7 @@
 [
  {
-  "stem": "post-01",
-  "file": "posts/01-auntiegaik-post-meet-auntie.png",
-  "issues": [],
-  "fonts": [
-   true,
-   true,
-   true
-  ],
-  "broken": []
- },
- {
   "stem": "post-02",
   "file": "posts/02-auntiegaik-post-curry-kapitan.png",
-  "issues": [],
-  "fonts": [
-   true,
-   true,
-   true
-  ],
-  "broken": []
- },
- {
-  "stem": "post-03",
-  "file": "posts/03-auntiegaik-post-find-the-blue-doors.png",
   "issues": [],
   "fonts": [
    true,
@@ -66,28 +44,6 @@
   "broken": []
  },
  {
-  "stem": "post-07",
-  "file": "posts/07-auntiegaik-post-four-years-running.png",
-  "issues": [],
-  "fonts": [
-   true,
-   true,
-   true
-  ],
-  "broken": []
- },
- {
-  "stem": "post-08",
-  "file": "posts/08-auntiegaik-post-tables-for-ten.png",
-  "issues": [],
-  "fonts": [
-   true,
-   true,
-   true
-  ],
-  "broken": []
- },
- {
   "stem": "post-09",
   "file": "posts/09-auntiegaik-post-table-for-six.png",
   "issues": [],
@@ -99,52 +55,41 @@
   "broken": []
  },
  {
-  "stem": "post-10",
-  "file": "posts/10-auntiegaik-post-three-drinks.png",
-  "issues": [],
-  "fonts": [
-   true,
-   true,
-   true
-  ],
-  "broken": []
- },
- {
-  "stem": "post-11",
-  "file": "posts/11-auntiegaik-post-bishop-street-since-2013.png",
-  "issues": [],
-  "fonts": [
-   true,
-   true,
-   true
-  ],
-  "broken": []
- },
- {
-  "stem": "post-12",
-  "file": "posts/12-auntiegaik-post-the-team.png",
-  "issues": [],
-  "fonts": [
-   true,
-   true,
-   true
-  ],
-  "broken": []
- },
- {
-  "stem": "post-13",
-  "file": "posts/13-auntiegaik-post-pengat.png",
-  "issues": [],
-  "fonts": [
-   true,
-   true,
-   true
-  ],
-  "broken": []
- },
- {
   "stem": "post-14",
   "file": "posts/14-auntiegaik-post-before-you-come.png",
+  "issues": [],
+  "fonts": [
+   true,
+   true,
+   true
+  ],
+  "broken": []
+ },
+ {
+  "stem": "story-01",
+  "file": "stories/story-01-auntiegaik-poll.png",
+  "issues": [],
+  "fonts": [
+   true,
+   true,
+   true
+  ],
+  "broken": []
+ },
+ {
+  "stem": "story-04",
+  "file": "stories/story-04-auntiegaik-ask-auntie.png",
+  "issues": [],
+  "fonts": [
+   true,
+   true,
+   true
+  ],
+  "broken": []
+ },
+ {
+  "stem": "xhs-02",
+  "file": "xhs/02-auntiegaik-xhs-curry-kapitan.png",
   "issues": [],
   "fonts": [
    true,

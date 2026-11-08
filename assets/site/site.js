@@ -16,6 +16,7 @@
   var REDUCE = false;
   try { REDUCE = matchMedia('(prefers-reduced-motion: reduce)').matches; } catch (e) {}
   var G = W.gsap, ST = W.ScrollTrigger, SPLIT = W.SplitText, FLIP = W.Flip;
+  function fontsIdle() { return !d.fonts || d.fonts.status === 'loaded'; } // SplitText warns (and mis-measures) while a face is loading
   var MOTION = !STATIC && !!(G && ST);
   var FINE = false;
   try { FINE = matchMedia('(pointer: fine)').matches; } catch (e) {}
@@ -267,7 +268,7 @@
     if (filmOn) return;
     filmOn = true;
     HI = hwFilm.getBoundingClientRect().width * (W.devicePixelRatio || 1) > 1000;
-    hv[0].preload = 'auto';
+    hv[0].preload = 'metadata';
     setClip(hv[0], 0);
     hv[0].classList.add('top');
     syncFilm();
@@ -281,7 +282,7 @@
         if (!prepped && v.currentTime > v.duration - 2.6) {
           prepped = true;
           var o = hv[1 - cur];
-          o.preload = 'auto';
+          o.preload = 'metadata';
           setClip(o, (+v.getAttribute('data-i') + 1) % CL.length);
           o.load();
         }
@@ -296,33 +297,6 @@
     }
     onLoad(startFilm); // poster + page first, then the film
     syncFilm();
-  }
-
-  /* ---------------- room film: all-intra scrub file on desktop, plain loop on phones ---------------- */
-  var rv = q('.rm-v'), roomScrub = false, vt = 0, seeking = false;
-  function loadRoom() {
-    if (SHOT || STATIC || rv.getAttribute('src')) return;
-    if (roomScrub) { rv.preload = 'auto'; rv.src = 'assets/video/scrub-room.mp4'; }
-    else { rv.loop = true; rv.preload = 'auto'; rv.src = 'assets/video/clips/gen-10.mp4'; }
-    rv.load();
-  }
-  function seek() { if (!rv.duration) return; seeking = true; rv.currentTime = vt; }
-  function scrubTo(p) {
-    vt = p * ((rv.duration || 5.04) - 0.05);
-    if (!seeking) seek();
-  }
-  if (rv) {
-  rv.addEventListener('seeked', function () { seeking = false; if (Math.abs(rv.currentTime - vt) > 0.03) seek(); });
-  rv.addEventListener('loadedmetadata', function () { if (roomScrub) seek(); });
-  if ('IntersectionObserver' in W && !SHOT && !STATIC) {
-    new IntersectionObserver(function (es) {
-      if (es[0].isIntersecting) loadRoom();
-    }, { rootMargin: '150% 0px' }).observe(q('#room'));
-    new IntersectionObserver(function (es) {
-      if (roomScrub) return;
-      if (es[0].isIntersecting && !REDUCE) playV(rv); else rv.pause();
-    }, { threshold: 0.1 }).observe(rv);
-  }
   }
 
   /* ---------------- plate rail (drag + wheel + keys, inertia, snap) ---------------- */
@@ -581,13 +555,23 @@
      ===================================================================== */
   var fontsP = Promise.race([
     d.fonts && d.fonts.load ? Promise.all(['500 40px "Bodoni Moda"', 'italic 400 40px "Bodoni Moda"', '400 16px Jost', '500 12px Jost']
-      .map(function (f) { return d.fonts.load(f); })).then(function () { return d.fonts.ready; }) : Promise.resolve(),
-    new Promise(function (r) { setTimeout(r, 3000); })
+      .map(function (f) { return d.fonts.load(f); })).then(function () {
+        // settle: SplitText warns if any face is still loading, so wait until the font set is idle
+        return new Promise(function (res) {
+          var t0 = Date.now();
+          (function chk() {
+            d.fonts.ready.then(function () {
+              if (d.fonts.status === 'loaded' || Date.now() - t0 > 2500) res(); else setTimeout(chk, 50);
+            });
+          })();
+        });
+      }) : Promise.resolve(),
+    new Promise(function (r) { setTimeout(r, 4000); })
   ]).catch(function () {});
 
   function splitEl(el, chars) {
     if (!el) return null;
-    if (!SPLIT) { el.style.visibility = 'visible'; return null; }
+    if (!SPLIT || !fontsIdle()) { el.style.visibility = 'visible'; return null; }
     var s = new SPLIT(el, { type: chars ? 'lines,words,chars' : 'lines,words', mask: 'lines', linesClass: 'ln' });
     (s.masks || []).forEach(function (m) { m.style.padding = '.14em .12em'; m.style.margin = '-.14em -.12em'; });
     el.style.visibility = 'visible';
@@ -599,7 +583,7 @@
     if (heroInDone) return; heroInDone = true;
     var h1 = q('#hero-h'), lines = qa('.hl', h1), tl = G.timeline();
     lines.forEach(function (l) { l.classList.add('mask'); });
-    var sp = SPLIT ? new SPLIT(qa('.hl-i', h1), { type: 'chars' }) : null;
+    var sp = SPLIT && fontsIdle() ? new SPLIT(qa('.hl-i', h1), { type: 'chars' }) : null;
     h1.style.visibility = 'visible';
     if (sp) tl.from(sp.chars, { yPercent: 120, duration: 1.15, ease: 'expo.out', stagger: 0.024 }, 0);
     else tl.from(qa('.hl-i', h1), { yPercent: 110, duration: 1.1, ease: 'expo.out', stagger: 0.1 }, 0);
@@ -813,7 +797,6 @@
       /* signature: extreme close-up that pulls back to the whole bowl */
       G.fromTo('.sig-px img', { scale: 1.42 }, { scale: 1, ease: 'none', scrollTrigger: { trigger: '.sig-ph', start: 'top 95%', end: 'center 45%', scrub: 0.7 } });
       G.fromTo('.sig-frame', { x: -26, y: -26 }, { x: 0, y: 0, ease: 'none', scrollTrigger: { trigger: '.sig-ph', start: 'top bottom', end: 'bottom 40%', scrub: 0.7 } });
-      if (desk) G.from('.pk', { opacity: 0, y: 34, duration: 1, ease: 'power3.out', stagger: 0.08, scrollTrigger: { trigger: '.picks-list', start: 'top 85%', once: true } });
 
       /* the rempah: scattered bowls assemble into a tile grid */
       var bowls = qa('.bowl'), seed = 11;
@@ -821,7 +804,7 @@
       var sc = bowls.map(function () {
         return { x: (rnd() - 0.5) * (desk ? 1.25 : 0.9), y: rnd() * (desk ? 0.55 : 0.45), r: (rnd() - 0.5) * 56, s: 0.62 + rnd() * 0.7 };
       });
-      var rTitle = q('#rempah-h'), rSplit = SPLIT ? new SPLIT(rTitle, { type: 'words,chars' }) : null;
+      var rTitle = q('#rempah-h'), rSplit = SPLIT && fontsIdle() ? new SPLIT(rTitle, { type: 'words,chars' }) : null;
       var rtl = G.timeline({ scrollTrigger: desk
         ? { trigger: '.rp-pin', start: 'top top', end: '+=140%', pin: true, scrub: 0.8, invalidateOnRefresh: true, onToggle: willOn(bowls) }
         : { trigger: '.bowls', start: 'top 95%', end: 'center 52%', scrub: 0.8, invalidateOnRefresh: true } });
@@ -845,21 +828,6 @@
           } });
         });
         vals[0].classList.add('on');
-      }
-
-      /* the room: scroll-scrubbed film inside a 16:10 window (no extra crop) */
-      var lines = qa('.rm-lines li');
-      roomScrub = desk && !!rv;
-      if (!rv) { /* room section removed */ } else if (desk) {
-        rv.loop = false;
-        var mtl = G.timeline({ scrollTrigger: { trigger: '.rm-pin', start: 'top top', end: '+=200%', pin: true, scrub: true,
-          onUpdate: function (s) { scrubTo(s.progress); } } });
-        mtl.from(lines[0], { opacity: 0, y: 30, duration: 0.1 }, 0.06)
-          .from(lines[1], { opacity: 0, y: 30, duration: 0.1 }, 0.38)
-          .from(lines[2], { opacity: 0, y: 30, duration: 0.1 }, 0.7)
-          .to({}, { duration: 0.2 }, 0.8);
-      } else {
-        G.from(lines, { opacity: 0, y: 30, duration: 0.9, ease: 'power3.out', stagger: 0.12, scrollTrigger: { trigger: '.rm-lines', start: 'top 88%', once: true } });
       }
 
       /* headings: lines + words rise through padded line masks */

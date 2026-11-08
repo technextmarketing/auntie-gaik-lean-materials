@@ -14,6 +14,7 @@
   const QS = new URLSearchParams(location.search);
   const STATIC = QS.has('static') && QS.get('static') !== '0';
   const RM = STATIC || matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const LAZY = !RM;
   const T = '../assets/texture/';
   const ASSET = '../assets/site/logo-white-760.webp';
   const SPARK = '<svg class="sp" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2c.6 5 2 8 7 10-5 2-6.4 5-7 10-.6-5-2-8-7-10 5-2 6.4-5 7-10z"/></svg>';
@@ -29,7 +30,8 @@
 
   function photoFig(d, cls) {
     const p = d.photo;
-    return `<figure class="ph ${cls || ''}"><div class="ph__w"><img src="${p.lg}" width="${p.w}" height="${p.h}" alt="${esc(p.alt)}" style="object-position:${p.pos}" loading="lazy" decoding="async" draggable="false"></div><figcaption>${esc(d.name)}</figcaption></figure>`;
+    const srcAttr = LAZY ? `data-src="${p.src}"` : `src="${p.src}"`;   // -md files for the book; later spreads load as the reader nears them
+    return `<figure class="ph ${cls || ''}"><div class="ph__w"><img ${srcAttr} width="${p.w}" height="${p.h}" alt="${esc(p.alt)}" style="object-position:${p.pos}" loading="lazy" decoding="async" draggable="false"></div><figcaption>${esc(d.name)}</figcaption></figure>`;
   }
 
   const faces = {
@@ -97,7 +99,7 @@
         <ul class="tips">
           <li><b>Book ahead</b><span>Booking is advised, and a deposit may be asked for. Book online, call or message the team.</span></li>
           <li><b>Groups of ten or more</b><span>The room has large tables for big family meals.</span></li>
-          <li><b>Pork-free kitchen</b><span>Please tell the team about any allergies or what you do not eat.</span></li>
+          <li><b>Pork-free kitchen</b><span>Ours is a pork-free kitchen. Please tell the team about any allergies or what you do not eat.</span></li>
           <li><b>Getting here</b><span>1 Lebuh Bishop, in the heritage core of George Town. Street parking nearby.</span></li>
         </ul>
         <div class="band" aria-hidden="true"></div>
@@ -229,6 +231,12 @@
       el.setAttribute('aria-hidden', on ? 'false' : 'true');
     }));
     drawAll();
+    warm();
+  }
+  /* photos: only the sheets near the reader are fetched; the rest follow once the page is idle */
+  function warm(all) {
+    const upto = all ? Infinity : Math.max(B.pos, B.want) + (B.single ? 2 : 1);
+    B.sheets.forEach((el, i) => { if (i <= upto) el.querySelectorAll('img[data-src]').forEach(im => { im.src = im.dataset.src; im.removeAttribute('data-src'); }); });
   }
 
   /* ---- sizing */
@@ -237,7 +245,7 @@
     const W = stage.clientWidth, H = stage.clientHeight;
     if (!W || !H) return;
     if (!B.single) {
-      const s = Math.min((W - 28) / 1232, (H - 18) / 872);
+      const s = Math.min((W - 130) / 1200, (H - 28) / 856);   // side arrows need ~65px each side
       B.scale = s;
       fit.style.transform = `translate(-50%,-50%) scale(${s.toFixed(4)})`;
     } else {
@@ -459,6 +467,7 @@
   function init() {
     if (STATIC || RM) { buildStatic(); return; }
     build();
+    (window.requestIdleCallback || (f => setTimeout(f, 1500)))(() => setTimeout(() => warm(true), 2500));
   }
   init();
 

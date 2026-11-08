@@ -1,0 +1,28 @@
+/* Shared top bar + container for the materials pack pages (hub, brand, campaign, social, library).
+   Markup:
+   <header class="pk-bar"><div class="pk-in">
+     <a class="pk-logo" href="../materials.html" aria-label="All materials"><img src="../assets/logo/logo-white.png" alt="Auntie Gaik Lean's Old School Eatery" width="1144" height="371"></a>
+     <nav class="pk-nav" aria-label="Materials">
+       <a href="../index.html">Website</a><a href="../brand/">Brand</a><a href="../menu/">Menu</a><a href="../samples/">Campaign</a><a href="../library/">Library</a>
+     </nav>
+     <a class="pk-all" href="../materials.html">All materials</a>
+   </div></header>
+   Mark the current page with aria-current="page" on its nav link. Use .pk-wrap for the page's main container. */
+:root { --pk-h: 64px; --pk-max: 1440px; --pk-pad: clamp(16px, 4.5vw, 72px); }
+.pk-bar { position: sticky; top: 0; z-index: 60; height: var(--pk-h); background: var(--night); border-bottom: 1px solid var(--line-dark); color: var(--porcelain); }
+.pk-in { box-sizing: border-box; height: 100%; max-width: calc(var(--pk-max) + 2 * var(--pk-pad)); margin: 0 auto; padding: 0 var(--pk-pad); display: flex; align-items: center; gap: clamp(16px, 3vw, 40px); }
+.pk-logo { flex: none; display: block; line-height: 0; }
+.pk-logo img { width: 132px; height: auto; display: block; }
+.pk-nav { flex: 1; display: flex; justify-content: center; gap: clamp(14px, 2.2vw, 32px); }
+.pk-nav a, .pk-all { font: 500 11px/1 var(--f-sans); letter-spacing: .22em; text-transform: uppercase; text-decoration: none; color: var(--mist, #c9d3ea); padding: 16px 0; border-bottom: 1px solid transparent; }
+.pk-nav a:hover, .pk-nav a[aria-current="page"] { color: var(--gold-hi); border-bottom-color: var(--gold-hi); }
+.pk-all { flex: none; color: var(--gold-hi); border: 1px solid var(--line-dark); padding: 14px 16px; border-radius: 2px; }
+.pk-all:hover { background: var(--gold); color: var(--night); }
+.pk-bar a:focus-visible { outline: 2px solid var(--gold-hi); outline-offset: 3px; }
+.pk-wrap { box-sizing: border-box; max-width: calc(var(--pk-max) + 2 * var(--pk-pad)); margin-left: auto; margin-right: auto; padding-left: var(--pk-pad); padding-right: var(--pk-pad); }
+@media (max-width: 900px) {
+  .pk-nav { display: none; }
+  .pk-in { justify-content: space-between; }
+  .pk-logo img { width: 112px; }
+  .pk-all { padding: 15px 14px; }
+}

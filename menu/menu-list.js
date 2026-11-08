@@ -19,7 +19,7 @@
   };
   const dish = d => `<li class="dish${d.pick ? ' is-pick' : ''}">${pic(d)}
       <div class="dish__txt">
-        <h4 class="dish__n disp">${esc(d.name)}</h4>
+        <h3 class="dish__n disp">${esc(d.name)}</h3>
         ${d.local || d.zh ? `<p class="dish__l">${esc(d.local || '')}${d.zh ? ` <span class="zh">${d.zh}</span>` : ''}</p>` : ''}
         <p class="dish__d">${esc(d.desc)}</p>
         ${d.pick ? `<p class="dish__m">${SPARK}<span>MICHELIN inspectors</span></p>` : ''}
@@ -36,11 +36,11 @@
     <nav class="lv-tabs" id="lvTabs" aria-label="Menu chapters"><div class="lv-tabs__in">${CH.map(c => `<a href="#ch-${c.id}" data-id="${c.id}">${esc(LABEL[c.id] || c.short)}</a>`).join('')}</div></nav>
     <div class="lv-body">${CH.map(c => `<section class="lv-ch" id="ch-${c.id}" aria-labelledby="h-${c.id}">
         <header class="lv-ch__h"><p class="lbl lv-ch__n">${String(c.n).padStart(2, '0')} · ${c.dishes.length} ${c.dishes.length === 1 ? 'dish' : 'dishes'}</p>
-        <h3 class="disp lv-ch__t" id="h-${c.id}">${esc(c.title)}</h3><p class="lv-ch__line">${esc(c.line)}</p></header>
+        <h2 class="disp lv-ch__t" id="h-${c.id}">${esc(c.title)}</h2><p class="lv-ch__line">${esc(c.line)}</p></header>
         <ul class="dishes">${c.dishes.map(dish).join('')}</ul></section>`).join('')}</div>
     <footer class="lv-foot" id="lvVisit">
       <p class="lbl lv-foot__eyebrow">Visit</p>
-      <h3 class="disp lv-foot__t">Come and <i>eat</i></h3>
+      <h2 class="disp lv-foot__t">Come and <i>eat</i></h2>
       <dl class="lv-foot__facts">
         <div><dt class="lbl">Hours</dt><dd>Wed–Sun<br>Lunch 12pm–2.30pm<br>Dinner 6pm–9.30pm<br>Closed Mon and Tue</dd></div>
         <div><dt class="lbl">Address</dt><dd>${esc(M.address.replace(' (Bishop Street)', ''))}</dd></div>
@@ -79,6 +79,9 @@
     scrollTo({ top: s.getBoundingClientRect().top + scrollY - off() + 2, behavior: RM ? 'auto' : 'smooth' });
     history.replaceState(null, '', '#ch-' + a.dataset.id);
   });
+  const tabsBox = tabsEl.firstElementChild;
+  function fades() { tabsEl.classList.toggle('is-scrolled', tabsBox.scrollLeft > 6); tabsEl.classList.toggle('is-end', tabsBox.scrollLeft + tabsBox.clientWidth >= tabsBox.scrollWidth - 6); }
+  tabsBox.addEventListener('scroll', fades, { passive: true }); addEventListener('resize', fades); fades();
   window.AGList = { sync() { cur = -1; onScroll(); } };
   mark(0);
 })();

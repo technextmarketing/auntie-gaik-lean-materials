@@ -7,39 +7,50 @@
 <title>Campaign · Auntie Gaik Lean's Old School Eatery</title>
 <meta name="description" content="A month of marketing for Auntie Gaik Lean's: posts, Xiaohongshu covers, stories, reels, Meta ads, emails, in-store and Google posts, all made from the restaurant's own shoot.">
 <link rel="icon" href="../assets/logo/logo-ink.png">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Campaign · Auntie Gaik Lean's Old School Eatery">
+<meta property="og:description" content="A month of marketing for Auntie Gaik Lean's: posts, Xiaohongshu covers, stories, reels, Meta ads, emails, in-store and Google posts, all made from the restaurant's own shoot.">
+<meta property="og:image" content="https://technextmarketing.github.io/auntie-gaik-lean-materials/brand/exports/og-image-1200x630.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Campaign · Auntie Gaik Lean's Old School Eatery">
+<meta name="twitter:image" content="https://technextmarketing.github.io/auntie-gaik-lean-materials/brand/exports/og-image-1200x630.png">
 <link rel="stylesheet" href="../assets/css/brand.css">
+<link rel="stylesheet" href="../assets/css/packbar.css">
 <style>
   * { box-sizing: border-box; margin: 0; padding: 0; }
   html { scroll-behavior: smooth; }
   body { background: var(--porcelain); color: var(--ink); font-family: var(--f-sans); -webkit-font-smoothing: antialiased; }
   a { color: inherit; }
   img, video { display: block; max-width: 100%; height: auto; }
-  .wrap { width: min(1320px, calc(100% - clamp(32px, 8vw, 160px))); margin-inline: auto; }
   button { font: inherit; }
-  .bar { position: sticky; top: 0; z-index: 30; background: rgba(245,247,251,.93); backdrop-filter: blur(10px); border-bottom: 1px solid var(--line-light); }
-  .bar .wrap { display: flex; align-items: center; justify-content: space-between; gap: 18px; height: 66px; }
-  .bar img { height: 34px; width: auto; }
-  .bar nav { display: flex; gap: clamp(10px, 1.6vw, 24px); font-size: 12px; letter-spacing: .2em; text-transform: uppercase; font-weight: 500; }
-  .bar nav a { text-decoration: none; color: var(--ink-2); white-space: nowrap; padding: 6px 0; border-bottom: 1px solid transparent; }
-  .bar nav a:hover { color: var(--cobalt); border-color: var(--gold); }
-  @media (max-width: 1100px) { .bar nav a:not(.keep) { display: none; } }
+  :focus-visible { outline: 2px solid var(--cobalt); outline-offset: 3px; }
+  .dark :focus-visible, .cobalt :focus-visible, .hero :focus-visible { outline-color: var(--gold-hi); }
+  .skip { position: absolute; left: 12px; top: -60px; z-index: 100; background: var(--gold-hi); color: var(--night); padding: 12px 18px; font: 500 12px/1 var(--f-sans); letter-spacing: .2em; text-transform: uppercase; text-decoration: none; }
+  .skip:focus { top: 8px; }
+  .subnav { position: sticky; top: var(--pk-h); z-index: 50; background: var(--porcelain); border-bottom: 1px solid var(--line-light); }
+  .subnav nav { display: flex; gap: 4px; overflow-x: auto; scrollbar-width: none; }
+  .subnav nav::-webkit-scrollbar { display: none; }
+  .subnav a { flex: none; display: inline-flex; align-items: center; min-height: 44px; padding: 0 14px; font-size: 12px; letter-spacing: .2em; text-transform: uppercase; font-weight: 500; text-decoration: none; color: var(--ink-2); border-bottom: 2px solid transparent; }
+  .subnav a:hover { color: var(--cobalt); border-bottom-color: var(--gold); }
+  section[id], .card[id], figure[id], .ad[id] { scroll-margin-top: 120px; }
   .hero { position: relative; background: var(--night); color: var(--porcelain); overflow: hidden; }
   .hero::before { content: ""; position: absolute; inset: 0; background: url("../assets/pattern/tile-gold.svg") 0 0 / 96px; opacity: .2;
     -webkit-mask-image: linear-gradient(100deg, transparent 30%, #000 85%); mask-image: linear-gradient(100deg, transparent 30%, #000 85%); }
-  .hero .wrap { position: relative; display: grid; grid-template-columns: 1.05fr .95fr; gap: clamp(32px, 5vw, 72px); align-items: center; padding: clamp(64px, 9vw, 128px) 0; }
+  .hero .pk-wrap { position: relative; display: grid; grid-template-columns: 1.05fr .95fr; gap: clamp(32px, 5vw, 72px); align-items: center; padding-top: clamp(64px, 9vw, 128px); padding-bottom: clamp(64px, 9vw, 128px); }
   .hero .kick { color: var(--gold-hi); font-size: 13px; }
   .hero h1 { font-size: clamp(46px, 6.4vw, 96px); margin: 18px 0 22px; padding-bottom: .1em; text-wrap: balance; }
   .hero h1 i { color: var(--gold-hi); }
   .hero p { font-size: clamp(16px, 1.5vw, 19px); line-height: 1.6; color: var(--mist); max-width: 34em; }
-  .counts { display: flex; flex-wrap: wrap; gap: 12px 28px; margin-top: 32px; font-size: 12px; color: var(--sky); letter-spacing: .2em; text-transform: uppercase; font-weight: 500; }
+  .counts { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 18px 24px; margin-top: 32px; font-size: 12px; color: var(--sky); letter-spacing: .2em; text-transform: uppercase; font-weight: 500; }
   .counts b { color: var(--porcelain); font-family: var(--f-display); font-weight: 500; font-size: 30px; letter-spacing: 0; margin-right: 8px; vertical-align: -4px; }
   .fan { position: relative; height: clamp(360px, 40vw, 560px); }
-  .fan img { position: absolute; width: 46%; box-shadow: 0 30px 60px rgba(0,0,0,.45); border: 6px solid #fff; transition: transform .8s cubic-bezier(.2,.7,.2,1); }
-  .fan img:nth-child(1) { left: 2%; top: 12%; transform: rotate(-9deg); }
-  .fan img:nth-child(2) { left: 27%; top: 0; transform: rotate(2deg); z-index: 2; }
-  .fan img:nth-child(3) { left: 52%; top: 14%; transform: rotate(10deg); }
-  .fan:hover img:nth-child(1) { transform: rotate(-14deg) translateX(-14px); } .fan:hover img:nth-child(3) { transform: rotate(15deg) translateX(14px); }
-  @media (max-width: 900px) { .hero .wrap { grid-template-columns: 1fr; } .fan { height: 78vw; } }
+  .fan img { position: absolute; width: 32%; box-shadow: 0 30px 60px rgba(0,0,0,.45); border: 6px solid #fff; transition: transform .8s cubic-bezier(.2,.7,.2,1); }
+  .fan img:nth-child(1) { left: 0; top: 14%; transform: rotate(-6deg); }
+  .fan img:nth-child(2) { left: 34%; top: 0; transform: rotate(2deg); z-index: 2; }
+  .fan img:nth-child(3) { left: 68%; top: 16%; transform: rotate(7deg); }
+  .fan:hover img:nth-child(1) { transform: rotate(-9deg) translateX(-6px); } .fan:hover img:nth-child(3) { transform: rotate(10deg) translateX(6px); }
+  @media (max-width: 520px) { .counts { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+  @media (max-width: 900px) { .hero .pk-wrap { grid-template-columns: 1fr; } .fan { height: 78vw; } }
   section.blk { padding: clamp(64px, 8vw, 112px) 0; }
   section.blk.dark { background: var(--night); color: var(--porcelain); }
   section.blk.cobalt { background: var(--cobalt); color: var(--porcelain); }
@@ -70,26 +81,27 @@
   .zoom { all: unset; cursor: zoom-in; display: block; overflow: hidden; }
   .zoom img { transition: transform .9s cubic-bezier(.2,.7,.2,1); width: 100%; }
   .zoom:hover img { transform: scale(1.035); }
-  .zoom:focus-visible { outline: 2px solid var(--gold); outline-offset: 2px; }
   .meta { padding: 16px 16px 18px; display: flex; flex-direction: column; gap: 6px; flex: 1; }
-  .meta .lbl { font-size: 11px; color: var(--gold-lo); }
+  .meta .lbl { font-size: 12px; color: var(--gold-lo); }
   .dark .meta .lbl, .cobalt .meta .lbl { color: var(--gold-hi); }
+  .cobalt .card { background: rgba(255,255,255,.06); border-color: rgba(201,161,74,.4); }
+  .cobalt .meta .lbl, .cobalt details.cap summary { color: #D9E0F2; }
   .meta h3 { font-family: var(--f-display); font-weight: 500; font-size: 20px; color: var(--indigo); line-height: 1.2; }
   .dark .meta h3, .cobalt .meta h3 { color: var(--porcelain); }
-  details.cap summary { cursor: pointer; font-size: 11px; letter-spacing: .2em; text-transform: uppercase; color: var(--cobalt); font-weight: 500; list-style: none; margin-top: auto; padding-top: 8px; }
+  details.cap summary { cursor: pointer; font-size: 12px; letter-spacing: .2em; text-transform: uppercase; color: var(--cobalt); font-weight: 500; list-style: none; margin-top: auto; min-height: 44px; display: flex; align-items: center; }
   .dark details.cap summary, .cobalt details.cap summary { color: var(--sky); }
   details.cap summary::-webkit-details-marker { display: none; }
   details.cap p { white-space: pre-line; font-size: 14px; line-height: 1.55; color: var(--ink-2); margin-top: 8px; }
   .dark details.cap p, .cobalt details.cap p { color: var(--mist); }
-  .copy { all: unset; cursor: pointer; margin-top: 10px; font-size: 11px; letter-spacing: .2em; text-transform: uppercase; color: var(--cobalt); font-weight: 600; }
+  .copy { all: unset; box-sizing: border-box; cursor: pointer; margin-top: 4px; min-height: 44px; display: inline-flex; align-items: center; padding: 0 14px; border: 1px solid currentColor; border-radius: 2px; font-size: 12px; letter-spacing: .18em; text-transform: uppercase; color: var(--cobalt); font-weight: 600; }
+  .copy + .copy { margin-left: 8px; }
   .dark .copy, .cobalt .copy { color: var(--gold-hi); }
-  .copy:focus-visible { outline: 2px solid var(--cobalt); outline-offset: 3px; }
   .phones { display: grid; grid-template-columns: repeat(auto-fill, minmax(210px, 1fr)); gap: 28px; }
   .phone { background: var(--night); border: 9px solid #05081a; border-radius: 30px; overflow: hidden; aspect-ratio: 9 / 16; position: relative; box-shadow: 0 30px 60px -25px rgba(0,0,0,.6); cursor: pointer; }
   .phone video, .phone img { width: 100%; height: 100%; object-fit: cover; }
   .phone-meta { margin-top: 14px; }
   .phone-meta b { font-family: var(--f-display); font-weight: 500; font-size: 19px; display: block; }
-  .phone-meta span { font-size: 11px; letter-spacing: .2em; text-transform: uppercase; color: var(--gold-hi); }
+  .phone-meta span { font-size: 12px; letter-spacing: .2em; text-transform: uppercase; color: var(--gold-hi); }
   .ad { display: grid; grid-template-columns: 1.15fr .62fr 1fr; gap: 24px; align-items: start; padding: 32px 0; border-top: 1px solid var(--line-dark); }
   .ad:first-child { border-top: 0; padding-top: 0; }
   .ad figcaption { font-size: 11px; letter-spacing: .2em; text-transform: uppercase; color: var(--sky); margin-top: 10px; }
@@ -103,7 +115,7 @@
   .mail li button { all: unset; display: block; width: 100%; box-sizing: border-box; padding: 18px 20px; border-bottom: 1px solid var(--line-light); cursor: pointer; }
   .mail li button b { display: block; font-size: 14px; color: var(--indigo); } .mail li button span { font-size: 13px; color: var(--ink-2); }
   .mail li button[aria-selected="true"] { background: var(--porcelain-2); box-shadow: inset 3px 0 0 var(--gold); }
-  .mail li button:focus-visible { outline: 2px solid var(--cobalt); outline-offset: -2px; }
+  .mail li button:focus-visible { outline-offset: -2px; }
   .mail .view { overflow: auto; max-height: 860px; background: #e9edf5; display: flex; justify-content: center; align-items: flex-start; padding: 28px; }
   .mail .view img { width: 600px; max-width: 100%; box-shadow: 0 20px 40px -20px rgba(12,20,51,.35); }
   @media (max-width: 760px) { .mail { grid-template-columns: 1fr; } .mail ul { display: flex; overflow-x: auto; border-right: 0; } .mail li { flex: 0 0 auto; } }
@@ -118,11 +130,11 @@
   .weeks p { font-size: 15px; line-height: 1.55; color: var(--ink-2); }
   @media (max-width: 860px) { .weeks { grid-template-columns: 1fr 1fr; } }
   .dl { columns: 3 260px; column-gap: 32px; list-style: none; }
-  .dl li { break-inside: avoid; padding: 9px 0; border-bottom: 1px solid var(--line-dark); font-size: 14px; display: flex; justify-content: space-between; gap: 12px; }
-  .dl a { color: var(--sky); text-decoration: none; word-break: break-all; } .dl a:hover { text-decoration: underline; color: var(--porcelain); }
+  .dl li { break-inside: avoid; align-items: center; padding: 0; border-bottom: 1px solid var(--line-dark); font-size: 14px; display: flex; justify-content: space-between; gap: 12px; }
+  .dl a { color: var(--sky); text-decoration: none; overflow-wrap: anywhere; min-height: 44px; display: inline-flex; align-items: center; } .dl a:hover { text-decoration: underline; color: var(--porcelain); }
   .dl em { font-style: normal; font-size: 11px; letter-spacing: .16em; text-transform: uppercase; color: var(--gold-hi); white-space: nowrap; }
   footer { background: var(--night); color: var(--mist); padding: 40px 0; font-size: 13px; border-top: 1px solid var(--line-dark); }
-  footer .wrap { display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; align-items: center; }
+  footer .pk-wrap { display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; align-items: center; }
   footer img { height: 36px; width: auto; }
   .lb { position: fixed; inset: 0; z-index: 60; background: rgba(8,12,30,.94); display: none; place-items: center; padding: 24px; cursor: zoom-out; }
   .lb.on { display: grid; }
@@ -134,16 +146,19 @@
 </style>
 </head>
 <body>
-<header class="bar"><div class="wrap">
-  <a href="../materials.html" aria-label="All materials"><img src="../assets/logo/logo-ink.png" alt="Auntie Gaik Lean's Old School Eatery" width="1144" height="372"></a>
-  <nav aria-label="Sections">
-    <a class="keep" href="../materials.html">All materials</a><a href="#calendar">Calendar</a><a href="#posts">Posts</a><a href="#xhs">Xiaohongshu</a><a href="#video">Stories &amp; reels</a><a href="#ads">Ads</a><a href="#email">Email</a><a href="#instore">In-store</a><a href="#press">Press</a><a href="#downloads">Downloads</a>
+<a class="skip" href="#main">Skip to content</a>
+<header class="pk-bar"><div class="pk-in">
+  <a class="pk-logo" href="../materials.html" aria-label="All materials"><img src="../assets/logo/logo-white.png" alt="Auntie Gaik Lean's Old School Eatery" width="1144" height="371"></a>
+  <nav class="pk-nav" aria-label="Materials">
+    <a href="../index.html">Website</a><a href="../brand/">Brand</a><a href="../menu/">Menu</a><a href="../samples/" aria-current="page">Campaign</a><a href="../library/">Library</a>
   </nav>
+  <a class="pk-all" href="../materials.html">All materials</a>
 </div></header>
+<div class="subnav"><div class="pk-wrap"><nav aria-label="Sections on this page"><a href="#calendar">Calendar</a><a href="#posts">Posts</a><a href="#xhs">Xiaohongshu</a><a href="#video">Stories &amp; reels</a><a href="#ads">Ads</a><a href="#email">Email</a><a href="#instore">In-store</a><a href="#press">Press</a><a href="#downloads">Downloads</a><a href="../social/index.html">Posting plan</a></nav></div></div>
 
-<main>
+<main id="main">
   <section class="hero">
-    <div class="wrap">
+    <div class="pk-wrap">
       <div>
         <span class="lbl kick">Campaign · Auntie's Table · November 2026</span>
         <h1 class="disp">A month at <i>Auntie's</i> table.</h1>
@@ -155,7 +170,7 @@
   </section>
 
   <section class="blk" id="calendar">
-    <div class="wrap">
+    <div class="pk-wrap">
       <div class="head reveal"><div><span class="n">01</span><h2 class="disp">Four weeks of posts.</h2></div>
         <p>Where each piece sits in the month: dishes, people, the room, Penang and moments. The full day-by-day schedule, with times and captions, is in the <a href="../social/index.html" style="color:var(--cobalt)">social posting plan</a>.</p></div>
       <div class="cal reveal" id="cal"></div>
@@ -163,15 +178,15 @@
   </section>
 
   <section class="blk" id="posts" style="padding-top:0">
-    <div class="wrap">
+    <div class="pk-wrap">
       <div class="head reveal"><div><span class="n">02</span><h2 class="disp">Fourteen posts, fourteen ideas.</h2></div>
-        <p>3:4 for Instagram and Facebook. Open a caption to copy it; every one ends with how to book.</p></div>
+        <p>3:4 for Instagram and Facebook. Open a caption to copy it; every one ends with how to book. Facebook versions point to the Book button on our Page.</p></div>
       <div class="grid g4" id="postGrid"></div>
     </div>
   </section>
 
   <section class="blk cobalt" id="xhs">
-    <div class="wrap">
+    <div class="pk-wrap">
       <div class="head reveal"><div><span class="n">03</span><h2 class="disp">For Xiaohongshu.</h2></div>
         <p>Bilingual covers for Chinese-speaking travellers planning a trip to Penang.</p></div>
       <div class="grid g3" id="xhsGrid"></div>
@@ -179,7 +194,7 @@
   </section>
 
   <section class="blk dark" id="video">
-    <div class="wrap">
+    <div class="pk-wrap">
       <div class="head reveal"><div><span class="n">04</span><h2 class="disp">Stories and reels, on their own footage.</h2></div>
         <p>9:16 masters without sound; music is added in the app. Hover or tap a phone to play.</p></div>
       <div class="phones" id="phones"></div>
@@ -187,7 +202,7 @@
   </section>
 
   <section class="blk dark" id="ads" style="padding-top:0">
-    <div class="wrap">
+    <div class="pk-wrap">
       <div class="head reveal"><div><span class="n">05</span><h2 class="disp">Paid, but never pushy.</h2></div>
         <p>Meta ads for Singapore and Kuala Lumpur travellers and for celebrations, each in feed 4:5 and story 9:16, with copy to paste.</p></div>
       <div id="adList"></div>
@@ -195,7 +210,7 @@
   </section>
 
   <section class="blk" id="email">
-    <div class="wrap">
+    <div class="pk-wrap">
       <div class="head reveal"><div><span class="n">06</span><h2 class="disp">Letters from Bishop Street.</h2></div>
         <p>Welcome, booking confirmed, a birthday invitation and a thank-you that asks for a review.</p></div>
       <div class="mail reveal"><ul role="tablist" id="mailList" aria-label="Emails"></ul><div class="view" id="mailView" role="tabpanel"></div></div>
@@ -203,7 +218,7 @@
   </section>
 
   <section class="blk" id="instore" style="padding-top:0">
-    <div class="wrap">
+    <div class="pk-wrap">
       <div class="head reveal"><div><span class="n">07</span><h2 class="disp">From the table to the phone.</h2></div>
         <p>QR cards on the table and the counter, and Google Business posts that keep the profile alive.</p></div>
       <div class="grid g5" id="instoreGrid"></div>
@@ -211,7 +226,7 @@
   </section>
 
   <section class="blk cobalt" id="press">
-    <div class="wrap">
+    <div class="pk-wrap">
       <div class="head reveal"><div><span class="n">08</span><h2 class="disp">For the people who write about food.</h2></div>
         <p>A short fact sheet a journalist or hotel concierge can use as it is. Photos are in the library.</p></div>
       <div class="facts reveal">
@@ -222,25 +237,25 @@
         <div><b>Try</b><p>Curry Kapitan, Nasi Ulam, Otak-Otak, Gulai Tumis, Assam Prawns, Kuih Pie Tee, Bee Koh Moy.</p></div>
         <div><b>Visit</b><p>Wed–Sun, lunch 12pm–2.30pm, dinner 6pm–9.30pm. Closed Monday and Tuesday. Booking ahead is advised.</p></div>
       </div>
-      <p style="margin-top:22px;font-size:14px;color:var(--porcelain-2)">Photos: <a href="../library/index.html" style="color:var(--gold-hi)">Photo &amp; film library</a> · Brand: <a href="../brand/index.html" style="color:var(--gold-hi)">Brand guidelines</a> · Menu: <a href="../menu/index.html" style="color:var(--gold-hi)">Auntie's Tingkat</a></p>
+      <p style="margin-top:22px;font-size:14px;color:var(--porcelain-2)">Photos: <a href="../library/index.html" style="color:var(--gold-hi)">Photo &amp; film library</a> · Brand: <a href="../brand/index.html" style="color:var(--gold-hi)">Brand guidelines</a> · Menu: <a href="../menu/index.html" style="color:var(--gold-hi)">Open the menu book</a></p>
     </div>
   </section>
 
   <section class="blk" id="plan">
-    <div class="wrap">
+    <div class="pk-wrap">
       <div class="head reveal"><div><span class="n">09</span><h2 class="disp">The first month.</h2></div>
         <p>When each group of materials goes out. The day-by-day posting plan is on its own page.</p></div>
       <div class="weeks reveal">
         <div><h3>Week 1 &middot; Auntie</h3><p>Meet Auntie, the MICHELIN story and the first reel go up, with the video bumper. The bio carries the booking link, then hours and address.</p></div>
-        <div><h3>Week 2 &middot; The table</h3><p>Dish posts (Curry Kapitan, Assam Prawns, Pie Tee), the first Xiaohongshu covers and the Singapore and Kuala Lumpur ad.</p></div>
-        <div><h3>Week 3 &middot; The room</h3><p>Round tables, celebrations and private events, with the events ad. The table QR cards are set out.</p></div>
+        <div><h3>Week 2 &middot; The table</h3><p>Dish posts (Curry Kapitan, Assam Prawns, Kuih Pie Tee), the first Xiaohongshu covers and the Singapore and Kuala Lumpur ad.</p></div>
+        <div><h3>Week 3 &middot; The room</h3><p>Round tables, celebrations and groups, with the events ad. The table QR cards are set out.</p></div>
         <div><h3>Week 4 &middot; Come back</h3><p>Desserts and drinks, the dessert ad, the thank-you email and the favourite posts shared again.</p></div>
       </div>
     </div>
   </section>
 
   <section class="blk dark" id="downloads">
-    <div class="wrap">
+    <div class="pk-wrap">
       <div class="head reveal"><div><span class="n">10</span><h2 class="disp">Every file, ready to post.</h2></div>
         <p>Full-size files. Captions and ad copy are above.</p></div>
       <ul class="dl" id="dl"></ul>
@@ -248,7 +263,7 @@
   </section>
 </main>
 
-<footer><div class="wrap"><img src="../assets/logo/logo-white.png" alt="Auntie Gaik Lean's Old School Eatery" width="1144" height="371"><span>Campaign samples · November 2026 · For review only</span></div></footer>
+<footer><div class="pk-wrap"><img src="../assets/logo/logo-white.png" alt="Auntie Gaik Lean's Old School Eatery" width="1144" height="371"><span>Campaign samples · November 2026 · For review only</span></div></footer>
 <div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="Enlarged image"><img alt=""></div>
 
 <script>
@@ -265,10 +280,12 @@
   const key = o => ((o.stem || '') + ' ' + (o.file || '') + ' ' + (o.kind || '') + ' ' + (o.id || '')).toLowerCase();
   const isX = p => /xhs|xiaohongshu/.test(key(p) + (p.platform || '').toLowerCase());
   const feed = P.filter(p => !isX(p)), xhs = P.filter(isX);
-  const img = (f, alt, w, h) => `<img src="${web(f)}" alt="${esc(alt)}" loading="lazy" width="${w || 720}" height="${h || 960}" onerror="this.onerror=null;this.src='${full(f)}'">`;
-  const capBlock = c => c ? `<details class="cap"><summary>Caption</summary><p class="txt">${esc(c)}</p><button class="copy" type="button">Copy caption</button></details>` : '';
-  const card = (p, kind) => `<article class="card reveal"><button class="zoom" data-full="${full(p.file)}" aria-label="Enlarge ${esc(p.title)}">${img(p.file, p.title)}</button>
-    <div class="meta"><span class="lbl">${esc(kind)}</span><h3>${esc(p.title)}</h3>${capBlock(p.caption || (typeof p.copy === 'string' ? p.copy : ''))}</div></article>`;
+  const small = f => 'exports/web/s/' + norm(f).split('/').pop().replace(/\.(png|jpe?g)$/i, '') + '-360.webp';
+  const img = (f, alt, w, h, sizes) => `<img src="${web(f)}" srcset="${small(f)} 360w, ${web(f)} 720w" sizes="${sizes || '(min-width:1100px) 300px, (min-width:760px) 30vw, 46vw'}" alt="${esc(alt)}" loading="lazy" decoding="async" width="${w || 720}" height="${h || 960}" onerror="this.onerror=null;this.removeAttribute('srcset');this.src='${full(f)}'">`;
+  const fbOf = c => c.replace(/Book a table: link in bio/g, 'Book a table with the button on our Page.').replace(/\(link in bio\)/g, '(use the Book button on our Page)');
+  const capBlock = (c, fbc) => c ? `<details class="cap"><summary>Caption</summary><p class="txt">${esc(c)}</p>${/link in bio/.test(c) ? `<p class="txt fbtxt" hidden>${esc(fbc || fbOf(c))}</p><button class="copy" type="button">Copy Instagram caption</button><button class="copy fb" type="button">Copy Facebook caption</button>` : '<button class="copy" type="button">Copy caption</button>'}</details>` : '';
+  const card = (p, kind) => `<article class="card reveal"${p.stem ? ` id="${p.stem}"` : ''}><button class="zoom" data-full="${full(p.file)}" aria-label="Enlarge ${esc(p.title)}">${img(p.file, p.title)}</button>
+    <div class="meta"><span class="lbl">${esc(kind)}</span><h3>${esc(p.title)}</h3>${capBlock(p.caption || (typeof p.copy === 'string' ? p.copy : ''), p.caption_fb)}</div></article>`;
 
   const isReel = v => /reel/.test(key(v)), isAdV = v => /ad-video|meta-6s/.test(key(v));
   const reels = B.reels.concat(V.filter(v => isReel(v) && !isAdV(v))), stories = V.filter(v => !isReel(v) && !isAdV(v)), adVideos = V.filter(isAdV);
@@ -282,7 +299,7 @@
   });
   const AD_COPY = {
     ad3: { primary: "Planning a celebration in Penang? Weddings, private events, corporate events and year-end dinners round our big tables for ten or more. Heirloom Nyonya cooking, made by hand on Bishop Street, George Town.", headline: "Celebrate at Auntie's round table", description: "Tables for ten or more · Booking advised", button: "Send WhatsApp message", audience: "Singapore + Kuala Lumpur, 28–60, groups, family and event-planning interests" },
-    ad4: { primary: "Dessert first. Pengat: Pisang Raja bananas, sweet potato and yam in coconut milk, a Nyonya dessert made by hand from scratch. Open Wednesday to Sunday on Bishop Street, George Town.", headline: "Dessert first at Auntie's", description: "Open Wed–Sun · Lunch & dinner", button: "Book now", audience: "Penang and Kuala Lumpur, 22–50, dessert and Malaysian food interests" } };
+    ad4: { primary: "Dessert first. Pengat: Pisang Raja bananas, sweet potato and yam in coconut milk, a Nyonya dessert to finish. Open Wednesday to Sunday on Bishop Street, George Town.", headline: "Dessert first at Auntie's", description: "Open Wed–Sun · Lunch & dinner", button: "Book now", audience: "Penang and Kuala Lumpur, 22–50, dessert and Malaysian food interests" } };
   Object.keys(AD_COPY).forEach(k => { if (adSets[k]) { const c = AD_COPY[k], s = adSets[k]; ['primary', 'headline', 'description', 'button', 'audience'].forEach(f => s[f] = c[f]); } });
   const adList = Object.values(adSets);
   const emails = O.filter(o => /email/.test(key(o))), instore = O.filter(o => /instore|gbp|google/.test(key(o)));
@@ -306,19 +323,19 @@
   const vids = reels.concat(stories, adVideos);
   document.getElementById('phones').innerHTML = vids.map(v => { const src = v.web || v.file; const isVid = /\.mp4$/i.test(src || '');
     const label = isAdV(v) ? 'Video ad' : isReel(v) ? 'Reel' : 'Story';
-    return `<figure class="reveal"><div class="phone">${isVid ? `<video src="${full(src)}" ${v.poster ? `poster="${full(v.poster)}"` : ''} muted loop playsinline preload="none" aria-label="${esc(v.title)}"></video>` : `<img src="${full(v.file)}" alt="${esc(v.title)}" loading="lazy">`}</div>
-      <figcaption class="phone-meta"><span>${label}${v.duration ? ' · ' + Math.round(v.duration) + ' s' : ''}</span><b>${esc(v.title)}</b>${capBlock(v.caption)}</figcaption></figure>`; }).join('') || '<p class="empty">Stories and reels are being finalised.</p>';
+    return `<figure class="reveal" id="${v.stem || v.id || ''}"><div class="phone">${isVid ? `<video src="${full(src)}" ${v.poster ? `poster="${full(v.poster)}"` : ''} muted loop playsinline preload="none" aria-label="${esc(v.title)}"></video>` : `<img src="${full(v.file)}" alt="${esc(v.title)}" loading="lazy">`}</div>
+      <figcaption class="phone-meta"><span>${label}${v.duration ? ' · ' + Math.round(v.duration) + ' s' : ''}</span><b>${esc(v.title)}</b>${capBlock(v.caption, v.caption_fb)}</figcaption></figure>`; }).join('') || '<p class="empty">Stories and reels are being finalised.</p>';
   document.querySelectorAll('.phone video').forEach(v => { const f = v.closest('figure'); f.addEventListener('mouseenter', () => v.play().catch(() => {})); f.addEventListener('mouseleave', () => v.pause()); v.parentElement.addEventListener('click', () => v.paused ? v.play().catch(() => {}) : v.pause()); });
 
   document.getElementById('adList').innerHTML = adList.map(a => { const row = (k, v) => v ? `<div><dt>${k}</dt><dd>${esc(v)}</dd></div>` : '';
-    return `<div class="ad reveal">
+    return `<div class="ad reveal" id="${a.id || ''}">
       ${a.feed ? `<figure><button class="zoom" data-full="${full(a.feed)}" aria-label="Enlarge ${esc(a.title)} feed">${img(a.feed, a.title + ' feed', 720, 900)}</button><figcaption>Feed 4:5</figcaption></figure>` : '<div></div>'}
       ${a.story ? `<figure><button class="zoom" data-full="${full(a.story)}" aria-label="Enlarge ${esc(a.title)} story">${img(a.story, a.title + ' story', 720, 1280)}</button><figcaption>Story 9:16</figcaption></figure>` : '<div></div>'}
       <div class="copybox"><h3>${esc(a.title)}</h3><dl>${row('Primary text', a.primary)}${row('Headline', a.headline)}${row('Description', a.description)}${row('Button', a.button)}${row('Suggested audience', a.audience)}</dl></div></div>`; }).join('');
 
   const list = document.getElementById('mailList'), view = document.getElementById('mailView');
   list.innerHTML = emails.map((e, i) => `<li><button role="tab" aria-selected="${i === 0}" data-i="${i}"><b>${esc(e.title)}</b><span>${esc((e.copy && e.copy.subject) || e.subject || '')}</span></button></li>`).join('');
-  const show = i => { view.innerHTML = emails[i] ? `<img src="${full(emails[i].file)}" alt="${esc(emails[i].title)}">` : '<p class="empty">Emails are being finalised.</p>'; list.querySelectorAll('button').forEach(b => b.setAttribute('aria-selected', b.dataset.i == i)); };
+  const show = i => { view.innerHTML = emails[i] ? `<div style="text-align:center;width:600px;max-width:100%"><img src="${web(emails[i].file)}" alt="${esc(emails[i].title)}" width="600" height="900" decoding="async"><a class="copy" href="${full(emails[i].file)}" download style="margin-top:14px">Download full size</a></div>` : '<p class="empty">Emails are being finalised.</p>'; list.querySelectorAll('button').forEach(b => b.setAttribute('aria-selected', b.dataset.i == i)); };
   list.addEventListener('click', e => { const b = e.target.closest('button'); if (b) show(+b.dataset.i); }); show(0);
 
   document.getElementById('instoreGrid').innerHTML = instore.map(o => card(o, /gbp|google/.test(key(o)) ? 'Google post' : 'In-store')).join('') || '<p class="empty">In-store pieces are being finalised.</p>';
@@ -332,7 +349,7 @@
 
   const lb = document.getElementById('lb'), lbImg = lb.querySelector('img');
   document.addEventListener('click', e => { const z = e.target.closest('button.zoom'); if (z) { lbImg.src = z.dataset.full; lbImg.alt = z.querySelector('img').alt; lb.classList.add('on'); }
-    const c = e.target.closest('.copy'); if (c) { const t = c.parentElement.querySelector('.txt').innerText.trim(); navigator.clipboard.writeText(t).then(() => { c.textContent = 'Copied'; setTimeout(() => c.textContent = 'Copy caption', 1600); }, () => { c.textContent = 'Select and copy'; }); } });
+    const c = e.target.closest('button.copy'); if (c) { const src = c.classList.contains('fb') ? c.parentElement.querySelector('.fbtxt') : c.parentElement.querySelector('.txt'); const t = src.textContent.trim(), orig = c.textContent; navigator.clipboard.writeText(t).then(() => { c.textContent = 'Copied'; setTimeout(() => c.textContent = orig, 1600); }, () => { c.textContent = 'Select and copy'; }); } });
   lb.addEventListener('click', () => lb.classList.remove('on')); addEventListener('keydown', e => { if (e.key === 'Escape') lb.classList.remove('on'); });
   const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } }), { rootMargin: '0px 0px -6% 0px' });
   document.querySelectorAll('.reveal').forEach(el => STATIC ? el.classList.add('in') : io.observe(el));

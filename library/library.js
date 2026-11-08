@@ -83,7 +83,7 @@ function build(data){
 function filter(id){
   [].forEach.call(chips.children,function(b){b.setAttribute('aria-pressed',b.dataset.id===id)});
   sections.forEach(function(s){ s.el.hidden=!(id==='all'||s.id===id); });
-  var top=lib.getBoundingClientRect().top+window.scrollY-(chips.offsetHeight+12);
+  var top=lib.getBoundingClientRect().top+window.scrollY-(chips.offsetHeight+76);
   window.scrollTo({top:top,behavior:rm?'auto':'smooth'});
 }
 

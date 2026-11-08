@@ -1,8 +1,6 @@
 /* Auntie Gaik Lean's - menu data (shared by menu/index.html and menu/print.html).
-   Source: BRIEF.md section 1 (dishes reported on their menu by the MICHELIN Guide, their Instagram and 2024-25 reviews).
-   NO prices (they vary by source). Descriptions are generic: what the classic dish is, never a house claim.
-   Photos ONLY where BRIEF allows: named dish/drink photos, Assam Prawns = food-1624, Pie Tee = crop of food-0054
-   (menu/img/pie-tee.webp), Pengat = dining-6692. Every other dish is a typographic card. */
+   NO prices. Descriptions are generic: what the classic dish is, never a house claim.
+   Photos only for dishes with a real photo of that dish; every other dish is a typographic card. */
 window.AG_MENU = {
   note: "Dishes change with the market; ask the team for today's menu and prices.",
   book: "https://inline.app/booking/-OnKy8jPaRn_LUmJ5tDV:inline-live-4/-OnKy8r2gI9_CX8R2D7X",
@@ -26,7 +24,7 @@ window.AG_MENU = {
         { id: "otak-otak", name: "Otak-Otak", local: "Steamed fish custard", pick: true,
           desc: "Fish blended with spices and coconut milk, steamed in banana leaf." },
         { id: "egg-belanda", name: "Egg Belanda", local: "An old Nyonya egg dish",
-          desc: "An old Nyonya egg dish with a Dutch-era name. Ask the team how it is served today." }
+          desc: "A traditional Nyonya egg dish. Ask the team how it is served today." }
       ]
     },
     {
@@ -62,7 +60,7 @@ window.AG_MENU = {
       line: "Sour, fresh and green, to balance the curries.",
       dishes: [
         { id: "kiam-chai-ark", name: "Kiam Chai Ark", local: "Salted-vegetable duck soup", zh: "咸菜鸭",
-          desc: "Duck simmered with salted mustard greens; sour and peppery." },
+          desc: "Duck simmered with salted mustard greens in a sour broth." },
         { id: "terung-sambal", name: "Terung Sambal", local: "Sambal brinjal",
           desc: "Brinjal cooked soft and topped with sambal." },
         { id: "kerabu-pucuk-paku", name: "Kerabu Pucuk Paku", local: "Fern shoot salad",
@@ -81,7 +79,7 @@ window.AG_MENU = {
         { id: "kerabu-bee-hoon", name: "Kerabu Bee Hoon", local: "Vermicelli salad",
           desc: "Rice vermicelli tossed with lime, sambal and herbs." },
         { id: "nyonya-fried-rice", name: "Nyonya Fried Rice", local: "Nasi Goreng",
-          desc: "Rice fried with a little rempah, the Nyonya way." }
+          desc: "Rice fried the Nyonya way." }
       ]
     },
     {

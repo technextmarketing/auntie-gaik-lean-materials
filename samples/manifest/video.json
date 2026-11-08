@@ -6,8 +6,9 @@
   "poster": "stories/story-01-auntiegaik-poll-poster.jpg",
   "contact_sheet": "stories/story-01-auntiegaik-poll-contact-sheet.png",
   "title": "Story 01 - Poll: Curry Kapitan or Assam Prawns?",
-  "caption": "Curry Kapitan or Assam Prawns? Your pick for supper. Book a table: link in bio #GaikLeanMoment #AuntieGaikLean",
-  "duration": 7.0
+  "caption": "Curry Kapitan or Assam Prawns? Your pick for the table. Book a table: link in bio #GaikLeanMoment #AuntieGaikLean",
+  "duration": 7.0,
+  "caption_fb": "Curry Kapitan or Assam Prawns? Your pick for the table. Book a table with the button on our Page. #GaikLeanMoment #AuntieGaikLean"
  },
  {
   "stem": "story-03",
@@ -17,7 +18,8 @@
   "contact_sheet": "stories/story-03-auntiegaik-in-the-kitchen-contact-sheet.png",
   "title": "Story 03 - In the kitchen: made by hand",
   "caption": "Made by hand. Heirloom recipes, from scratch, on site. Book a table: link in bio #GaikLeanMoment #AuntieGaikLean",
-  "duration": 7.0
+  "duration": 7.0,
+  "caption_fb": "Made by hand. Heirloom recipes, from scratch, on site. Book a table with the button on our Page. #GaikLeanMoment #AuntieGaikLean"
  },
  {
   "stem": "story-05",
@@ -27,7 +29,8 @@
   "contact_sheet": "stories/story-05-auntiegaik-four-years-running-contact-sheet.png",
   "title": "Story 05 - Four years running",
   "caption": "One MICHELIN Star, four years running (2023 to 2026 guides). Book a table: link in bio #GaikLeanMoment #AuntieGaikLean",
-  "duration": 8.0
+  "duration": 8.0,
+  "caption_fb": "One MICHELIN Star, four years running (2023 to 2026 guides). Book a table with the button on our Page. #GaikLeanMoment #AuntieGaikLean"
  },
  {
   "stem": "reel-02",
@@ -36,8 +39,9 @@
   "poster": "reels/02-auntiegaik-reel-the-rempah-poster.jpg",
   "contact_sheet": "reels/02-auntiegaik-reel-the-rempah-contact-sheet.png",
   "title": "Reel 02 - The rempah",
-  "caption": "The rempah, the spice paste that starts the curry. Made by hand, from scratch, on site. Book a table: link in bio #GaikLeanMoment #AuntieGaikLean #NyonyaCuisine",
-  "duration": 18.0
+  "caption": "The rempah, the spice paste that starts the curry. Book a table: link in bio #GaikLeanMoment #AuntieGaikLean #NyonyaCuisine",
+  "duration": 18.0,
+  "caption_fb": "The rempah, the spice paste that starts the curry. Book a table with the button on our Page. #GaikLeanMoment #AuntieGaikLean #NyonyaCuisine"
  },
  {
   "stem": "reel-03",
@@ -47,7 +51,8 @@
   "contact_sheet": "reels/03-auntiegaik-reel-round-tables-contact-sheet.png",
   "title": "Reel 03 - Round tables",
   "caption": "Tables for ten or more, under the glowing sign on Bishop Street. Birthdays, family dinners, year-end tables. Book a table: link in bio #GaikLeanMoment #AuntieGaikLean #PeranakanHeritage",
-  "duration": 17.6
+  "duration": 17.6,
+  "caption_fb": "Tables for ten or more, under the glowing sign on Bishop Street. Birthdays, family dinners, year-end tables. Book a table with the button on our Page. #GaikLeanMoment #AuntieGaikLean #PeranakanHeritage"
  },
  {
   "stem": "ad-video",
@@ -65,15 +70,17 @@
   "poster": "stories/story-02-auntiegaik-open-today.png",
   "title": "Story 02 - Open today",
   "caption": "Open today. Lunch 12pm to 2.30pm, dinner 6pm to 9.30pm, Wed to Sun. Book a table: link in bio #GaikLeanMoment #AuntieGaikLean",
-  "duration": null
+  "duration": null,
+  "caption_fb": "Open today. Lunch 12pm to 2.30pm, dinner 6pm to 9.30pm, Wed to Sun. Book a table with the button on our Page. #GaikLeanMoment #AuntieGaikLean"
  },
  {
   "stem": "story-04",
   "file": "stories/story-04-auntiegaik-ask-auntie.png",
   "poster": "stories/story-04-auntiegaik-ask-auntie.png",
-  "title": "Story 04 - Ask Auntie",
-  "caption": "Ask Auntie. Questions on the food, the room or Bishop Street are welcome. #GaikLeanMoment #AuntieGaikLean",
-  "duration": null
+  "title": "Story 04 - Ask us",
+  "caption": "Ask us. Questions on the food, the room or Bishop Street are welcome. #GaikLeanMoment #AuntieGaikLean",
+  "duration": null,
+  "caption_fb": "Ask us. Questions on the food, the room or Bishop Street are welcome. #GaikLeanMoment #AuntieGaikLean"
  },
  {
   "stem": "story-06",
@@ -81,6 +88,7 @@
   "poster": "stories/story-06-auntiegaik-tonights-table.png",
   "title": "Story 06 - Tonight's table",
   "caption": "Tonight's table. Wed to Sun, lunch and dinner. Book a table: link in bio #GaikLeanMoment #AuntieGaikLean",
-  "duration": null
+  "duration": null,
+  "caption_fb": "Tonight's table. Wed to Sun, lunch and dinner. Book a table with the button on our Page. #GaikLeanMoment #AuntieGaikLean"
  }
 ]

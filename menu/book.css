@@ -281,5 +281,19 @@
 .view--book.is-single .pg--story .card__t { font-size: calc(var(--u) * 4.9); margin-bottom: calc(var(--u) * 2.2); }
 .bk__static .intro-s { margin-top: 0; }
 
+/* ---------------------------------------------------------------- desktop controls: arrows flank the book, one slim row below.
+   The book is height-bound, so the row stays ~62px and the arrows leave the row; book.js scales the page spread to the stage. */
+.view--book { --ctrlH: 62px; }
+.view--book:not(.is-single):not(.is-list) .bk__ctrl { position: static; flex-wrap: nowrap; padding: 6px var(--gut) 10px; gap: 8px 20px; min-height: var(--ctrlH); }
+.view--book:not(.is-single) .bk__nav { display: contents; }
+.view--book:not(.is-single) .bk__arrow { position: absolute; z-index: 5; top: calc((100% - var(--ctrlH)) / 2 - 24px); width: 48px; height: 48px; background: rgba(10, 17, 46, .6); }
+.view--book:not(.is-single) #bkPrev { left: clamp(10px, 1.6vw, 32px); }
+.view--book:not(.is-single) #bkNext { right: clamp(10px, 1.6vw, 32px); }
+.view--book:not(.is-single) .bk__where { order: -1; min-width: 170px; text-align: left; }
+.view--book:not(.is-single) .bk__tab { height: 38px; }
+@media (max-width: 1319px) { .view--book:not(.is-single) .bk__where { display: none; } }
+@media (max-width: 1100px) { .view--book:not(.is-single) .bk__tab { padding: 0 7px; gap: 5px; letter-spacing: .08em; font-size: 10.5px; } .view--book:not(.is-single) .bk__ctrl { gap: 8px 10px; } .bk__tool { padding: 0 9px; } }
+@media (min-width: 1700px) { .view--book:not(.is-single) .bk__arrow { width: 56px; height: 56px; top: calc((100% - var(--ctrlH)) / 2 - 28px); } .bk__tab { padding: 0 16px; } }
+
 /* the section stays out of the page until the desktop switch (menu-boot.js) shows it */
 .view--book[hidden] { display: none !important; }

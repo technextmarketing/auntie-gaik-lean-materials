@@ -4,3 +4,5 @@ samples/art/_smoke.html
 BRIEF.md
 SITE-SPEC.md
 MATERIALS-V2.md
+__pycache__/
+*.pyc
